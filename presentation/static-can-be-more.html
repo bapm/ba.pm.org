@@ -1,0 +1,412 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<title>Static can be more</title>
+<!-- metadata -->
+<meta name="version" content="S5 1.1" />
+<meta name="presdate" content="20090805" />
+<meta name="author" content="Jozef Kutej"/>
+<meta name="company" content="" />
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<!-- configuration parameters -->
+<meta name="defaultView" content="slideshow" />
+<!-- <meta name="defaultView" content="outline" /> -->
+<meta name="controlVis" content="hidden" />
+<!-- style sheet links -->
+<link rel="stylesheet" href="ui/default/slides.css" type="text/css" media="projection" id="slideProj" />
+<link rel="stylesheet" href="ui/default/outline.css" type="text/css" media="screen" id="outlineStyle" />
+<link rel="stylesheet" href="ui/default/print.css" type="text/css" media="print" id="slidePrint" />
+<link rel="stylesheet" href="ui/default/opera.css" type="text/css" media="projection" id="operaFix" />
+<!-- S5 JS -->
+<script src="ui/default/slides.js" type="text/javascript"></script>
+<!-- syntax highlighting -->
+<link rel="stylesheet" type="text/css" href="ui/sh/sh_style.css" />
+<script type="text/javascript" src="ui/sh/sh_main.js"></script>
+<script type="text/javascript" src="ui/sh/sh_perl.js"></script>
+<script type="text/javascript" src="ui/sh/sh_sql.js"></script>
+<!-- custom -->
+<script src="ui/jquery-1.2.6.js" type="text/javascript"></script>
+<script src="ui/custom.js" type="text/javascript"></script>
+<link rel="stylesheet" href="ui/custom.css" type="text/css" />
+</head>
+
+<body><!--  onload='sh_highlightDocument();' -->
+
+<div class="layout">
+<div id="controls"><!-- DO NOT EDIT --></div>
+<div id="currentSlide"><!-- DO NOT EDIT --></div>
+<div id="header"></div>
+<div id="footer">
+
+<!-- added by Jozef :) -->
+<div id="counter" style="float: right; margin-right: 10px;">40</div>
+<span id="ignoreClicks" />
+
+<h1>05. Aug 2009</h1>
+<h2>Static can be more</h2>
+
+</div>
+
+</div>
+
+
+<div class="presentation">
+
+<div class="slide">
+    <h1 style="text-align: center;">Static can be more</h1>
+	<p style="text-align: center;">
+	<img src='static-can-be-more/water-drop.jpg' alt="water drop" />
+	</p>
+    <h4 style="text-align: center;">Jozef Kutej</h4>
+</div>
+
+<div class="slide">
+    <h1>Agenda</h1>
+    <div class="singleThink">
+    :-?
+    </div>
+</div>
+
+<div class="slide">
+    <h1>1. theory</h1>
+</div>
+
+<div class="slide">
+    <h1>1.1. static pages?</h1>
+</div>
+
+<div class="slide">
+    <h1>1.2. dynamic pages?</h1>
+</div>
+
+<div class="slide">
+    <h1>2. examples + practical solutions</h1>
+</div>
+
+<div class="slide">
+    <h1>2.1. http://ba.pm.org/</h1>
+</div>
+
+<div class="slide">
+    <h1>2.2. Makefile + inotify</h1>
+</div>
+
+<div class="slide">
+    <h1>2.3. Template::Toolkit</h1>
+</div>
+
+<div class="slide">
+    <h1>2.4. xml+xslt => .tt2 &amp; .rdf</h1>
+</div>
+
+<div class="slide">
+    <h1>2.5. SVN for RC and deployment</h1>
+</div>
+
+<div class="slide">
+    <h1>2.6. store + planet + testing + minification + ...</h1>
+</div>
+
+<!--
+<div class="slide">
+    <h1>2.7. mobilofant.com</h1>
+</div>
+-->
+
+<div class="slide">
+    <h1>I hope that there will be something new for everyone and you'll
+	enjoy it, or ...</h1>
+</div>
+
+<div class="slide">
+	<h1>or ...</h1>
+    <div class="singleThink"><img src="catalyst-tricks/real_tricks.jpg" alt="attention" /></div>
+</div>
+
+
+<div class="slide">
+    <h1>let's start</h1>
+</div>
+
+<div class="slide">
+    <h1>Static pages</h1>
+    <div class="singleThink">
+    WYBIWYG
+    </div>
+</div>
+
+<div class="slide">
+    <h1>Dynamic pages</h1>
+    <ul>
+        <li>dynamic => interactive experience</li>
+        <li>react to context/conditions/input</li>
+        <li>server side</li>
+        <li> or client side</li>
+    </ul>
+</div>
+
+<div class="slide">
+    <h1>Server side static pages</h1>
+    <ul>
+        <li>pre-generated interactive experience ;-)</li>
+        <li>these are the target of my talk</li>
+        <li>(btw is this talk html static or dynamic?)</li>
+    </ul>
+</div>
+
+<div class="slide">
+    <h1>Static Pages/Content</h1>
+    <h2>advantages</h2>
+    <ul>
+        <li>fast "processing" by web server</li>
+        <li>can be served by any web server (or even file://)</li>
+        <li>nginx - 10000 inactive HTTP keep-alive connections take about 2.5M memory</li>
+        <li>100k requests for a .png (313kB) from 1000 clients
+        <a href="http://superjared.com/entry/benching-lighttpd-vs-nginx-static-files/">in 12.5s</a> (8034.86 [#/sec])</li>
+        <li>it's cheap to serve users with static pages</li>
+        <li>can be served through a Content delivery network (CDN)</li>
+    </ul>
+</div>
+
+<div class="slide">
+    <h1>Static pages</h1>
+    <h2>disadvantages</h2>
+    <ul>
+        <li>there has to be some tool to generate them, otherwise it will be a nightmare to try to keep a consistent look and manage updates</li>
+        <li>there is no "well known tool"</li>
+        <li>there is no "well known how-to"</li>
+    </ul>   
+</div>
+
+<div class="slide">
+    <h1>server side Scripting/Programming</h1>
+    <h2>advantages</h2>
+    <ul>
+        <li>that's the only way to get the credit card number</li>
+        <li>lots of books/tutorials/documentation</li>
+        <li>my friend/coworker/everyone does it</li>
+    </ul>
+</div>
+
+<div class="slide">
+    <h1>server side Scripting/Programming</h1>
+    <h2>disadvantages</h2>
+    <ul>
+        <li>costs CPU</li>
+        <li>costs RAM</li>
+        <li>mostly requires a specific web server (Apache HTTPD, IIS, Tomcat)</li>
+        <li>ASP, PHP, JSP, SSI, CGI, ...</li>
+    </ul>
+</div>
+
+<div class="slide">
+    <h1>Laziness</h1>
+    <pre>&lt;?
+Include "./_conf.php";
+Include "./_head.php";
+?&gt;
+
+&lt;h1&gt;Welcome to my page.&lt;/h1&gt;
+&lt;p&gt;For an idea that does not at first seem insane,
+there is no hope.&lt;/p&gt;
+
+&lt;?
+Include "./_tail.php";
+?&gt;</pre>
+</div>
+
+<div class="slide">
+    <h1>Compromise</h1>
+    <div class="singleThink"><img src="dynamic-static/kompromis-lp.jpg" alt="-KOMPROMIS (2005 LP)-" /><br/><div style="font-size: 15%">-KOMPROMIS (2005 LP)-</div></div>
+</div>
+
+<div class="slide">
+	<h1>the practical part</h1>
+</div>
+
+
+<div class="slide">
+    <h1>BA.pm.org<br/>
+	<small><small><a href="https://cle.sk/repos/pub/www/tt-pm/">https://cle.sk/repos/pub/www/tt-pm/</a><br/>
+	<a href="http://www.ohloh.net/p/bratislava-pm-org">http://www.ohloh.net/p/bratislava-pm-org</a></small></small></h1>
+</div>
+
+<div class="slide">
+    <h1>BA.pm.org features</h1>
+    <ul>
+        <li>common header+footer (consistent look)</li>
+        <li>menu with current selection highlighting</li>
+        <li><a href="http://bratislava.pm.org/en/news.rdf">RSS feed</a> and <a href="http://bratislava.pm.org/en/events.html">events page</a> generated from one XML source file</li>
+        <li><a href="http://bratislava.pm.org/en/who.html">who-is-who</a> generated from an XML file</li>
+        <li>(meta+js) redirects (for example <a href="http://ba.pm.org/go/YAPC">/go/YAPC</a>)</li>
+        <li>sk/en language versions</li>
+        <li><a href="http://bratislava.pm.org/en/contact.html#feedback">generated feedback form</a> (+<a href="http://hiveminder.com/">hiveminder.com</a>)</li>
+        <li><a href="http://ba.pm.org/en/store.html">book store</a></li>
+    </ul>
+</div>
+
+<div class="slide">
+    <h1>BA.pm.org more features</h1>
+    <ul>
+        <li><a href="http://bratislava.pm.org/en/planet/">planet</a></li>
+        <li>xhtml validation tests</li>
+        <li>internal links check</li>
+        <li><a href="http://bratislava.pm.org/sitemap.xml">sitemap.xml</a></li>
+        <li>can be hosted on anything, even file://<br/>
+        <small>(with the exception of send-feedback.cgi, planet, store)</small>
+        </li>
+        <li>auto deployment from SVN with commit diff emails</li>
+        <li>2 stage development (dev+prod)<br/>
+        <small>(extensible to 3 stage if it's ever needed)</small>
+		</li>
+    </ul>   
+</div>
+
+<div class="slide">
+    <h1>it's better to <a href="http://bratislava.pm.org/">see</a> once<br/>
+    then to hear 100 times</h1>
+</div>
+
+<div class="slide">
+	<h1>for the curious</h1>
+	<p style="text-align: center;"><img src="static-can-be-more/uniq-visitors.png" alt="visitors" title="visitors" /></p>
+</div>
+
+<div class="slide">
+	<h1>TMB score</h1>
+	<p style="text-align: center;"><img src="static-can-be-more/tick-my-boxes.png" alt="Tick My Boxes book cover" title="Tick My Boxes book cover" /><br/>72 out of 100</p>
+</div>
+
+<div class="slide">
+    <h1>HOW?</h1>
+</div>
+
+<div class="slide">
+    <h1>Makefile + inotify</h1>
+</div>
+
+<div class="slide">
+    <h1>Template::Toolkit</h1>
+    <ul>
+        <li><a href="http://search.cpan.org/perldoc?Template">http://search.cpan.org/perldoc?Template</a></li>
+        <li>This templating module allows special marks to be added into the text,
+		which are then processed. The default ones are <code>[% %]</code>,
+		but can be redefined.</li>
+        <li>Standard usage of Template Toolkit is for MVC frameworks, where it can be
+		used as a View component to generate XML, plain text, ... and of course
+        HTML.</li>
+    </ul>   
+</div>
+
+<div class="slide">
+    <h1>ttree</h1>
+    <ul>
+        <li>TT has a `ttree` command</li>
+        <li>this is used to convert a tree of templates into HTML (or some other output format)</li>
+        <li>this is how <a href="http://bratislava.pm.org/">BA.pm.org</a> is generated</li>
+    </ul>
+</div>
+
+<div class="slide">
+    <h1>_cfg.tt2,<br/>_wrapper.tt2,<br/>_header.tt2,<br/>_footer.tt2,</h1>
+</div>
+
+<div class="slide">
+    <h1>redirect.tt2</h1>
+</div>
+
+<div class="slide">
+    <h1>events.xml + events-to-(html|rdf).xslt</h1>
+	<ul>
+		<li>events.xml + events-to-html.xslt =&gt; events.tt2</li>
+		<li>events.xml + events-to-rdf.xslt =&gt; news.rdf</li>
+	</ul>
+</div>
+
+<div class="slide">
+    <h1>who.xml + who-to-(html|js).xslt</h1>
+	<ul>
+		<li>who.xml + who-to-html.xslt =&gt; who.tt2</li>
+		<li>who.xml + who-to-js.xslt =&gt; 06_mongers.js</li>
+	</ul>
+</div>
+
+<div class="slide">
+	<h1>i18n</h1>
+	<ul>
+		<li>.tt || .tt-en</li>
+		<li>[% IF lang %]</li>
+		<li>feedback form with Locale::Maketext (+HTML::FormFu)<br/><small>(.yaml -&gt; .tt2)</small></li>
+		<li>JavaScript i18n</li>
+	</ul>
+</div>
+
+<div class="slide">
+	<h1>send-feedback.cgi</h1>
+	<ul>
+		<li>checks input</li>
+		<li>sends email to <a href="http://hiveminder.com/">hiveminder.com</a></li>
+		<li>redirects to /cgi/email-(<a href="http://bratislava.pm.org/cgi/email-ok.html">ok</a>|<a href="http://bratislava.pm.org/cgi/email-fail.html">fail</a>).html</li>
+		<li>anti-spammer protection</li>
+	</ul>
+</div>
+
+<div class="slide">
+	<h1>nginx.conf</h1>
+</div>
+
+
+<div class="slide">
+    <h1>SVN notify + deploy hooks</h1>
+	<ul>
+		<li>`meld html/`</li>
+		<li>`svn commit`</li>
+		<li>SVN::Notify</li>
+		<li>`svk up`</li>
+	</ul>
+</div>
+
+<div class="slide">
+    <h1>the rest</h1>
+	<ul>
+		<li>`vxml -v --ignore ...`</li>
+		<li>java -jar script/yuicompressor-2.4.2.jar</li>
+        <li><a href="http://bratislava.pm.org/sitemap.xml">sitemap.xml</a></li>
+		<li>Amazon store (iframe)</li>
+		<li>`planet`</li>
+	</ul>
+</div>
+
+<div class="slide">
+    <h1>Questions?</h1>
+    <div class="singleThink"><img src="images/diving-signal-question.jpg" alt=":-?" /></div>
+</div>
+
+<!--
+<div class="slide">
+    <h1><a href="http://mobilofant.com/">mobilofant.com</a></h1>
+</div>
+-->
+
+<div class="slide">
+    <h1>That's it</h1>
+    <h2>Thank you!</h2>
+	<ul>
+		<li>any comments later?</li>
+		<li>you can use feedback form on <a href="http://bratislava.pm.org/contact.html#feedback">ba.pm.org</a> anytime!</li>
+	</ul>
+
+    <p style="text-align: center;"><img src="static-can-be-more/le-chameau-qui-rit.png" alt=":-)" /></p>
+	
+</div>
+
+
+
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="400"
+   height="400"
+   id="svg2"
+   sodipodi:version="0.32"
+   inkscape:version="0.46"
+   version="1.0"
+   sodipodi:docname="question-mark-blue-box.svg"
+   inkscape:output_extension="org.inkscape.output.svg.inkscape">
+  <defs
+     id="defs4">
+    <inkscape:perspective
+       sodipodi:type="inkscape:persp3d"
+       inkscape:vp_x="0 : 75 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_z="150 : 75 : 1"
+       inkscape:persp3d-origin="75 : 50 : 1"
+       id="perspective28" />
+    <linearGradient
+       id="linearGradient3172">
+      <stop
+         style="stop-color: rgb(153, 204, 255); stop-opacity: 1;"
+         offset="0"
+         id="stop3174" />
+      <stop
+         id="stop3180"
+         offset="1"
+         style="stop-color: rgb(0, 153, 204); stop-opacity: 1;" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient3162">
+      <stop
+         style="stop-color: rgb(153, 204, 255); stop-opacity: 1;"
+         offset="0"
+         id="stop3164" />
+      <stop
+         style="stop-color: rgb(0, 153, 204); stop-opacity: 0.6;"
+         offset="1"
+         id="stop3166" />
+    </linearGradient>
+    <filter
+       inkscape:collect="always"
+       id="filter3358">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="3.1676115"
+         id="feGaussianBlur3360" />
+    </filter>
+    <filter
+       inkscape:collect="always"
+       id="filter3410">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="0.46527277"
+         id="feGaussianBlur3412" />
+    </filter>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3172"
+       id="linearGradient2405"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2.7042585,0,0,2.7042585,649.54231,-2845.1192)"
+       x1="0"
+       y1="977.36218"
+       x2="150"
+       y2="977.36218" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3162"
+       id="radialGradient2410"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1,0,0,0.742186,1.04257,257.855)"
+       cx="75.000015"
+       cy="996.11237"
+       fx="75.000015"
+       fy="1049.1431"
+       r="72.727303" />
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     gridtolerance="10000"
+     guidetolerance="10"
+     objecttolerance="10"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.34456"
+     inkscape:cx="21.687839"
+     inkscape:cy="101.38335"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1400"
+     inkscape:window-height="995"
+     inkscape:window-x="0"
+     inkscape:window-y="0" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title>Question Mark Icon - Blue Box</dc:title>
+        <dc:date>2008-06-27</dc:date>
+        <dc:creator>
+          <cc:Agent>
+            <dc:title>Willscrlt (Will Murray)</dc:title>
+          </cc:Agent>
+        </dc:creator>
+        <dc:rights>
+          <cc:Agent>
+            <dc:title>CC-BY-SA-3.0, GFDL, LGPL</dc:title>
+          </cc:Agent>
+        </dc:rights>
+        <dc:identifier>http://commons.wikimedia.org/wiki/Image:Question_Mark_Icon_-_Blue_Box.svg</dc:identifier>
+        <dc:source />
+        <dc:subject>
+          <rdf:Bag>
+            <rdf:li>question mark</rdf:li>
+            <rdf:li>blue</rdf:li>
+            <rdf:li>white</rdf:li>
+            <rdf:li>icon</rdf:li>
+            <rdf:li>box</rdf:li>
+            <rdf:li>rounded</rdf:li>
+            <rdf:li>square</rdf:li>
+            <rdf:li>question</rdf:li>
+            <rdf:li>punctuation</rdf:li>
+            <rdf:li>gradient</rdf:li>
+          </rdf:Bag>
+        </dc:subject>
+        <dc:description>A white question mark with a medium blue outline in a blue box. The box has rounded corners and a blue gradient that gives a glossy, slightly 3-D button look.</dc:description>
+        <dc:contributor>
+          <cc:Agent>
+            <dc:title>[http://commons.wikimedia.org/wiki/User:Willscrlt|Willscrlt (Will Murray)]</dc:title>
+          </cc:Agent>
+        </dc:contributor>
+        <cc:license
+           rdf:resource="http://creativecommons.org/licenses/by-sa/3.0/" />
+        <dc:publisher>
+          <cc:Agent>
+            <dc:title />
+          </cc:Agent>
+        </dc:publisher>
+        <dc:relation>http://willmurray.name/</dc:relation>
+      </cc:Work>
+      <cc:License
+         rdf:about="http://creativecommons.org/licenses/by-sa/3.0/">
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#Reproduction" />
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#Distribution" />
+        <cc:requires
+           rdf:resource="http://creativecommons.org/ns#Notice" />
+        <cc:requires
+           rdf:resource="http://creativecommons.org/ns#Attribution" />
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#DerivativeWorks" />
+        <cc:requires
+           rdf:resource="http://creativecommons.org/ns#ShareAlike" />
+      </cc:License>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-2.0851221,-652.36219)">
+    <rect
+       transform="matrix(0,1,-1,0,0,0)"
+       ry="67.606461"
+       rx="67.606461"
+       y="-398.02875"
+       x="656.41858"
+       height="391.88724"
+       width="391.88724"
+       id="rect3183"
+       style="fill:#0099cc;fill-opacity:1;stroke:#006699;stroke-width:8.1127758;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    <rect
+       style="fill:url(#linearGradient2405);fill-opacity:1;stroke:#006699;stroke-width:8.1127758;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect2387"
+       width="391.88724"
+       height="391.88724"
+       x="656.41858"
+       y="-398.02875"
+       rx="67.606461"
+       ry="67.606461"
+       transform="matrix(0,1,-1,0,0,0)" />
+    <path
+       style="fill:url(#radialGradient2410);fill-opacity:1;stroke:none;stroke-width:4.54540014;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;filter:url(#filter3358)"
+       d="M 148.76989,980.67776 L 148.76989,1031.2316 C 148.76989,1042.2565 137.57836,1051.1321 123.67677,1051.1321 L 28.408411,1051.1321 C 14.506821,1051.1321 3.3152908,1042.2565 3.3152908,1031.2316 L 3.3152908,943.17776 C 41.596079,988.36727 101.74274,1006.9168 148.76989,980.67776 z"
+       id="rect3159"
+       sodipodi:nodetypes="ccccccc"
+       transform="matrix(2.7042585,0,0,2.7042585,-3.5536209,-1793.4972)" />
+    <path
+       transform="matrix(3.2397016,0,0,2.8714357,-25.953697,-2132.1542)"
+       style="font-size:150px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;text-anchor:middle;fill:#eeeeff;fill-opacity:1;stroke:#006699;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;filter:url(#filter3410);font-family:Arial Rounded MT Bold"
+       d="M 33.767639,1014.5479 C 33.767633,1009.9093 35.256889,1005.2096 38.235413,1000.4487 C 41.213914,995.68809 45.559613,991.74522 51.272522,988.62012 C 56.985383,985.49522 63.650415,983.93273 71.267639,983.93262 C 78.347666,983.93273 84.59766,985.23888 90.017639,987.85107 C 95.437493,990.46348 99.6245,994.01572 102.57867,998.50781 C 105.5327,1003.0001 107.00975,1007.8829 107.00983,1013.1562 C 107.00975,1017.3067 106.16746,1020.9444 104.48297,1024.0693 C 102.79833,1027.1944 100.79637,1029.8922 98.477112,1032.1626 C 96.157707,1034.4332 91.995113,1038.254 85.989319,1043.625 C 84.329105,1045.1387 82.99854,1046.4693 81.99762,1047.6167 C 80.996589,1048.7642 80.251961,1049.814 79.763733,1050.7661 C 79.2754,1051.7183 78.896982,1052.6705 78.628479,1053.6226 C 78.359873,1054.5747 77.957042,1056.2471 77.419983,1058.6396 C 76.492199,1063.7178 73.586929,1066.2569 68.704163,1066.2568 C 66.165061,1066.2569 64.028833,1065.4268 62.295471,1063.7666 C 60.562039,1062.1065 59.695341,1059.6407 59.695374,1056.3691 C 59.695341,1052.2676 60.330106,1048.7154 61.59967,1045.7124 C 62.869166,1042.7095 64.553735,1040.0728 66.653381,1037.8022 C 68.752949,1035.5318 71.584978,1032.834 75.149475,1029.709 C 78.274424,1026.9747 80.532723,1024.9117 81.924377,1023.52 C 83.315923,1022.1285 84.487797,1020.5782 85.440002,1018.8691 C 86.392092,1017.1602 86.868165,1015.3048 86.868225,1013.3027 C 86.868165,1009.3966 85.41553,1006.1007 82.510315,1003.415 C 79.604989,1000.7296 75.857434,999.38681 71.267639,999.38672 C 65.896507,999.38681 61.941433,1000.7418 59.402405,1003.4517 C 56.863313,1006.1617 54.714877,1010.1534 52.957092,1015.4268 C 51.296912,1020.9444 48.147501,1023.7032 43.50885,1023.7031 C 40.774461,1023.7032 38.467335,1022.7388 36.587463,1020.8101 C 34.707573,1018.8814 33.767633,1016.794 33.767639,1014.5479 L 33.767639,1014.5479 z M 69.509827,1094.8213 C 66.531272,1094.8213 63.931177,1093.8569 61.709534,1091.9282 C 59.487822,1089.9995 58.376983,1087.3018 58.377014,1083.835 C 58.376983,1080.7588 59.451201,1078.1709 61.59967,1076.0713 C 63.748071,1073.9717 66.384787,1072.9219 69.509827,1072.9219 C 72.585953,1072.9219 75.173841,1073.9717 77.273499,1076.0713 C 79.373056,1078.1709 80.422859,1080.7588 80.422913,1083.835 C 80.422859,1087.2529 79.324228,1089.9385 77.127014,1091.8916 C 74.929701,1093.8447 72.390641,1094.8213 69.509827,1094.8213 L 69.509827,1094.8213 z"
+       id="text2383" />
+  </g>
+</svg>

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Disallow: /presentation/dynamic-static/moderny-web.html
+Sitemap: http://bratislava.pm.org/sitemap.xml

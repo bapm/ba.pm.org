@@ -1,0 +1,528 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<title>Soitron+HP@YAPC 2007</title>
+<!-- metadata -->
+<meta name="generator" content="Bluefish 1.0.7"/>
+<meta name="version" content="S5 1.1" />
+<meta name="presdate" content="20050728" />
+<meta name="author" content="Jozef Kutej"/>
+<meta name="company" content="Soiton, a.s." />
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<!-- configuration parameters -->
+<meta name="defaultView" content="slideshow" />
+<!-- <meta name="defaultView" content="outline" /> -->
+<meta name="controlVis" content="hidden" />
+<!-- style sheet links -->
+<link rel="stylesheet" href="ui/default/slides.css" type="text/css" media="projection" id="slideProj" />
+<link rel="stylesheet" href="ui/default/outline.css" type="text/css" media="screen" id="outlineStyle" />
+<link rel="stylesheet" href="ui/default/print.css" type="text/css" media="print" id="slidePrint" />
+<link rel="stylesheet" href="ui/default/opera.css" type="text/css" media="projection" id="operaFix" />
+<link rel="stylesheet" href="ui/ba.pm/slides.css" type="text/css" media="projection" id="baSlideProj" />
+<link rel="stylesheet" href="ui/ba.pm/slides.css" type="text/css" media="screen" id="baOutlineStyle" />
+<!-- S5 JS -->
+<script src="ui/default/slides.js" type="text/javascript"></script>
+</head>
+<body>
+
+<div class="layout">
+<div id="controls"><!-- DO NOT EDIT --></div>
+<div id="currentSlide"><!-- DO NOT EDIT --></div>
+<div id="header"></div>
+<div id="footer">
+
+<!-- added by Jozef :) -->
+<div id="counter" style="float: right; margin-right: 10px;">60</div> 
+
+<h1>Bratislava, 4 Sep 2007</h1>
+<h2>Soitron+HP@YAPC 2007</h2>
+</div>
+
+</div>
+
+
+<div class="presentation">
+
+<div class="slide">
+<h1>Soitron+HP@YAPC 2007</h1>
+<h3>Emo + Jozef + Porucik</h3>
+<p style="text-align: center;"><img src="yapc2007/yapc2007_logo.gif" alt="yapc2007 logo" title="logo" /></p>
+</div>
+
+<div class="slide">
+<h1>YAPC 2007</h1>
+<ul>
+<li>YAPC - Yeat Another Perl Conference</li>
+<li>Wien</li>
+<li>3 days</li>
+<li>348 "users"</li>
+<li>64 speakers</li>
+<li>66h of talks</li>
+<li>about databases, web, techniques and social things</li>
+</ul>
+
+</div>
+
+
+
+<div class="slide">
+<h1>1st day</h1>
+<p>9:00 Vienna University of Economics and Business Administration</p>
+<p style="text-align: center;"><img src="yapc2007/P1000163.JPG" alt="" title="My" /></p>
+</div>
+
+
+<div class="slide">
+<h1>Larry Wall</h1>
+<ul>
+<li>Openning speech</li>
+</ul>
+<p style="text-align: center;"><img src="yapc2007/wall_602.jpg" alt="" title="Larry" /></p>
+</div>
+
+<div class="slide">
+<h1>Larry Wall</h1>
+<p style="text-align: center;"><img src="yapc2007/programming.jpg" alt="" title="Programming is hard, let's go scripting!1" /></p>
+</div>
+
+
+<div class="slide">
+	<h1>Operator overloading</h1>
+	<h2>Posibilities</h2>
+	<p style="text-align: center; float: right;"><img src="http://vienna.yapceurope.org/photos/eb5c63bbe5f41169931a8cbd32987e98.jpg" alt="" title="Jan Henning Thorsen" /></p>
+	<ul>
+		<li>Arithmetic operations (+, /, x, *, +=, ., etc)</li>
+		<li>Comparison operations (&lt;, &gt;, le, &lt;=&gt;, etc)</li>
+		<li>Bit operations (&amp;, ^, |, neg, !, ~)</li>
+		<li>Increment and decrement (++, --)</li>
+		<li>Transcendental functions (atan2, cos, sin, exp, abs, log, sqrt, int)</li>
+		<li>Boolean, string and numeric conversion (bool, "$var", '0+')</li>
+		<li>Iteration (&lt;&gt;)</li>
+		<li>Dereferencing (${}, @{}, %{}, &amp;{}, *{})</li>
+		<li>special (nomethod, fallback, =)</li>
+	</ul>
+</div>
+
+
+<div class="slide">
+	<h1>Operator overloading</h1>
+	<h2>When to use it?</h2>
+	
+	<ul class="incremental">
+		<li>In mathematical libraries (BigInt, Matrices, Imaginary numbers, Dates)</li>
+		<li>Otherwise <b>never</b>, it's too confusing!</li>
+		<li>
+		<ul>
+			<li><code>$x = $y + $z;</code></li>
+			<li><code>print @devices - %in_outage, "\n";</code></li>
+		</ul>
+		</li>
+		<li>Except for basic operators like: string</li>
+		<li>
+		<ul>
+			<li>
+<pre>
+use overload qq(""), sub {
+	my $count = keys %{ $_[0] };
+	return "Env has $count variables"; 
+};
+
+my $env = bless \%ENV, __PACKAGE__;
+print "$env";
+# Prints "Env has 37 variables"
+</pre>
+			</li>
+		</ul>
+		</li>
+	</ul>
+
+	<p>See <a href='http://search.cpan.org/perldoc?overload'>overload</a></p>
+</div>
+
+
+<div class="slide">
+	<h1>MySQL hacking</h1>
+	<h2>Rewrite MySQL in Perl by linking with the MySQL library</h2>
+	<p style="text-align: center; float: right;"><img src="http://vienna.yapceurope.org/photos/1a758127fbf8177101bde523d0d3bfc3.jpg" alt="" title="Philip Stoev" /></p>
+	<ul>
+		<li>Server-side implementation of the MySQL protocol</li>
+		<li>parse SQL statements by calling MySQL's own parser</li>
+		<li>Pure perl SQL parser derived from MySQL's grammar and lexer</li>
+		<li>Federated database engine (link two MyQSL servers as one)</li>
+		<li>Any Perl script can become a valid MySQL server: wrap LDAP as an SQL server</li>
+	</ul>
+
+	<p>
+	See <a href='http://search.cpan.org/perldoc?DBIx::MyServer'>DBIx::MyServer</a>,
+	<a href='http://search.cpan.org/perldoc?DBIx::MyParse'>DBIx::MyParse</a>,
+	and <a href='http://search.cpan.org/perldoc?DBIx::MyServerPP'>DBIx::MyServerPP</a>
+	</p>
+</div>
+
+
+<div class="slide">
+	<h1> Selenium</h1>
+	<p style="text-align: center; float: right;"><img src="http://vienna.yapceurope.org/photos/7805883e771deee24bf8b708d0204bcd.jpg" alt="" title="Barbie" /></p>
+	<ul>
+		<li>test tool for web applications</li>
+		<li>one of the most portable testing frameworks</li>
+		<li>2 parts - IDE, RC</li>
+		<li>IDE - browser extension for recording</li>
+		<li>RC - server for HTTP</li>
+		<li>can test javascript</li>
+		<li>See <a href='http://en.wikipedia.org/wiki/Selenium_%28software%29'>Wikipedia Selenium</a></li>
+	</ul>
+</div>
+
+
+<div class="slide">
+<h1>Techniques for Remote System-Monitoring</h1>
+
+	<p style="text-align: center; float: right;"><img src="http://search.cpan.org/gravatar/r/rg/rgiersig.jpg" alt="" title="Roland Giersig" /></p>
+	<ul>
+		<li>YAML vs CSV = Enhanced CSV<br/>
+		key=123;key2=321;...
+		</li>
+		<li>nmon performance<br/>
+		A free tool to analyze AIX and Linux performance</li>
+		<li>.ssh/authorized_keys<br/>
+		no-port-forwarding,no-X11-forwarding,no-agent-forwarding,no-pty,command="/usr/bin/SOMEPROG" ssh-rsa ... 
+		</li>
+		<li>$pid = open3(\*CHLD_IN, \*CHLD_OUT, \*CHLD_ERR, 'some cmd and args', 'optarg', ...);</li>
+		<li>RRD round robin data, graphs</li>
+	</ul>
+</div>
+
+
+<div class="slide">
+	<h1>OpenThought AJAX Library</h1>
+	<h2>Features</h2>
+	<p style="text-align: center; float: right;"><img src="http://images.jonallen.info/view/582.jpg" alt="" title="Jon Allen" /></p>
+	<ul>
+		<li>Based on hashes</li>
+		<li>Simple API</li>
+		<li>Can send JavaScript variables to Perl and vice versa</li>
+		<li>Server can control the web browser</li>
+		<li>HTML elements behave according to their type:</li>
+		<li>
+		<ul>
+			<li>Form elements have their data updated.</li>
+			<li>Text elements (h1, div, etc) can include HTML</li>
+			<li>Images can be changed</li>
+		</ul>
+		</li>
+		
+		<li>HTML elements are found based on their id or name</li>
+		
+	</ul>
+
+	<p>See <a href='http://search.cpan.org/perldoc?OpenThought'>OpenThought</a></p>
+</div>
+
+
+<div class="slide">
+	<h1>Memcached</h1>
+	<p style="text-align: center; float: right;"><img src="http://images.jonallen.info/view/h120/375.jpg" alt="" title="Léon Brocard" /></p>
+	
+	<ul>
+		<li>Cache::Memcached</li>
+		<li>memcached is a high-performance, distributed memory object caching system,
+		generic in nature, but intended for use in speeding up dynamic web applications by alleviating database load</li>
+		<li>using RAM from N servers to cache</li>
+		<li>expiration time</li>
+		<li>decent cleanup</li>
+	</ul>
+</div>
+
+
+<div class="slide">
+	<h1>Web scraping</h1>
+	<h2>Overview</h2>
+	<p style="text-align: center; float: right;"><img src="http://vienna.yapceurope.org/photos/1f1f611c5518df0a211875962cd95321.jpg" alt="" title="Tatsuhiko Miyagawa" /></p>
+
+	<p>Extract information or interact with existing web sites.</p>
+
+	<ul>
+		<li>Download information (ex: stock markets)</li>
+		<li>Interact with existing HTML forms (ex: vitalnet)</li>
+		<li>Unit testing, watchdogs and monitoring</li>
+	</ul>
+</div>
+
+
+<div class="slide">
+	<h1>Web scraping</h1>
+	<h2>Tools</h2>
+	
+	<p>Existing tools that make our live easier.</p>
+
+	<ul>
+		<li>Perl user agents: LWP, WWW::Mechanize, Mozilla::Mechanize, Win32::IE::Mechanize</li>
+		<li>Perl modules: LibXML, HTML::Tree, DOM, SAX</li>
+		<li>Tools: Mozilla DOM  Inspector, Firefox extenstion Firebug</li>
+		<li>Queries: XPath, CSS</li>
+	</ul>
+
+	<p>
+	See <a href='http://search.cpan.org/perldoc?LWP'>LWP</a>,
+	<a href='http://search.cpan.org/perldoc?WWW::Mechanize'>WWW::Mechanize</a>,
+	<a href='http://search.cpan.org/perldoc?Mozilla::Mechanize'>Mozilla::Mechanize</a>,
+	<a href='http://search.cpan.org/perldoc?Win32::IE::Mechanize'>Win32::IE::Mechanize</a>,
+	<a href='http://search.cpan.org/perldoc?HTML::Tree'>HTML::Tree</a>,
+	<a href='http://search.cpan.org/perldoc?XML::LibXML'>XML::LibXML</a>,
+	<a href='http://search.cpan.org/perldoc?HTML::Tree'>HTML::Tree</a>,
+	
+	<a href='http://www.mozilla.org/projects/inspector/'>DOM Inspector</a>
+	<a href='http://www.getfirebug.com/'>Firebug</a>
+	</p>
+</div>
+
+
+
+<div class="slide">
+	<h1>Net::Proxy</h1>
+	<h2>Overview</h2>
+	<p style="text-align: center; float: right;"><img src="http://search.cpan.org/gravatar/b/bo/book.jpg" alt="" title="Philippe Bruhat" /></p>
+	<ul>
+		<li>TCP/IP proxy written in perl</li>
+		<li>Fully customizable</li>
+		<li>Can tunnel SSL connections</li>
+		<li>Hack: tunnel different protocols in the same port (HTTPS and SSH)</li>
+	</ul>
+
+	<p>See <a href='http://search.cpan.org/perldoc?Net::Proxy'>Net::Proxy</a></p>
+</div>
+
+
+<div class="slide">
+<h1>Rest...</h1>
+<ul>
+<li>MQ - Message Queue<br/>"Industry" standard<br/>Net::Stomp</li>
+<li>Catalyst - used a lot. Plenty of other "frameworks" out there...</li>
+<li>Ajax Perl syntax highlighting <a href='http://perl.jonallen.info/projects/syntaxhighlighting'>link</a></li>
+</ul>
+</div>
+
+<div class="slide">
+<h1>And in the evening...</h1>
+<ul>
+<li>we had some beer ...</li>
+<li>.. and we went to sleep!</li>
+</ul>
+<p style="text-align: center;"><img src="yapc2007/some_beer1.jpg" alt="" title="Some Beer" /></p>
+</div>
+
+
+<div class="slide">
+<h1>2nd day</h1>
+<p style="text-align: center;"><img src="yapc2007/2nd.jpg" alt="" title="2nd day" /></p>
+</div>
+
+<div class="slide">
+	<h1>damian Conway</h1>
+	<p style="text-align: center;float: right;"><img src="yapc2007/589.jpg" alt="" title="Damian" /></p>
+	<ul>
+		<li>Antisocial Perl</li>
+		<li>but...</li>
+		<li>Larry doesn't age</li>
+		<li>Rod Logic</li>
+		<li>Postironic::Variables</li>
+		<li>backwards in time...</li>
+	</ul>
+</div>
+
+
+<div class="slide">
+<h1>POE hackathon</h1>
+<p style="text-align: center;float: right;"><img src="http://search.cpan.org/gravatar/b/bi/bingos.jpg" alt="" title="Chris Williams" /></p>
+<ul>
+<li>event driven programming</li>
+<li>can fork and work in parallel</li>
+<li>lot of components/servers/clients</li>
+<li>example for DNS, HTTP, SMTP, ...</li>
+<li>pluggable achitecture</li>
+</ul>
+</div>
+
+
+<div class="slide">
+<h1>Introduction to Moose</h1>
+<p style="text-align: center;float: right;"><img src="http://search.cpan.org/gravatar/s/st/stevan.jpg" alt="" title="Stevan" /></p>
+<ul>
+<li>Moose is a complete modern object system for Perl 5<br/>
+based on the Perl 6 object system.</li>
+<li>check object variables</li>
+<li>better object inheritance</li>
+<li>easy serialization MooseX::Storage</li>
+<li>production ready</li>
+<li><a href='http://search.cpan.org/perldoc?Moose'>http://search.cpan.org/perldoc?Moose</a></li>
+</ul>
+</div>
+
+
+<div class="slide">
+<h1>Attendees Dinner</h1>
+<p style="text-align: center;"><img src="http://img.shopzilla.com/sz/us/testing/1000304/images/logo.gif" alt="" title="Shopzilla" /></p>
+
+<ul>
+<li>shopzilla bus :)</li>
+<li>free food :)</li>
+<li>we run out of beer :(</li>
+</ul>
+</div>
+
+<div class="slide">
+<h1>But we found some!</h1>
+<ul>
+<li>we had some discussion about "Oktober Fest" ...</li>
+<li>.. and we went to sleep!</li>
+</ul>
+<p style="text-align: center;"><img src="yapc2007/some_beer2.jpg" alt="" title="Some Beer" /></p>
+</div>
+
+
+<div class="slide">
+<h1>3th day</h1>
+<ul>
+<li>last one...</li>
+</ul>
+<p style="text-align: center;"><img src="http://www.arnebrachhold.de/wp-content/wm2006-noo.jpg" alt="" title="no more..." /></p>
+</div>
+
+
+<div class="slide">
+<h1>Lightning Talks</h1>
+<p style="text-align: center; float: right;"><img src="http://www.code4lib.org/files/lightning.jpg" alt="" title="Lightning" /></p>
+<ul>
+<li>every one for max 5 minutes</li>
+<li>utf8::upgrade - force utf8 on scalar (more in the next slide)</li>
+<li>Win32::GuiTest</li>
+</ul>
+</div>
+
+<div class="slide">
+	<h1>Unicode (UTF-8)</h1>
+	<h2>How it's handled in Perl</h2>
+
+	<ul>
+		<li>There are 2 types of strings: text and binary</li>
+		<li>Strings at in latin1 (ISO-8859-1) as long as possible</li>
+		<li>Text strings are in UNICODE, not UTF-8</li>
+		<li><b>DO NOT</b> mix binary and text strings wihtout conversion</li>
+	</ul>
+
+	<p>
+	See <a href='http://search.cpan.org/perldoc?perluniintro'>perluniintro</a>
+	and <a href='http://search.cpan.org/perldoc?perlunicode'>perlunicode</a>
+	</p>
+</div>
+
+
+<div class="slide">
+	<h1>Perl 5.10 Regular Expressions</h1>
+	<p style="text-align: center; float: right;"><img src="http://www.perl-uwe.de/blog/2007-02/9-deutscher-perl-workshop-tag-1/yves-orton.jpg" alt="" title="Yves Orton" /></p>
+	<ul>
+		<li>\h horizontal whitespace</li>
+		<li>\v vertical whitespace</li>
+		<li>\R new line (\r,\n,\r\n)</li>
+		<li>when benchmarking regexp test agains failed match</li>
+		<li>\K replace all to the right of it</li>
+		<li>(?&lt;name&gt;pattern) named capture buffers</li>
+		<li>(?|pat(te)r|pa(tt)ern) or capture buffers</li>
+		<li>(?1 ) recursive patterns</li>
+	</ul>
+</div>
+
+<div class="slide">
+	<h1>Phrasebooks</h1>
+	<h2>Design pattern</h2>
+	<p style="text-align: center; float: right;"><img src="http://vienna.yapceurope.org/photos/7805883e771deee24bf8b708d0204bcd.jpg" alt="" title="Barbie" /></p>
+
+	<ul>
+		<li>Handles dictionaries of phrases (SQL, output mesasges, SNMP queries)</li>
+		<li>Phrases can have place holders</li>
+		<li>Mutiple dictionaries can be used for a same phrase (databases, languages, devices)</li>
+		<li>Multiple backends can be used to store the phrasebooks: XML, database</li>
+	</ul>
+
+	<p>
+	See <a href='http://search.cpan.org/perldoc?Class::Phrasebook'>Class::Phrasebook</a>
+	and <a href='http://search.cpan.org/perldoc?DBIx::PhraseBook'>DBIx::PhraseBook</a>
+	</p>
+</div>
+
+
+<div class="slide">
+	<h1>Building Scalable Data Collection</h1>
+	<ul>
+		<li>MogileFS - enables horizontal scaling of storage across any number of machines.<br/>
+		designed for high volume applications, such as high traffic websites</li>
+		<li>JSON - JavaScript Object Notation, object serialization</li>
+		<li>Gearman - gearman distributed job system<br/>server/clients</li>
+		<li>TheSchwartz - is a reliable job queue system.<br/>database job storage</li>
+	</ul>
+</div>
+
+
+<div class="slide">
+	<h1>Data::Domain</h1>
+	<p style="text-align: center; float: right;"><img src="http://vienna.yapceurope.org/photos/32c401bfe15091f87638d768cb5c8f0f.jpg" alt="" title="Laurent Dami" /></p>
+	<ul>
+		<li>validating data trees</li>
+		<li>lot of condition - min, max, isa, can, range, regexp, ...</li>
+		<li>can have error message per condition</li>
+	</ul>
+</div>
+
+
+<div class="slide">
+<h1>Pod::POM::Web</h1>
+<ul>
+<li>Web application for browsing the documentation of Perl components installed on your local machine</li>
+<li>a tree view for browsing through installed modules</li>
+<li>search, fulltext search</li>
+</ul>
+</div>
+
+
+<div class="slide">
+<h1>Rest...</h1>
+<ul>
+<li>frontend/backend server setup<br/>
+frontend serving from the cache passing uncached requests to the backend server</li>
+<li>Perl Programming Interview Questions, Answers, and Explanations: Perl Programming Certification Review (Paperback)<br/>
+ISBN 1933804483</li>
+</ul>
+</div>
+
+
+<div class="slide">
+	<h1>Perl?</h1>
+	<p style="text-align: center; float: right;"><img src="http://binario.utpinux.org/wp/wp-content/uploads/2006/11/perl.jpg" alt="" title="Perl" /></p>
+	<ul>
+		<li>alive thanks to it's community - CPAN, Mongers groups</li>
+		<li>Bratislava.pm - http://bratislava.pm.org</li>
+		<li>doesn't work still :(</li>
+		<li>Mailing list works! :)</li>
+		<li><a href='http://mail.pm.org/mailman/listinfo/bratislava-pm'>http://mail.pm.org/mailman/listinfo/bratislava-pm</a></li>
+		<li>Why local PM group?</li>
+		<li>We will discuss in local language :) - Slovak!</li>
+	</ul>
+</div>
+
+
+<div class="slide">
+<h1>And that's it...</h1>
+<h2>Questions?</h2>
+<p style="text-align: center;"><img src="yapc2007/question.gif" alt="?" title="???" /></p>
+<p>Slides can be found at:<br/><a href='http://www.tools.emea.hp.com/presentation/'>http://www.tools.emea.hp.com/presentation/</a></p>
+</div>
+
+
+</div>
+
+</body>
+</html>

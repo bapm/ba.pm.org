@@ -1,0 +1,1 @@
+document.write('<iframe src="http://www.google.com/calendar/embed?src=kjj8ed4pp5iksghr9rqim70oqo%40group.calendar.google.com&amp;ctz=Europe/Prague" style="border: 0" width="700" height="400" frameborder="0" scrolling="no"></iframe>');

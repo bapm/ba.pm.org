@@ -1,0 +1,300 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>Perl Hacks: Tips &amp; Tools for Programming, Debugging, and Surviving</title>
+	<link rel="stylesheet" href="../../stylesheets/style.css" type="text/css" media="screen" />
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta http-equiv="content-language" content="en" />
+	<meta http-equiv="imagetoolbar" content="false" />
+	<meta name="author" content="different" />
+	<meta name="copyright" content="" />
+	<meta name="description" content="Review na knihu 'Perl Hacks: Tips &amp; Tools for Programming, Debugging, and Surviving'" />
+	<meta name="keywords" content="review, kniha" />
+	<meta name="mssmarttagspreventparsing" content="true" />
+	<meta name="robots" content="index, follow, noarchive" />
+	<meta name="revisit-after" content="7 days" />
+	<link rel="alternate" title="Bratislava.pm.org - news" href="../news.rdf" type="application/rss+xml" />
+	<link rel="shortcut icon" href="../../favicon.ico" />
+</head>
+<body>
+	<div id="header">
+	<div id="header_inside">
+		<h1><a href="../index.html">Bratislava <span>Perl Mongers</span></a></h1>
+
+		<ul>
+			
+				<li>
+					<a 
+					href="../contact.html">Contact</a>
+				</li>
+			
+				<li>
+					<a 
+					href="../job.html">Job</a>
+				</li>
+			
+				<li>
+					<a 
+					href="../links.html">Links</a>
+				</li>
+			
+				<li>
+					<a  class="active"
+					href="../other.html">Other</a>
+				</li>
+			
+				<li>
+					<a 
+					href="../events.html">Events</a>
+				</li>
+			
+				<li>
+					<a 
+					href="../index.html">PM</a>
+				</li>
+			
+		</ul>		
+
+	</div>
+	</div>
+
+	<div id="content">
+	<div id="content_inside">
+
+
+<div id="miniMenu">
+<ul>
+	
+	<li><a href="../../review/perl-hacks-book.html"><img src="../../images/sk-small-flag.png" alt="sk" /> sk</a></li>
+	
+	<li class="first" ><a id="feedbackLink" href="../contact.html">Feedback</a></li>	
+</ul>
+</div>
+
+		
+		<div id="content_inside_main">
+		<div class="error hidden">
+			<img class="icon" src="../../images/icons/32x32/dialog-error.png" alt="!" />
+			<div id="errorMessage"></div>
+		</div>
+		<div class="info hidden">
+			<img class="icon" src="../../images/icons/32x32/dialog-information.png" alt="" />
+			<div id="infoMessage"></div>
+		</div>
+		
+		<div class="warn">
+			<img class="icon" src="../../images/icons/32x32/dialog-warning.png" alt="!" />
+			<div>No english translation, sorry.</div>
+		</div>
+				
+
+
+<div class="cover"><a href="http://www.amazon.com/gp/product/0596526741?ie=UTF8&amp;tag=bratperlmong-20&amp;linkCode=as2&amp;camp=1789&amp;creative=9325&amp;creativeASIN=0596526741"><img src="../../review/images/perl-hacks.jpg" alt="cover" /></a><img src="http://www.assoc-amazon.com/e/ir?t=bratperlmong-20&amp;l=as2&amp;o=1&amp;a=0596526741" width="1" height="1" alt="" style="border:none !important; margin:0px !important;" /></div>
+<pre>
+Book Review : <a href="http://www.amazon.com/gp/product/0596526741?ie=UTF8&amp;tag=bratperlmong-20&amp;linkCode=as2&amp;camp=1789&amp;creative=9325&amp;creativeASIN=0596526741">Perl Hacks: Tips &amp; Tools for Programming, Debugging, and Surviving</a>
+Author(s)   : chromatic with Damian Conway and Curtis "Ovid" Poe
+Publisher   : O'Reilly (2006)
+ISBN        : <a href="http://www.amazon.com/gp/product/0596526741?ie=UTF8&amp;tag=bratperlmong-20&amp;linkCode=as2&amp;camp=1789&amp;creative=9325&amp;creativeASIN=0596526741">0596526741</a>
+Language    : English
+</pre>
+
+<p>Kniha je zbierka #101 Perlových tipov a trikov. Rôzneho
+zamerania. Od jednoduchých po zložité, od užitočných po "pre krásu".</p>
+
+<p>Čo myslíte spraví tento program?</p>
+
+<pre>
+#!/usr/bin/perl -w                           # how to (ab)use substr
+use strict;
+
+my $pi='3.14159210535152623346475240375062163750446240333543375062';
+
+     substr     ($^X,0)=
+       substr   ($pi,-6);map{
+         substr ($^X,$.++,1)=chr(
+          substr($pi,21,2)+
+          substr($pi,$_,2))}(12,28,-18,-6,-10,14);map{$^O=$"x(
+         substr ($pi,-5,2));
+       substr   ($^O,sin(++$a/8)*32+
+     substr     ($pi,-2)/2+1,1)=$_;
+   substr       ($^O,sin($a/4)*(
+ substr         ($pi,2,2))+
+substr          ($pi,-7,-5)-1,1)=$_;print"$^O$/";eval($^X.('$b,'x3).
+substr          ($pi,-3,1).'.'.
+ substr         ($pi,9,2));}(map{chr($_+
+   substr       ($pi,21,2))}(
+     substr     ($pi,8)x3)=~/../g);
+
+#101
+# source http://www.perlmonks.org/index.pl?node_id=77619
+</pre>
+
+<p>To bol posledný hack - "Learn from Obfuscations" na rozlúčku. človek nemusí
+vždy robiť aby sa učil, veľakrát sa viac naučí hrou. A k tomu dáva Perl
+bohaté možnosti. Zopár viac príkladov <a href="http://en.wikipedia.org/wiki/Just_another_Perl_hacker">JAPH</a>.</p>
+
+<p>Tu sú jednotlivé kapitoly podľa ktorých sú tipy a triky zotriedené:
+</p>
+
+<ul>
+<li>Chapter 1, Productivity Hacks</li>
+<li>Chapter 2, User Interaction</li>
+<li>Chapter 3, Data Munging</li>
+<li>Chapter 4, Working with Modules</li>
+<li>Chapter 5, Object Hacks</li>
+<li>Chapter 6, Debugging</li>
+<li>Chapter 7, Developer Tricks</li>
+<li>Chapter 8, Know Thy Code</li>
+<li>Chapter 9, Expand Your Perl Foo</li>
+</ul>
+
+<p>Z každého rožku trošku. Dobre sa to číta, lebo
+každy hack ma tak 2 - 3 strany (2,6 v priemere). Ked niečo človeka nezaujíma
+ľahko sa to dá preskočiť a pokračovať. Čo som preskočil bola ukážka SDL::App
+ako sa dá naprogramovať jednoduchá grafická hra v Perle. To mi celkom ako hack ani
+trik nepripadalo ale niekomu sa to môže páčiť. Oveľa viac krát som sa však pristihol
+pri tom, že som si povedal "a vlastne naozaj!" alebo "šikovné! to bolo určite
+niekde schované v manuálovej stránke...".
+</p>
+
+<p>Tak či tak tu je môj zoznam hackov, tipov a trikov, ktoré sa mi páčili v tejto knihe:</p>
+
+<p>#4 ako produktivity hack doporučujú autori používať alias aby si človek
+zjednodušil život a spravil si shortcut-y na veci čo sa často opakujú,
+poprípade ťažko pamätajú.</p>
+
+<p>#17 ukážka toho ako sa pýtať otázky pri inštalacii/konfigurácii modulu. Ukazujú
+aj ako pomocou <a href="http://search.cpan.org/perldoc?Data::Dumper">Data::Dumper</a>
+sa dá generovať kód. V tomto prípade sa z otázok
+vygeneruje modul, ktorý obsahuje odpovede.</p>
+
+<p>#21 predstavuje <a href="http://search.cpan.org/perldoc?Spreadsheet::Read">Spreadsheet::Read</a>
+ktorý podľa obsahu súboru, Excel || OpenOffice || CSV, načíta
+spreadsheet a vráti jeho obsah v unifikovanej forme. Vcelku užitočné keď sa mieša Windows a Linux
+tabuľkový vstup.
+</p>
+
+<p>#23 príklad použitia %EXPORT_TAGS modulu <a href="http://search.cpan.org/perldoc?Exporter">Exporter</a>
+na vytvorenie knižnice SQL príkazov.
+</p>
+
+<p>#26 použitie closures na generovanie iterácií, keď treba poprechádzať
+všetky IPčky z niekoľko rozsahov. Bud si ich vygenerujeme do jedného obrovského poľa,
+alebo si spravíme niekoľko cyklov v kóde, alebo si spravíme closure, ktorý to všetko
+zakryje. Asi najprofesionálnejšie by bolo spraviť si modul ale to môže byť
+v niektorých prípadoch kanón na vrabca.</p>
+
+
+<p>#27 <code>use <a href="http://search.cpan.org/perldoc?Want">Want</a> 'howmany';</code>
+Pomocou <code>howmany()</code> môže funkcia/metóda zistiť koľko návratových hodnôt sa
+od nej očakáva.</p>
+
+<p>#34 makrá v Perle pomocu <a href="http://search.cpan.org/perldoc?Filter::Macro">Filter::Macro</a></p>
+
+<p>#36 ukazuje ako sa dá override-ovať build-in funkcia. V tomto prípade funkcia <code>exit()</code>. Stačí použiť
+<code>use subs 'exit';</code>.</p>
+
+<p>#38 pomocou <code>use SUPER; super();</code> sa dá nahradit <code>$self->SUPER::func_name()</code>,
+je tu aj ukážka toho ako sa dá "zomrieť" s objektom pomocou
+<a href="http://search.cpan.org/perldoc?Exception::Class">Exception::Class</a></p>
+
+<p>#45 use <a href="http://search.cpan.org/perldoc?Scalar::Util">Scalar::Util</a> 'blessed';
+funkcia <code>blessed</code> otestuje či je premenná pointer na objekt.
+</p>
+
+<p>#54 predstavuje <a href="http://search.cpan.org/perldoc?Smart::Comments">Smart::Comments</a>
+ktoré sú zaujímavé ale <code>use <a href="http://search.cpan.org/perldoc?Log::Log4perl">Log::Log4perl</a>
+qw(:resurrect);</code> dokáže "premeniť" komentáre na plnohodnotné Log4perl logovacie príkazy
+s log levelmi čo je ešte zaujímavejšie.
+</p>
+
+<p>#55 pomocou <code>caller()</code> je tu ukázané ako sa dá spolu s chybovou hláškou
+vypísať aj kus kódu programu kde nastala.</p>
+
+<p>#57 <code>local *__ANON__ = "meno";</code> "pomenuje" anonymnú funkciu. Lepšie sa potom
+hľadá kde nastala výnimka.
+</p>
+
+<p>#59 pomocu <a href="http://search.cpan.org/perldoc?Devel::Command">Devel::Command</a> sa
+dajú pridávať vlastné príkazy do perl debuggeru.</p>
+
+<p>#63 <a href="http://search.cpan.org/perldoc?Term::ANSIColor">Term::ANSIColor</a> zafarbí
+terminál, <a href="http://search.cpan.org/perldoc?IPC::Open3">IPC::Open3</a> vie
+"zachytiť" štandardný vstup aj výstup</p>
+
+<p>#65 podáva myšlienku zakomponovať testy do "živého" produkčného kódu, tak
+že naždý N-tý request sa "preženie" testami. Podľa štatistiky skôr
+či neskôr by sa mal problém so vstupom objaviť.</p>
+
+<p>#74 v tomto tipe som si všimol, že metóda <code>can()</code> vracia CODE ref.
+Napríklad: <code>$code_ref = $objeckt-&gt;can('toto');</code>, alebo
+<code>$code_ref = Nejaky::Modul->can('tamto');</code></p>
+
+<p>#75 predstavuje magický hash <code>%main::</code>, ktorý
+obsahuje symboly.</p>
+
+<p>#77 - #83 v týchto tipoch sa pohrávajú autori s kódom. Ako sa dá dekompilovať
+na OP kódy, ako sa dá v ňom vyhladávať, meniť. Zistiť ktorá časť zaberá najviac
+pamäte. Ako si pridať vlastný warning, že je niečo podozrivé už pri kompilácií.</p>
+
+<p>#87 pomocou <code>use Hash::Util 'lock_keys';</code> sa dajú zamknúť hashe
+aby sa nestalo že by sa omylom pristupovalo ku hash kľúču ktorý neexistuje.</p>
+
+<p>#88 <a href="http://search.cpan.org/perldoc?Scope::Guard">Scope::Guard</a> postráži premennú
+a keď má opustiť scope a má byť uvolnená z pamäte tak sa
+<a href="http://search.cpan.org/perldoc?Scope::Guard">Scope::Guard</a> postará o to aby sa sputila
+zadefinovaná funkcia. Vcelku šikovné na "upratanie" si po sebe.
+</p>
+
+<p>#89 ukazuje ako sa dajú písať filtre-layers pre vstupy a výstupy z filehandle.
+<code>use <a href="http://search.cpan.org/perldoc?PerlIO::via">PerlIO::via</a>;
+open $fh, '>:via(Filter1):via(Filter2)', 'subor.dat'</code>
+</p>
+
+<p>#91 use <a href="http://search.cpan.org/perldoc?Fatal">Fatal</a>; ušetrí
+písanie kódu aby sa nemuselo každé volanie funkcie (open, print, close, ...)
+spodmienkovávať - <code>or die $!</code>.</p>
+
+<p>#92 use <a href="http://search.cpan.org/perldoc?Contextual::Return">Contextual::Return</a>;
+vie "zistiť" aká návratová hodnota je očakávaná od funkcie.
+</p>
+
+<p>#93 pomocou <a href="http://search.cpan.org/perldoc?Contextual::Return">Contextual::Return</a>
+je tu implementovaná živá premenná <code>$timer</code>.
+</p>
+
+<p>#96 predstavuje <a href="http://search.cpan.org/perldoc?P5NCI">P5NCI</a> pomocou
+ktorého sa dajú volať C-čkové knižnice bez nutnosti mať kompilátor k dispozícií.</p>
+
+<p>#98 pomocou <a href="http://search.cpan.org/perldoc?Regexp::Assemble">Regexp::Assemble</a>
+je tu ukázané ako sa dá vytvoriť hash, ktorý má ako kľúče regulárne výrazy. Na ukážku
+je pomocou neho vytvorený IRC bot.
+</p>
+
+<div class="score">
+<pre>Hodnotenie: 4/4</pre>
+<img src="../../images/plody-borievky.jpg" alt="1" />
+<img src="../../images/plody-borievky.jpg" alt="1" />
+<img src="../../images/plody-borievky.jpg" alt="1" />
+<img src="../../images/plody-borievky.jpg" alt="1" />
+</div>
+
+<p class='signature'>10. Apr 2008<br/>Jozef</p>
+
+
+		</div>	
+	</div>	
+	</div>
+
+	<div id="footer">
+	<div id="footer_inside">
+		<p>© Copyright 2009</p>
+	</div>
+	</div>
+	<script src="../../js/script.js" type="text/javascript"></script>
+	<script src="../../js/jsloc-en.js" type="text/javascript"></script>
+	<script type="text/javascript"><!--
+		wrap.i18n.init(undefined, 'jsloc-en', locale_data);
+	// --></script>
+</body>
+</html>

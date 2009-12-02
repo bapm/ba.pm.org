@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<!DOCTYPE catalog
+	PUBLIC "-//OASIS/DTD Entity Resolution XML Catalog V1.0//EN"
+	"http://www.oasis-open.org/committees/entity/release/1.0/catalog.dtd"
+>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+
+	<public
+		publicId="-//BRATISLAVA.PM.ORG//RDF 1.0//EN"
+		uri="rdf-1.0.dtd"
+	/>
+
+	<public
+		publicId="-//BRATISLAVA.PM.ORG//EVENTS 1.0//EN"
+		uri="events-1.0.dtd"
+	/>
+
+	<public
+		publicId="-//BRATISLAVA.PM.ORG//EVENTS 1.1//EN"
+		uri="events-1.1.dtd"
+	/>
+
+	<public
+		publicId="-//BRATISLAVA.PM.ORG//WHO 1.0//EN"
+		uri="who-1.0.dtd"
+	/>
+
+	<public
+		publicId="-//BRATISLAVA.PM.ORG//WHO 1.1//EN"
+		uri="who-1.1.dtd"
+	/>
+
+	<public
+		publicId="-//BRATISLAVA.PM.ORG//WHO 1.2//EN"
+		uri="who-1.2.dtd"
+	/>
+
+
+	<nextCatalog catalog="/etc/xml/catalog"/>
+
+
+</catalog>

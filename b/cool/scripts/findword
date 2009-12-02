@@ -1,0 +1,17 @@
+#!/usr/bin/perl -w
+
+my $DICT = "/usr/share/dict/words";
+
+$pat = shift
+    or die "Usage: $0 '<perl_pattern>'\n";
+
+print {*STDERR} "...$pat\n\n";
+
+open my $DICT_FH, $DICT
+    or die "Can't open dictionary file: $!\n";
+
+use IO::Page;
+while (<$DICT_FH>) {
+    /$pat/o and print;
+}
+

@@ -1,0 +1,23 @@
+.singleThink {
+	width: 100%;
+	height: 100%;
+}
+.singleCellTable {
+	width: 100%;
+	height: 100%;
+	font-size: 64pt;
+	text-align: center;
+	vertical-align: middle;
+}
+
+.slide {
+	height: 70%;
+}
+
+.hidden {
+	visibility: hidden;
+}
+
+.small {
+	font-size: 75%;
+}

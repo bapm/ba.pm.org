@@ -1,0 +1,164 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>Čo skrýva CPAN</title>
+	<link rel="stylesheet" href="../stylesheets/style.css" type="text/css" media="screen" />
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta http-equiv="content-language" content="sk" />
+	<meta http-equiv="imagetoolbar" content="false" />
+	<meta name="author" content="different" />
+	<meta name="copyright" content="" />
+	<meta name="description" content="Čo všetko ponúká CPAN - archív distribúcií Perl modulov" />
+	<meta name="keywords" content="CPAN" />
+	<meta name="mssmarttagspreventparsing" content="true" />
+	<meta name="robots" content="index, follow, noarchive" />
+	<meta name="revisit-after" content="7 days" />
+	<link rel="alternate" title="Bratislava.pm.org - news" href="../news.rdf" type="application/rss+xml" />
+	<link rel="shortcut icon" href="../favicon.ico" />
+</head>
+<body>
+	<div id="header">
+	<div id="header_inside">
+		<h1><a href="../index.html">Bratislava <span>Perl Mongers</span></a></h1>
+
+		<ul>
+			
+				<li>
+					<a 
+					href="../contact.html">Kontakt</a>
+				</li>
+			
+				<li>
+					<a 
+					href="../job.html">Job</a>
+				</li>
+			
+				<li>
+					<a 
+					href="../links.html">Linky</a>
+				</li>
+			
+				<li>
+					<a  class="active"
+					href="../other.html">Ostatné</a>
+				</li>
+			
+				<li>
+					<a 
+					href="../events.html">Udalosti</a>
+				</li>
+			
+				<li>
+					<a 
+					href="../index.html">PM</a>
+				</li>
+			
+		</ul>		
+
+	</div>
+	</div>
+
+	<div id="content">
+	<div id="content_inside">
+
+
+<div id="miniMenu">
+<ul>
+	
+	<li><a href="../en/tutorial/cpan.html"><img src="../images/uk-small-flag.png" alt="en" /> en</a></li>
+	
+	<li class="first" ><a id="feedbackLink" href="../contact.html">Feedback</a></li>	
+</ul>
+</div>
+
+		
+		<div id="content_inside_main">
+		<div class="error hidden">
+			<img class="icon" src="../images/icons/32x32/dialog-error.png" alt="!" />
+			<div id="errorMessage"></div>
+		</div>
+		<div class="info hidden">
+			<img class="icon" src="../images/icons/32x32/dialog-information.png" alt="" />
+			<div id="infoMessage"></div>
+		</div>
+				
+
+
+<h1>Čo skrýva CPAN</h1>
+
+<p>CPAN je archív distribúcií Perl modulov, ktorý má mirrory-y po celom svete.
+Perl distribúcia je jeden <code>.tar.gz</code> súbor obsahujúci: jeden alebo
+viac modulov (.pm), dokumentáciu (README, Changes, integrovaný Pod), testy
+(v t/ adresári), skripty (väčšinou v script/ adresári, alebo v hlavnom
+adresári) a jeden inštalačný skript (Build.PL alebo Makefile.PL). Inštalačný
+skript má v sebe zadefinované závislosti na iných moduloch. Týmto
+spôsobom je zabezpečené unifikovaná inštalácia. Úlohou CPAN-u okrem skladovania
+je aj indexácia - vyhľadávanie. Ďalej je k dispozícií niekoľko nástrojov na
+uľahčenie života autorom modulov.
+</p>
+
+<p>Na CPAN-e je momentálne registrovaných 58000 modulov 15476 distribúcií a
+6707 autorov. A počet uploadnutých modulov má rastúcu tendenciu.
+Mať prehľad o tom ktoré za to stoja a ktoré nie je občas dosť zložité. Je možné
+pridať hodnotenie a review ale to sa zas tak často nevyužíva. Takže niekedy
+je potrebné si dobre tipnúť. Keď je modul vyhovujúci, ale niečo mu chýba
+dajú sa použiť tri prístupy. Prvý je vytvoriť si vlastnú verziu pod iným
+názvom. Druhý je vytvoriť plugin modul ktorý rozšíri funkcionalitu primárneho
+modulu, ale tretí (asi najlepší) je skontaktovať autora a poslať mu patch
+pomocou <a href="http://rt.cpan.org/">rt.cpan.org</a>.
+V tomto prípade si treba dať záležať na tom aby patch obsahoval aj testy
+k danej zmene. Ináč sa môže stať že bude zamietnutý, alebo bude dosť dlho trvať
+kým sa objaví v niektorej z nadchádzajúcich verzií modulu.
+</p>
+
+<p>Hlavná stránka CPAN-u je <a href="http://www.cpan.org">www.CPAN.org</a>,
+ale najpoužívanejšia je <a href="http://search.cpan.org">search.CPAN.org</a>
+na ktorej sa dajú vyhľadávať moduly.
+</p>
+
+<p>Aké môžu byť motivácie na uploadnutie modulu? Napríklad pochváliť sa na čom
+človek robí, získať na to odozvu a komentáre, poprípade nájsť človeka čo má
+rovnaké záujmy a ktorý je ochotný ďalej zlepšovať tento modul. Neodmysliteľným
+pozitívom je možnosť ukázať svoje programátorské zručnosti pri pohovore do
+nového zamestnania. Určite k dobrým benefitom patrí, pekne usporiadaná,
+prehľadávateľná Pod dokumentácia, možnosť inštalácie pomocou "cpan shell" na
+ďalších počítačoch, automatické testy ktoré preveria či modul
+funguje aj na iných operačných systémoch alebo architektúrach.
+</p>
+
+<p><a href="http://www.cpan.org/">www.CPAN.org</a> a
+<a href="http://search.cpan.org/">search.CPAN.org</a> je index a archív
+modulov, na to aby sa dalo niečo pridať sa treba zaregistrovať na
+<a href="http://pause.cpan.org/">pause.CPAN.org</a>. Po zaregistrovaní je
+možné upload-ovať <code>.tar.gz</code> súbory s distribúciou Perl modulov.
+Čo ešte ponúka CPAN? Request tracker (<a href="http://rt.CPAN.org/">http://rt.CPAN.org/</a>)
+na ktorom sa dajú
+zaznamenávať chyby, poprípade žiadosti na vylepšenie modulov. AnnoCPAN
+(<a href="http://annoCPAN.org/">http://annoCPAN.org/</a>)
+poskytuje možnosť dopisovať poznámky k Pod dokumentácií. CPAN Ratings
+(<a href="http://CPANratings.perl.org/">http://CPANratings.perl.org/</a>)
+pomocou ktorého sa dajú hodnotiť jednotlivé distribúcie. CPAN Other Tools -
+Diff a Grep.
+</p>
+
+<p>Linky: <a href="new-module.html">Ako na CPAN-like modul</a></p>
+
+<p class='signature'>3. Aug 2008<br/>Jozef</p>
+
+
+		</div>	
+	</div>	
+	</div>
+
+	<div id="footer">
+	<div id="footer_inside">
+		<p>© Copyright 2009</p>
+	</div>
+	</div>
+	<script src="../js/script.js" type="text/javascript"></script>
+	<script src="../js/jsloc-sk.js" type="text/javascript"></script>
+	<script type="text/javascript"><!--
+		wrap.i18n.init(undefined, 'jsloc-sk', locale_data);
+	// --></script>
+</body>
+</html>

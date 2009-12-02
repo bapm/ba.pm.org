@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE article PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+"http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd">
+<article>
+  <articleinfo>
+    <title>Work Proposal Template</title>
+
+    <author>
+      <firstname>Jozef</firstname>
+
+      <surname>Kutej</surname>
+    </author>
+
+    <author>
+      <firstname>Emmanuel</firstname>
+
+      <surname>Rodriguez</surname>
+    </author>
+
+    <pubdate>24. March 2009</pubdate>
+  </articleinfo>
+
+  <section>
+    <title>Introduction</title>
+
+    <para></para>
+  </section>
+
+  <section>
+    <title>Architecture</title>
+
+    <para></para>
+  </section>
+
+  <section>
+    <title>Implementation</title>
+
+    <para></para>
+
+    <section>
+      <title>Programming language</title>
+
+      <para></para>
+    </section>
+
+    <section>
+      <title>Which existing libraries and sw will be used</title>
+
+      <para></para>
+    </section>
+  </section>
+
+  <section>
+    <title>Costs</title>
+
+    <para></para>
+
+    <section>
+      <title>Timeplan/Schedule</title>
+
+      <para></para>
+    </section>
+
+    <section>
+      <title>Resources requirements</title>
+
+      <para></para>
+    </section>
+  </section>
+
+  <section>
+    <title>Open questions</title>
+
+    <para></para>
+  </section>
+
+  <section>
+    <title>UA tests</title>
+
+    <para></para>
+  </section>
+
+  <section>
+    <title>Related</title>
+
+    <para></para>
+  </section>
+</article>

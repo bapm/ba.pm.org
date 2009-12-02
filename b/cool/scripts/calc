@@ -1,0 +1,70 @@
+#!/usr/bin/perl -w
+
+use strict;
+use IO::Prompt;
+use List::Util qw( max );
+
+my $INDENT = 25;
+my $IDENT  = qr/ [^\W\d] \w* /xms;
+
+# Cache for all results and aliases...
+my %res;
+
+# Input counter...
+my $n = 0;
+
+INPUT:
+while (my $expr = prompt "[r$n] ", -nl=>q{}) {
+
+    # Help will always be provided to those who ask for it...
+    if ($expr =~ /^ \s* (?: help | \? ) \s* $/) {
+        print "\n\tEnter a Perl expression and hit return.\n"
+            . "\tUse r0, r1, etc to refer to previous results.\n"
+            . "\tEnter: '= <identifier>' to rename the previous result\n"
+            . "\t(then you can refer to it by that identifier too).";
+        next INPUT;
+    }
+
+    # Make a copy so we can convert input to a proper Perl expression...
+    my $expr_munged = $expr;
+    for ($expr_munged) {
+        # Create an alias to any existing result...
+        if (m{\A \s* = \s* ($IDENT) \s* \z}xms) {
+            $res{$1} = $res{'r'.($n-1)};
+            print "\n";
+            next INPUT;
+        }
+
+        # Look for identifiers and replace them with the corresonding values...
+        if (my @vars = reverse sort keys %res) {
+            my $var = join '|', @vars;
+            s/($var)/$res{$1}/gxms;
+        }
+        s{ \A \s* (?=[^\w.]) }{$res{'r'.($n-1)}}exms;
+    }
+
+    # Evaluate and store the expression, or report that it's invalid...
+    my $new_key = 'r'.$n;
+    $res{$new_key} = eval $expr_munged;
+
+    # Format, align, and print the result...
+    my $outdent = 3 + length $n;
+    my $indent = max(0,$INDENT-length($expr)-$outdent);
+    print q{.} x $indent;
+    print "\n", q{ }x$outdent,  q{.}x($INDENT-$outdent) if !$indent;
+    print ': ';
+    if (!defined($res{$new_key})) {
+        print "is not a valid expression\n";
+        next INPUT;
+    }
+    elsif (ref $res{"r$n"} eq 'ARRAY') {
+        print '[', join(q{, }, @{$res{$new_key}}), ']';
+    }
+    else {
+        print $res{$new_key};
+    }
+    print "\n";
+
+    $n++;
+}
+

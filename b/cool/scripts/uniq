@@ -1,0 +1,79 @@
+#! /opt/bin/perl5.10.0
+use v5.10;
+use warnings;
+
+
+# Defaults...
+BEGIN {
+		$in   = '-';
+		$out  = '-';
+		$reps = 0;
+}
+
+use Getopt::Declare <<'EOARGS';
+
+		-c				Count how many times each line is repeated
+						{ $::count=1 }
+
+		-d				Output only duplicated lines
+						{ $::reps=2 }
+
+		-u				Output only unrepeated lines
+						{ $::reps=1 }
+		[mutex: -d -u]
+
+		-f <N:+i>		Skip first N fields when comparing
+						{ $::fields = $N }
+
+		-s <N:+i>		Skip first N chars when comparing
+						{ $::chars = $N }
+
+		-w				Ignore differences in whitespace
+						{ $::ws = 1 }
+
+		<in:if>			Input file
+						{ $::in = $in }
+
+		<out:of>		Output file
+						{ $::out = $out }
+EOARGS
+
+# Acquire I/O streams
+open IN,  "<$in"  or die "Can't open input file '$in': $!\n";
+open OUT, ">$out" or die "Can't open output file '$out': $!\n";
+
+# Work out what to ignore...
+my $skip = "";
+$skip .= "(?:\\s*\\S+\\s+){$fields}" if $fields;
+$skip .= ".{$chars}" if $chars;
+
+my $maxcount = 0;
+# Acquire and remember lines...
+while (<IN>) {
+		push @lines, $_;
+
+	# Standardize whitespace if whitespace to be ignored...
+		if ($ws) { s/[^\S\n]+/ /g; s/^ | $//g; }
+
+	# Match and count each line, skipping whatever...
+		/$skip(.*)/o;
+		$count{$1}++;
+		$maxcount = $count{$1} if $maxcount < $count{$1};
+}
+
+my $format = $count ? "%0".length($maxcount)."s %s" : "%n%s";
+
+my %seen;
+
+my $reprange = $reps==2 ? sub { $count{$_[0]} >= 2 }
+			 : $reps==1 ? sub { $count{$_[0]} == 1 }
+			 :			  sub { 1 };
+
+# Process the lines, as requested...
+print OUT map  { sprintf $format, $count{$_->[0]}, $_->[1] }
+		  grep { $reprange->($_->[0]) && !$seen{$_->[0]}++ } 
+		  map  { my $orig = $_;
+				 if ($ws) { s/[^\S\n]+/ /g; s/^ | $//g; }
+				 /^$skip(.*)/o||/(.*)/; [$1,$orig]
+			   }
+		  @lines;

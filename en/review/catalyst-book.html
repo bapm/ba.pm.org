@@ -1,0 +1,234 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>Catalyst: Accelerating Perl Web Application Development</title>
+	<link rel="stylesheet" href="../../stylesheets/style.css" type="text/css" media="screen" />
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta http-equiv="content-language" content="en" />
+	<meta http-equiv="imagetoolbar" content="false" />
+	<meta name="author" content="different" />
+	<meta name="copyright" content="" />
+	<meta name="description" content="Review na knihu 'Catalyst: Accelerating Perl Web Application Development'" />
+	<meta name="keywords" content="review, kniha" />
+	<meta name="mssmarttagspreventparsing" content="true" />
+	<meta name="robots" content="index, follow, noarchive" />
+	<meta name="revisit-after" content="7 days" />
+	<link rel="alternate" title="Bratislava.pm.org - news" href="../news.rdf" type="application/rss+xml" />
+	<link rel="shortcut icon" href="../../favicon.ico" />
+</head>
+<body>
+	<div id="header">
+	<div id="header_inside">
+		<h1><a href="../index.html">Bratislava <span>Perl Mongers</span></a></h1>
+
+		<ul>
+			
+				<li>
+					<a 
+					href="../contact.html">Contact</a>
+				</li>
+			
+				<li>
+					<a 
+					href="../job.html">Job</a>
+				</li>
+			
+				<li>
+					<a 
+					href="../links.html">Links</a>
+				</li>
+			
+				<li>
+					<a  class="active"
+					href="../other.html">Other</a>
+				</li>
+			
+				<li>
+					<a 
+					href="../events.html">Events</a>
+				</li>
+			
+				<li>
+					<a 
+					href="../index.html">PM</a>
+				</li>
+			
+		</ul>		
+
+	</div>
+	</div>
+
+	<div id="content">
+	<div id="content_inside">
+
+
+<div id="miniMenu">
+<ul>
+	
+	<li><a href="../../review/catalyst-book.html"><img src="../../images/sk-small-flag.png" alt="sk" /> sk</a></li>
+	
+	<li class="first" ><a id="feedbackLink" href="../contact.html">Feedback</a></li>	
+</ul>
+</div>
+
+		
+		<div id="content_inside_main">
+		<div class="error hidden">
+			<img class="icon" src="../../images/icons/32x32/dialog-error.png" alt="!" />
+			<div id="errorMessage"></div>
+		</div>
+		<div class="info hidden">
+			<img class="icon" src="../../images/icons/32x32/dialog-information.png" alt="" />
+			<div id="infoMessage"></div>
+		</div>
+		
+		<div class="warn">
+			<img class="icon" src="../../images/icons/32x32/dialog-warning.png" alt="!" />
+			<div>No english translation, sorry.</div>
+		</div>
+				
+
+
+<div class="cover"><a href="http://www.amazon.com/gp/product/1847190952?ie=UTF8&amp;tag=bratperlmong-20&amp;linkCode=as2&amp;camp=1789&amp;creative=9325&amp;creativeASIN=1847190952"><img src="../../review/images/catalyst-book.jpg" alt="cover" /></a><img src="http://www.assoc-amazon.com/e/ir?t=bratperlmong-20&amp;l=as2&amp;o=1&amp;a=1847190952" width="1" height="1" alt="" style="border:none !important; margin:0px !important;" /></div>
+<pre>
+Book Review : <a href="http://www.amazon.com/gp/product/1847190952?ie=UTF8&amp;tag=bratperlmong-20&amp;linkCode=as2&amp;camp=1789&amp;creative=9325&amp;creativeASIN=1847190952">Catalyst: Accelerating Perl Web Application Development</a>
+Author(s)   : Jonathan Rockway
+Publisher   : Packt Publishing (November 12, 2007)
+ISBN        : <a href="http://www.amazon.com/gp/product/1847190952?ie=UTF8&amp;tag=bratperlmong-20&amp;linkCode=as2&amp;camp=1789&amp;creative=9325&amp;creativeASIN=1847190952">1847190952</a>
+Pages       : 200
+Language    : English
+</pre>
+
+<h1>Catalyst</h1>
+<h4>Accelerating Perl Web Application Development</h4>
+<p>Vyšla nová kniha a sľubuje že naučí:</p>
+<ul>
+	<li>Inštalovať a nastaviť Catalyst</li>
+	<li>Ako sa používa Template toolkit</li>
+	<li>Navrhovať, pristupovať a pracovať s databázami</li>
+	<li>Používať FormBuilder</li>
+	<li>Ako na autentifikáciu a autorizáciu</li>
+	<li>Ako spraviť interface pre vlastné data</li>
+	<li>REST API, AJAX, RSS feeds</li>
+	<li>"Test-Driven Development"</li>
+	<li>Packaging</li>
+</ul>
+
+<p>V celku ambiciózny cieľ na 200 stranovú knižku, ale oplatí
+sa prečítať. Je to prvá knižka pre Perl, ktorá sa venuje
+naozaj moderným veciam ktoré hýbu web-om. Trochu viac
+by sa mohla venovať štruktúre aplikácie. Lebo jedna
+vec je si navrhovať jednoduché príklady do knižky a druhá
+je od začiatku mať dobre navrhnutú schému aplikácie.</p>
+
+<p>Autorom je Jonathan Rockway a aj keď mi knižka pripadala
+napísaná tak ako z rýchlika poskytuje ucelený obraz o Catalyst-e
+a našiel som v nej veci o ktorých som sa na CPAN-e nedočítal.
+A tu sú:</p>
+
+<p>Dandoo ma raz provokoval, že či si Catalyst nevie sám
+načítať definície tabuliek z databázy ako to vie Ruby
+on Rails. Tu som sa dočítal, že sa to dá. <code>myapp_create.pl model
+... DBIC::Schema ... create=dynamic ...</code> spraví tento trik. Aj keď už na
+trochu serióznejšie účely je to nepoužiteľné, ale ako ukážka
+veľmi efektné. ;) Čo je zaujímavejšie je, že <code>_create</code> vygeneruje
+aj statické súbory ak má správne nastavené prístupy do databázy.</p>
+
+<p>Oslovilo ma používanie <code>use base Catalyst::Controller::BindLex</code> v
+controlleroch. Vďaka nemu netreba všetko manuálne "pchať" do stash-u,
+ale jednoducho sa napíše <code>my $var : Stashed = 'bobo';</code></p>
+
+<p>Z DBIx::Class ma zaujalo hneď niekoľko vecí. Používanie
+<code>-&gt;find_or_new()</code> pre editovanie. Keď sa jedná
+o novú vec, tak sa jednoducho vytvorí objekt a keď sa jedná
+o starú, načíta sa z databázy. Potom sa nastaví čo treba
+a <code>-&gt;update_or_insert()</code> spraví, že
+funkcie pre editovanie alebo pridávanie môžu lahko zdieľať kód.</p>
+
+<p>Objavil som že ResultSet ma priamo "zabudovaný" paging:
+<code>-&gt;page(1), -&gt;pager;</code></p>
+
+<p>Jonathan si počaroval s ResultSet-ami a s tým ako
+sa dajú pekne reťaziť. Ako sa dá pomocou <code>-&gt;search_related()</code>
+vyhľadávať v inom ResultSet-e.</p>
+
+<p>Jednoznačne by si DBIx::Class zaslúžil knihu sám o sebe
+spolu s databázovým designom... Ktorý síce v upútavke na knihu
+sľubujú, ale moc sa naň nedostáva.</p>
+
+<p>Pomocou FormBuilder-u sú generované všetky formuláre a vyzerá
+to byť prepracovane spravený modul. Generuje aj client side
+JavaScript na validovanie user input-u a samozrejme podporuje
+aj server side validovanie. Veľa priestoru sa mu ale v knižke
+nevenuje.</p>
+
+<p>YAML-u, alebo všeobecne konfigurácií sa dá dočítať len
+popri iných veciach. Našiel som veci čo by mi v minulosti naozaj
+pomohli. Napríklad keď sa dá do konfiguráku sekciu s
+názvom Perl modulu (MyAPP::DB) všetky premenné zadefinované v tej sekcii
+sa dajú pristupoveť cez $self->{key} v tomto module.</p>
+
+<p>Druhá ešte dôležitejšia vec je, že keď pre hlavný konfigurák
+(myapp.yml) sa vytvorí druhý s _local (myapp_local.yml)
+tak hodnoty, ktoré sú v ňom sa automaticky pridajú do
+hlavného konfiguráku. Veľmi užitočné a ja som kôli
+tomu v minulosti vytváral vlasný Config.pm modul...</p>
+
+<p>Taká malá chuťovka čo poteší je
+<code>__PACKAGE__-&gt;config( 'session' => { 'flash_to_stash' => 1 } )</code>.
+Keď je táto "futúria" zapnutá, tak automaticky všetky premenné z flash-u
+sa dajú pristupovať aj cez stash. Netreba robiť rozdiely a škaredé
+podmienky. Ako ja v minulosti ;)</p>
+
+<p>A posledná vec - REST (nie RIP ;) a Jemplate spolu použité na 
+"výrobu" AJAX-u. REST je sám o sebe zaujímavý lebo
+do veľkej miery používa HTTP protokol a jeho metódy
+(GET, PUT, POST, DELETE) na komunikáciu. Čiže viac-menej
+nič nové, dobre sa to debug-uje aj v browseri.
+Pomocou hlavičiek sa dá nastaviť formát v akom sú
+predávané data (XML, JSON, YAML, ...). JSON potom ľahko
+použije AJAX na to aby dostal/poslal data na server. Nuž
+a Jemplate ocenia hlavne ľudia čo používajú Template Toolkit,
+ako napríklad ja ;), lebo tento modul vie použit TT formátovacie
+súbory a prekonvertovať ich pre JavaScript, ktorý beží u klienta.
+Moc pekné...
+</p>
+
+<p>Trochu mi chýbal úvod do scaffolding-u ktorým sa Ruby on Rails
+píši a je možný aj v Catalyst-e ale o tejto téme nieje v
+knižke ani zmienka. Škoda, jeden mínusovy bod pre vojnu
+medzi Ruby a Perl-om. :D</p>
+
+<p>Nuže a slovo na záver. Dobrá, ľahko čitateľná knižka, ktorú
+treba prečítať keď to človek myslí s WEB 2.0 :D seriózne. Keby
+len takých bolo viac...</p>
+
+<div class="score">
+<pre>Hodnotenie: 3/4</pre>
+<img src="../../images/plody-borievky.jpg" alt="1" />
+<img src="../../images/plody-borievky.jpg" alt="1" />
+<img src="../../images/plody-borievky.jpg" alt="1" />
+<img src="../../images/plody-borievky-gray.jpg" alt="0" />
+</div>
+
+<p class='signature'>16. Jan 2008<br/>Jozef</p>
+
+<p>PS: už sa vie čo to ten WEB 2.0 je???</p>
+
+
+		</div>	
+	</div>	
+	</div>
+
+	<div id="footer">
+	<div id="footer_inside">
+		<p>© Copyright 2009</p>
+	</div>
+	</div>
+	<script src="../../js/script.js" type="text/javascript"></script>
+	<script src="../../js/jsloc-en.js" type="text/javascript"></script>
+	<script type="text/javascript"><!--
+		wrap.i18n.init(undefined, 'jsloc-en', locale_data);
+	// --></script>
+</body>
+</html>

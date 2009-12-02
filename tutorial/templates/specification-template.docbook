@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE article PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+"http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd">
+<article>
+  <articleinfo>
+    <title>Specification Template</title>
+
+    <author>
+      <firstname>Jozef</firstname>
+
+      <surname>Kutej</surname>
+    </author>
+
+    <author>
+      <firstname>Emmanuel</firstname>
+
+      <surname>Rodriguez</surname>
+    </author>
+
+    <pubdate>23. Mar 2009</pubdate>
+  </articleinfo>
+
+  <section>
+    <title>Introduction</title>
+
+    <para></para>
+
+    <section>
+      <title>Purpose and intended audience</title>
+
+      <para></para>
+    </section>
+
+    <section>
+      <title>Contacts</title>
+
+      <para># technical and managing</para>
+
+      <para></para>
+    </section>
+
+    <section>
+      <title>Business Justification</title>
+
+      <para></para>
+    </section>
+
+    <section>
+      <title>Target users group or market and scope</title>
+
+      <para></para>
+    </section>
+
+    <section>
+      <title>Definitions</title>
+
+      <para></para>
+    </section>
+
+    <section>
+      <title>Current status</title>
+
+      <para></para>
+    </section>
+
+    <section>
+      <title>Risk</title>
+
+      <para></para>
+    </section>
+
+    <section>
+      <title>Related Projects</title>
+
+      <para></para>
+    </section>
+  </section>
+
+  <section>
+    <title>Open questions</title>
+
+    <para></para>
+  </section>
+
+  <section>
+    <title>Requirements</title>
+
+    <para></para>
+
+    <section>
+      <title>Special SW or HW requirements</title>
+
+      <para></para>
+    </section>
+
+    <section>
+      <title>Inputs</title>
+
+      <para></para>
+    </section>
+
+    <section>
+      <title>Deliverables</title>
+
+      <para></para>
+    </section>
+
+    <section>
+      <title>External dependencies</title>
+
+      <para></para>
+    </section>
+
+    <section>
+      <title>Security</title>
+
+      <para></para>
+    </section>
+
+    <section>
+      <title>Monitoring</title>
+
+      <para></para>
+    </section>
+
+    <section>
+      <title>SLA</title>
+
+      <para></para>
+    </section>
+  </section>
+
+  <section>
+    <title>Management</title>
+
+    <para></para>
+
+    <section>
+      <title>Timeplan/Schedule</title>
+
+      <para></para>
+    </section>
+
+    <section>
+      <title>Costs</title>
+
+      <para></para>
+    </section>
+  </section>
+
+  <section>
+    <title>UA tests</title>
+
+    <para></para>
+
+    <section>
+      <title>Deployment</title>
+
+      <para></para>
+    </section>
+
+    <section>
+      <title>Functionality</title>
+
+      <para></para>
+    </section>
+
+    <section>
+      <title>Performance</title>
+
+      <para></para>
+    </section>
+
+    <section>
+      <title>MTP checklist</title>
+
+      <para></para>
+    </section>
+  </section>
+
+  <section>
+    <title>Related</title>
+
+    <para></para>
+  </section>
+</article>

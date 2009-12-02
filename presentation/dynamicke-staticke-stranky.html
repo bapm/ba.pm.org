@@ -1,0 +1,250 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<title>Dynamicky generované statické stránky pomocou TT</title>
+<!-- metadata -->
+<meta name="version" content="S5 1.1" />
+<meta name="presdate" content="20081108" />
+<meta name="author" content="Jozef Kutej"/>
+<meta name="company" content="" />
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<!-- configuration parameters -->
+<meta name="defaultView" content="slideshow" />
+<!-- <meta name="defaultView" content="outline" /> -->
+<meta name="controlVis" content="hidden" />
+<!-- style sheet links -->
+<link rel="stylesheet" href="ui/default/slides.css" type="text/css" media="projection" id="slideProj" />
+<link rel="stylesheet" href="ui/default/outline.css" type="text/css" media="screen" id="outlineStyle" />
+<link rel="stylesheet" href="ui/default/print.css" type="text/css" media="print" id="slidePrint" />
+<link rel="stylesheet" href="ui/default/opera.css" type="text/css" media="projection" id="operaFix" />
+<!-- S5 JS -->
+<script src="ui/default/slides.js" type="text/javascript"></script>
+<!-- syntax highlighting -->
+<link rel="stylesheet" type="text/css" href="ui/sh/sh_style.css" />
+<script type="text/javascript" src="ui/sh/sh_main.js"></script>
+<script type="text/javascript" src="ui/sh/sh_perl.js"></script>
+<script type="text/javascript" src="ui/sh/sh_sql.js"></script>
+<!-- custom -->
+<script src="ui/jquery-1.2.6.js" type="text/javascript"></script>
+<script src="ui/custom.js" type="text/javascript"></script>
+<link rel="stylesheet" href="ui/custom.css" type="text/css" />
+</head>
+
+<body><!--  onload='sh_highlightDocument();' -->
+
+<div class="layout">
+<div id="controls"><!-- DO NOT EDIT --></div>
+<div id="currentSlide"><!-- DO NOT EDIT --></div>
+<div id="header"></div>
+<div id="footer">
+
+<!-- added by Jozef :) -->
+<div id="counter" style="float: right; margin-right: 10px;">20</div>
+<span id="ignoreClicks" />
+
+<h1>08. Nov 2008</h1>
+<h2>Dynamicky generované statické stránky pomocou TT</h2>
+
+</div>
+
+</div>
+
+
+<div class="presentation">
+
+<div class="slide">
+	<h1>Dynamicky generované statické stránky pomocou TT</h1>
+	<h3>Jozef Kutej</h3>
+	<p><img src='dynamic-static/ttbook.gif' alt="TT Book" /></p>
+</div>
+
+<div class="slide">
+	<h1>Čo nás čaká?</h1>
+	<div class="singleThink">
+	<img src="images/expectations.jpg" alt=":-?" />
+	</div>
+</div>
+
+<div class="slide">
+	<h1>1) statické stránky?</h1>
+</div>
+
+<div class="slide">
+	<h1>2) dynamické stránky?</h1>
+</div>
+
+<div class="slide">
+	<h1>3) Template::Toolkit</h1>
+</div>
+
+<div class="slide">
+	<h1>4) http://ba.pm.org/</h1>
+</div>
+
+<div class="slide">
+	<h1>CERN 1980,<br/>
+	fyzik Tim Berners-Lee</h1>
+</div>
+
+<div class="slide">
+	<h1>myšlienka na zdielanie<br/>
+	výskumných dokumentov</h1>
+</div>
+
+<div class="slide">
+	<h1>sa premenila na<br/>
+	HTML s 22 elementmi</h1>
+</div>
+
+<div class="slide">
+	<h1>HTML&nbsp;eq&nbsp;"text&nbsp;so&nbsp;značkami" :)</h1>
+</div>
+
+<div class="slide">
+	<h1>a tie dali základ<br/>
+	<a href="dynamic-static/moderny-web.html">modernému dynamickému web-u</a></h1>
+</div>
+
+<div class="slide">
+	<h1>Dynamické stránky</h1>
+	<ul>
+		<li>dynamické => interaktívna skúsenosť</li>
+		<li>reagujú na kontext/podmienky/správanie</li>
+		<li>čo sa dá dosiahnuť buď buď u klienta - client side scripting</li>
+		<li>alebo na strane servera - server side scripting/programming</li>
+		<li>alebo pred generovaním si obsahu</li>
+		<li>hmm</li>
+	</ul>
+</div>
+
+<div class="slide">
+	<h1>klasické statické stránky</h1>
+	<h2>nevýhody</h2>
+	<ul>
+		<li>pri počte &gt; 2 to začína byť otrava</li>
+		<li>udržať jednotný vzhľad zachraňuje pred utópiou len existencia CSS</li>
+		<li>opakujúce sa prvky v X dokumentoch</li>
+	</ul>	
+</div>
+
+<div class="slide">
+	<h1>statické stránky</h1>
+	<h2>výhody</h2>
+	<ul>
+		<li>rýchle "spracovanie" web serverom</li>
+		<li>statický content vie poskytovať akýkoľvek web server bez úpravy</li>
+		<li>nginx - 10,000 inactive HTTP keep-alive connections take about 2.5M memory</li>
+		<li>100000 requestov na .png (313kB) od 1000 klientov<br/>
+		<a href="http://superjared.com/entry/benching-lighttpd-vs-nginx-static-files/">za 12,5s</a> (8034.86 [#/sec])</li>
+		<li>statickým obsahom sa dá lacno nakŕmiť veľa klientov</li>
+	</ul>
+</div>
+
+<div class="slide">
+	<h1>server side Scripting/Programming</h1>
+	<h2>nevýhody</h2>
+	<ul>
+	    <li>stojí CPU</li>
+	    <li>stojí pamäť</li>
+	    <li>ušité na "mieru" sw čo beží na serveri (Apache HTTPD, IIS, Tomcat)</li>
+	    <li>ASP, PHP, JSP, SSI, CGI, ...</li>
+	</ul>
+</div>
+
+<div class="slide">
+	<h1>server side Scripting/Programming</h1>
+	<h2>výhody</h2>
+	<ul>
+		<li>ináč TO číslo kreditnej karty proste nedostaneme!</li>
+		<li>Amazon v "statike" nepobeží</li>
+	</ul>
+</div>
+
+<div class="slide">
+	<h1>Pohodlnosť</h1>
+	<pre>&lt;?
+Include "./_conf.php";
+Include "./_head.php";
+?&gt;
+
+&lt;h1&gt;Vitajte na mojej stránke.&lt;/h1&gt;
+&lt;p&gt;Prišiel som na svet a na nič viac som neprišiel.&lt;/p&gt;
+
+&lt;?
+Include "./_tail.php";
+?&gt;</pre>
+</div>
+
+<div class="slide">
+	<h1>Chce to Kompromis</h1>
+	<div class="singleThink"><img src="dynamic-static/kompromis-lp.jpg" alt="-KOMPROMIS (2005 LP)-" /><br/><div style="font-size: 15%">-KOMPROMIS (2005 LP)-</div></div>
+</div>
+
+<div class="slide">
+	<h1>Template::Toolkit</h1>
+	<ul>
+		<li><a href="http://search.cpan.org/perldoc?Template">http://search.cpan.org/perldoc?Template</a></li>
+		<li>Tento Perl modul umožňuje vložiť špeciálne značky do textového súboru ktoré sú rozpoznané
+		a spracované. Predvolené sú <code>[% %]</code>, ale 
+		dajú sa jednoducho predefinovať na iné</li>
+		<li>Štandardné použitie Template Toolkit je v MVC frameworks. Kde sa požíva ako
+		View ktorý je schopný vygenerovať XML, plain text, PDF, ... a samozrejme
+		HTML.</li>
+	</ul>	
+</div>
+
+<div class="slide">
+	<h1>Template::Toolkit</h1>
+	<ul>
+	    <li>obsahuje `ttree` príkaz</li>
+	    <li>ktorý je určený na konvertovanie stromu templejtov</li>
+	    <li>takto je generovaná <a href="http://bratislava.pm.org/">Bratislava.pm.org</a></li>
+	</ul>
+</div>
+
+<div class="slide">
+	<h1>Bratislava.pm.org</h1>
+	<ul>
+		<li>jednotná hlavička a päta</li>
+		<li>menu s "vysvietením" aktuálne zvoleného prvku</li>
+		<li>generovaný RSS feed a stránka s udalosťami (vďaka XSLT)</li>
+		<li>jednotné (meta+js) redirekty /go/XYZ</li>
+		<li>sk/en jazykové verzie (momentálne beta verzia)</li>
+		<li>-&gt;</li>
+	</ul>
+</div>
+
+<div class="slide">
+	<h1>Bratislava.pm.org</h1>
+	<ul>
+		<li>test či sú stránky xhtml valid</li>
+		<li>test či všetky interné linky "dobre odkazujú"</li>
+		<li>možnosť hostovania na "čomkoľvek" aj na file://<br/>
+		<small>(s výnimkou send-feedback.cgi)</small>
+		</li>
+		<li>dva stupne zmien - dev + prod</li>
+		<li>automatický prod deployment z SVN</li>
+	</ul>	
+</div>
+
+
+<div class="slide">
+	<h1>lepšie raz <a href="http://ba.pm.org/">vidieť</a><br/>
+	ako 100 krát počuť</h1>
+</div>
+
+
+<div class="slide">
+	<h1>Otázky?</h1>
+	<div class="singleThink"><img src="images/diving-signal-question.jpg" alt=":-?" /></div>
+</div>
+
+
+
+</div>
+
+</body>
+</html>

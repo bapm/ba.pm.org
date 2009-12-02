@@ -1,0 +1,79 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="generator" content=
+"HTML Tidy for Linux/x86 (vers 6 November 2007), see www.w3.org" />
+<title>ViennaPM1::DBIC::Monger</title>
+<link rel="stylesheet" href=
+"http://hp-cpan.tools.emea.hp.com/css/perldoc.css" type=
+"text/css" />
+<link rel="stylesheet" href=
+"http://hp-cpan.tools.emea.hp.com//css/hp-cpan.css" type=
+"text/css" />
+</head>
+<body bgcolor="#FFFFFF" text="#000000">
+<ul>
+<li><a href="#NAME">NAME</a></li>
+<li><a href="#DESCRIPTION">DESCRIPTION</a>
+<ul>
+<li><a href="#table">table</a></li>
+<li><a href="#columns">columns</a></li>
+<li><a href="#relationships">relationships</a></li>
+<li><a href="#unique_constraints">unique constraints</a></li>
+</ul>
+</li>
+<li><a href="#RESULTSETS">RESULTSETS</a>
+<ul>
+<li><a href=
+"with_cpan_id_ResultSet">with_cpan_id($cpan_id)
+: ResultSet</a></li>
+</ul>
+</li>
+<li><a href="#METHODS">METHODS</a>
+<ul>
+<li><a href="#status">status()</a></li>
+<li><a href="#is_active">is_active()</a></li>
+</ul>
+</li>
+</ul>
+<hr />
+<h1><a name="NAME" id="NAME">NAME</a></h1>
+<p>ViennaPM1::DBIC::Monger - DBIx:Class module representing Vienna
+Perl Monger</p>
+<h1><a name="DESCRIPTION" id="DESCRIPTION">DESCRIPTION</a></h1>
+<p>DBIx::Class representation of the Monger table.</p>
+<h2><a name="table" id="table">table</a></h2>
+<pre>
+   mongers
+</pre>
+<h2><a name="columns" id="columns">columns</a></h2>
+<pre>
+   monger_id - PK
+        name
+        cpan_id
+        status
+</pre>
+<h2><a name="relationships" id=
+"relationships">relationships</a></h2>
+<pre>
+   __PACKAGE__-&gt;might_have( 'personal_life' =&gt; 'ViennaPM1::PersonalLife', 'monger_id');
+        __PACKAGE__-&gt;has_many  ( 'presentations' =&gt; 'ViennaPM1::Presentation', 'monger_id');
+        __PACKAGE__-&gt;belongs_to( 'life_style'    =&gt; 'ViennaPM1::LifeStyle',    'life_style_id');
+</pre>
+<h2><a name="unique_constraints">unique constraints</a></h2>
+<pre>
+   uniq_cpan_id =&gt; [ qw{cpan_id} ]
+</pre>
+<h1><a name="RESULTSETS" id="RESULTSETS">RESULTSETS</a></h1>
+<h2><a name=
+"with_cpan_id_ResultSet">with_cpan_id($cpan_id)
+: ResultSet</a></h2>
+<p>Returns monger whose cpan id equals to $cpan_id</p>
+<h1><a name="METHODS" id="METHODS">METHODS</a></h1>
+<h2><a name="status">status()</a></h2>
+<p>Set or get current monger status.</p>
+<h2><a name="is_active">is_active()</a></h2>
+<p>Returns false if the monger is disabled otherwise true.</p>
+</body>
+</html>

@@ -1,0 +1,461 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>Ako na CPAN-like modul</title>
+	<link rel="stylesheet" href="../stylesheets/style.css" type="text/css" media="screen" />
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta http-equiv="content-language" content="sk" />
+	<meta http-equiv="imagetoolbar" content="false" />
+	<meta name="author" content="different" />
+	<meta name="copyright" content="" />
+	<meta name="description" content="Ako na CPAN-like modul" />
+	<meta name="keywords" content="CPAN, modul, nový, vytvoriť" />
+	<meta name="mssmarttagspreventparsing" content="true" />
+	<meta name="robots" content="index, follow, noarchive" />
+	<meta name="revisit-after" content="7 days" />
+	<link rel="alternate" title="Bratislava.pm.org - news" href="../news.rdf" type="application/rss+xml" />
+	<link rel="shortcut icon" href="../favicon.ico" />
+</head>
+<body>
+	<div id="header">
+	<div id="header_inside">
+		<h1><a href="../index.html">Bratislava <span>Perl Mongers</span></a></h1>
+
+		<ul>
+			
+				<li>
+					<a 
+					href="../contact.html">Kontakt</a>
+				</li>
+			
+				<li>
+					<a 
+					href="../job.html">Job</a>
+				</li>
+			
+				<li>
+					<a 
+					href="../links.html">Linky</a>
+				</li>
+			
+				<li>
+					<a  class="active"
+					href="../other.html">Ostatné</a>
+				</li>
+			
+				<li>
+					<a 
+					href="../events.html">Udalosti</a>
+				</li>
+			
+				<li>
+					<a 
+					href="../index.html">PM</a>
+				</li>
+			
+		</ul>		
+
+	</div>
+	</div>
+
+	<div id="content">
+	<div id="content_inside">
+
+
+<div id="miniMenu">
+<ul>
+	
+	<li><a href="../en/tutorial/new-module.html"><img src="../images/uk-small-flag.png" alt="en" /> en</a></li>
+	
+	<li class="first" ><a id="feedbackLink" href="../contact.html">Feedback</a></li>	
+</ul>
+</div>
+
+		
+		<div id="content_inside_main">
+		<div class="error hidden">
+			<img class="icon" src="../images/icons/32x32/dialog-error.png" alt="!" />
+			<div id="errorMessage"></div>
+		</div>
+		<div class="info hidden">
+			<img class="icon" src="../images/icons/32x32/dialog-information.png" alt="" />
+			<div id="infoMessage"></div>
+		</div>
+				
+
+
+<h1>Ako na CPAN-like modul</h1>
+
+<p>CPAN moduly sú distribuované vo forme .tar.gz kde sú zkomprimované a uložené
+jednotlivé súbory. Takto pripravené modulu si môžu užiť širokú paletu open
+source nástrojov ako je napríklad <code>dh-make-perl</code>, ktorý z nich
+vytvorí Debian balíček. Moduly nemusia byť použité len pre upload na CPAN ale
+aj na "interné" - closed source použitie. Zjednodušia organizovanie a
+inštalovanie.
+</p>
+
+<p>Na "naštartovanie" je najjednoduchšie použiť
+<a href="http://search.cpan.org/perldoc?Module::Starter">Module::Starter</a>. Takže
+<code>apt-get install libmodule-starter-perl</code> alebo <code>cpan -i Module::Starter</code>
+pridá do systému <code>module-starter</code> skriptík. Tento vie vytvoriť celú
+súborovú štruktúru pre modul. Napríklad chceme vytvoriť modul ktorý reprezentuje
+vlak. ;-) Nepýtajte sa ma prečo. (pretože nič dômyselnejšie ma momentálne nenapadlo)
+</p>
+
+<pre>
+$ module-starter --builder=Module::Build --module=Acme::DopravnyProstriedok::Vlak \
+                 --author="Jozef Kutej" --email=jozef@kutej.net
+Created starter directories and files
+$ tree Acme-DopravnyProstriedok-Vlak/
+Acme-DopravnyProstriedok-Vlak/
+|-- Build.PL
+|-- Changes
+|-- MANIFEST
+|-- README
+|-- lib
+|   `-- Acme
+|       `-- DopravnyProstriedok
+|           `-- Vlak.pm
+`-- t
+    |-- 00-load.t
+    |-- boilerplate.t
+    |-- pod-coverage.t
+    `-- pod.t
+</pre>
+
+<p>Čo znamenajú jednotlivé súbory:
+</p>
+
+<h3>Build.PL</h3>
+
+<pre>
+use strict;
+use warnings;
+use Module::Build;
+
+my $builder = Module::Build-&gt;new(
+    module_name         =&gt; 'Acme::DopravnyProstriedok::Vlak',
+    license             =&gt; 'perl',
+    dist_author         =&gt; 'Jozef Kutej &lt;jozef@kutej.net&gt;',
+    dist_version_from   =&gt; 'lib/Acme/DopravnyProstriedok/Vlak.pm',
+    build_requires =&gt; {
+        'Test::More' =&gt; 0,
+    },
+    add_to_cleanup      =&gt; [ 'Acme-DopravnyProstriedok-Vlak-*' ],
+    create_makefile_pl =&gt; 'traditional',
+);
+
+$builder-&gt;create_build_script();
+</pre>
+
+<p><code>Build.PL</code> pomocou <code>`perl Build.PL`</code> vytvorí Build ktorý sa dá spustiť.
+Build má veľa argumentov:</p>
+
+<pre>
+$ ./Build help
+
+ Usage: ./Build &lt;action&gt; arg1=value arg2=value ...
+ Example: ./Build test verbose=1
+ 
+ Actions defined:
+  build                          manifest    
+  clean                          manpages    
+  code                           pardist     
+  config_data                    ppd         
+  diff                           ppmdist     
+  dist                           prereq_report
+  distcheck                      pure_install
+  distclean                      realclean   
+  distdir                        retest      
+  distmeta                       skipcheck   
+  distsign                       test        
+  disttest                       testall     
+  docs                           testcover   
+  fakeinstall                    testdb      
+  help                           testpod     
+  html                           testpodcoverage
+  install                        versioninstall
+
+Run `Build help &lt;action&gt;` for details on an individual action.
+See `perldoc Module::Build` for complete documentation.
+</pre>
+
+<p>Najdôležitejšie sú - build, test, install, clean. "build" pripraví všetky potrebné
+súbory pre inštalovanie modulu a skopíruje ich do adresára blib. "test" spustí
+na týchto súboroch všetky testy nachádzajúce sa v adresári t/. "install"
+nainštaluje modul do systému. A "clean" poupratuje/zmaže súbory ktoré Build
+vytvoril.</p>
+
+<p>Bežný návod ako nainštalovať module pozostáva z
+<code>`perl Build.PL &amp;&amp; ./Build &amp;&amp; ./Build test &amp;&amp; ./Build install`</code>, v prípade
+že konfigurácia/inštalácia (ako nášho module) je postavená na
+<a href="http://search.cpan.org/perldoc?Module::Build">Module::Build</a>. Druhá možnosť
+je <a href="http://search.cpan.org/perldoc?ExtUtils::MakeMaker">ExtUtils::MakeMaker</a>.
+V tom prípade sa inštaluje pomocou
+<code>`perl Makefile.PL &amp;&amp; make &amp;&amp; make test &amp;&amp; make install`</code>. Ak je v Build.PL
+zapnuté <code>create_makefile_pl =&gt; 'traditional'</code> tak Module::Build
+vytvorí aj Makefile.PL takže sa dá inštalovať aj druhým spôsobom. Okolo toho
+či používať Module::Build, alebo ExtUtils::MakeMaker sa vedú vojny, pričom
+existuje ešte Module::Install a iné...
+</p>
+
+<h3>Changes</h3>
+
+<pre>
+Revision history for Acme-DopravnyProstriedok-Vlak
+
+0.01    Date/time
+        First version, released on an unsuspecting world.
+</pre>
+
+<p>súbor obsahuje zmeny ktoré boli urobené v konkrétnej verzií modulu.
+</p>
+
+<h3>MANIFEST</h3>
+
+<pre>
+Build.PL
+Changes
+MANIFEST
+README
+lib/Acme/DopravnyProstriedok/Vlak.pm
+t/00-load.t
+t/pod-coverage.t
+t/pod.t
+</pre>
+
+<p>MANIFEST obsahuje zoznam súborov ktoré patria k modulu. Ostatné
+súbory budú pri vytváraní distribúcie (Acme-DopravnyProstriedok-Vlak-0.01.tar.gz)
+zignorované. MANIFEST treba udržiavať "up-to-date". Ľahko sa stane že sa pridá nový
+súbor do distribúcie a zabudne sa na MANIFEST. Ako pomôcka slúži <code>`./Build distcheck`</code>
+ktorý upozorní že existujú nejaké súbory ktoré sa nenachádzajú v MANIFEST-e.
+</p>
+
+<p>Dobré je si pridať súbor MANIFEST.SKIP v ktorom sa nachádza zoznam súborov
+ktoré sa majú pri tomto teste ignorovať.</p>
+
+<h3>MANIFEST.SKIP</h3>
+
+<pre>
+# Avoid version control files.
+\bRCS\b
+\bCVS\b
+,v$
+\B\.svn\b
+
+# Avoid Makemaker generated and utility files.
+\bMakefile$
+\bblib
+\bMakeMaker-\d
+\bpm_to_blib$
+\bblibdirs$
+^MANIFEST\.SKIP$
+
+# Avoid Module::Build generated and utility files.
+\bBuild$
+\b_build
+\bcover_db
+
+# Avoid temp and backup files.
+~$
+\.tmp$
+\.old$
+\.bak$
+\#$
+\b\.#
+\.cvsignore
+\.svnignore
+</pre>
+
+<h3>README</h3>
+
+<p>Keď sa do Build.PL pridá <code>create_readme => 1,</code> vyupdatuje sa tento
+súbor pri vytváraní distribúcie z PODu hlavného .pm súboru. V našom
+prípade <code>lib/Acme/DopravnyProstriedok/Vlak.pm</code>. Update teda
+nastane pri <code>`./Build dist`</code> alebo pri <code>`./Build distmeta`</code>.
+Okrem README sa vytvoria aj nové verzie META.yml a Makefile.PL.
+</p>
+
+<h3>META.yml</h3>
+
+<p>Tento súbor obsahuje <a href="http://module-build.sourceforge.net/META-spec-v1.2.html">základné údaje</a>
+o module v <a href="http://www.yaml.org/">YAML formáte</a>. Je automaticky
+generovaný pri <code>`./Build dist`</code> alebo pri <code>`./Build distmeta`</code> z informácií
+v Build.PL .
+</p>
+
+<h3>.cvsignore</h3>
+
+<p>Obsahuje príklad toho čo ignorovať ak sa na revisioning control
+používa CVS. Ak používate Subversion dá sa použiť -
+<code>`svn propset svn:ignore "`cat .cvsignore`" . &amp;&amp; svn rm .cvsignore</code>`.
+Alebo pre GIT <code>`mv .cvsignore .gitignore`</code>.
+</p>
+
+<h3>t/ adresár</h3>
+
+<p>v tomto adresáre sa nachádzajú testy. Každý dobrý module/distribúcia by
+mala obsahovať testy. Tieto zaručia jednak pri vývoji, ale hlavne
+pri prerábaní, veľkých fixoch a iných zmenách, že funkcionalita zostane
+zachovaná. Aj vďaka testom vďačia Perl moduly za svoju kvalitu.
+Keď autor modulu nahrá novú verziu na CPAN, automaticky si to "všimnú"
+smoke testing servery a zbehnú tieto testy. Výsledky o tom či prešli,
+alebo neprešli a pre ktoré verzie Perl-u a ktoré operačné systémy sa
+dajú nájsť opäť na CPAN-e.
+</p>
+
+<p><code>t/00-load.t</code> je jednoduchý test ktorý zistí či sa dá náš
+nový modul skompilovať.
+<code>t/pod-coverage.t</code> prejde všetky súbory a zistí či sú všetky
+funkcie okomentované.
+<code>t/pod.t</code> otestuje či je pod dokumentácie bez syntaktických
+chýb. Tieto posledné dva sú pomôcka pre autora modulu
+a je dobre si ich nechať. Ďalej je dobre si pridať nasledujúce testy:
+</p>
+
+<p><code>00-compile.t</code> skontroluje či všetky moduly v distribúcií
+sa skompilujú v poriadku -</p>
+
+<pre>
+use strict;
+use Test::More;
+
+eval "use Test::Compile 0.08";
+plan skip_all => "Test::Compile 0.08 required for testing compilation"
+    if $@;
+
+my @pmdirs = qw(lib blib sbin bin);
+all_pm_files_ok(all_pm_files(@pmdirs));
+</pre>
+
+<p><code>pod-spell.t</code> skontroluje spelling v pod dokumentácií - </p>
+
+<pre>
+use strict;
+use Test::More;
+
+if (!$ENV{TEST_SPELLING}) {
+    plan skip_all =>
+      "Set the environment variable TEST_SPELLING to enable this test.";
+}
+
+eval 'use Test::Spelling;';
+
+plan skip_all => "Test::Spelling required for testing POD spelling"
+    if $@;
+
+add_stopwords(qw(
+    Jozef
+));
+all_pod_files_spelling_ok();
+</pre>
+
+<p><code>distribution.t</code> otestuje či všetky súbory distribúcie sú
+v poriadku -</p>
+
+<pre>
+use Test::More;
+
+eval 'use Test::Distribution not => "sig"';
+plan( skip_all => 'Test::Distribution not installed') if $@;
+</pre>
+
+<p><code>signature.t</code> otestuje digitálny podpis od autora
+modulu. Spustí sa len keď je nastavené $ENV{TEST_SIGNATURE} a keď
+existuje SIGNATURE súbor. Tento sa dá automaticky generovať
+ak sa do Build.PL pridá <code>sign => 1,</code> -</p>
+
+<pre>
+#!/usr/bin/perl
+
+use strict;
+use Test::More;
+
+if (!$ENV{TEST_SIGNATURE}) {
+    plan skip_all =>
+      "Set the environment variable TEST_SIGNATURE to enable this test.";
+}
+elsif (!eval { require Module::Signature; 1 }) {
+    plan skip_all =>
+      "Next time around, consider installing Module::Signature, ".
+      "so you can verify the integrity of this distribution.";
+}
+elsif ( !-e 'SIGNATURE' ) {
+    plan skip_all => "SIGNATURE not found";
+}
+elsif ( -s 'SIGNATURE' == 0 ) {
+    plan skip_all => "SIGNATURE file empty";
+}
+elsif (!eval { require Socket; Socket::inet_aton('pgp.mit.edu') }) {
+    plan skip_all => "Cannot connect to the keyserver to check module ".
+                     "signature";
+}
+else {
+    plan tests => 1;
+}
+
+my $ret = Module::Signature::verify();
+SKIP: {
+    skip "Module::Signature cannot verify", 1
+      if $ret eq Module::Signature::CANNOT_VERIFY();
+
+    cmp_ok $ret, '==', Module::Signature::SIGNATURE_OK(), "Valid signature";
+}
+</pre>
+
+<h3>lib/Acme/DopravnyProstriedok/Vlak.pm</h3>
+
+<p>Konečne sme sa dostali k dôvodu prečo sme robili všetku túto parádu :-) , a
+to vytvoriť modul k všeobecnému blahobytu. Tu má každý voľnu ruku a môže
+sa do sýtosti zrealizovať. O tom čo je to modul a ako vyzerá z vnútra
+napíšem v inom návode.</p>
+
+<h1>Výcuc ;-)</h1>
+
+<p>Rýchly štart:</p>
+
+<pre>
+module-starter --builder=Module::Build --module=Acme::DopravnyProstriedok::Vlak::Rychlik \
+                 --author="Jozef Kutej" --email=jozef@kutej.net
+cp MANIFEST.SKIP Acme-DopravnyProstriedok-Vlak-Rychlik/
+cp 00-compile distribution.t pod-spell.t  signature.t \
+	Acme-DopravnyProstriedok-Vlak-Rychlik/t/
+rm Acme-DopravnyProstriedok-Vlak-Rychlik/t/boilerplate.t
+cd Acme-DopravnyProstriedok-Vlak-Rychlik/
+vim Build.PL 
+# pridat
+#    create_readme       => 1,
+#    sign                => 1,
+vim lib/Acme/DopravnyProstriedok/Vlak/Rychlik.pm
+# nieco zmysluplne nakodit
+# zmenit verziu v hlavnom .pm, vyplnit Changes
+perl Build.PL; ./Build clean; perl Build.PL &amp;&amp; ./Build distcheck &amp;&amp; ./Build disttest &amp;&amp; ./Build dist
+# upload => pause.cpan.org
+</pre>
+
+<p>Slovo na záver. Netreba sa báť pridať niečo na CPAN. Pokiaľ to nekoliduje s iným modulom
+bude to indexované a pretrvá to tam na veky vekov. Treba rešpektovať niektoré namespace
+ako DateTime ktoré sa ho snažia mať upratané, ale v takých prípadoch sa niekto
+ozve, že mu tam robíte bordel. ;-)</p>
+
+<p>Linky: <a href="cpan.html">Čo skrýva CPAN</a></p>
+
+<p class='signature'>24. Jun 2008<br/>Jozef</p>
+
+
+		</div>	
+	</div>	
+	</div>
+
+	<div id="footer">
+	<div id="footer_inside">
+		<p>© Copyright 2009</p>
+	</div>
+	</div>
+	<script src="../js/script.js" type="text/javascript"></script>
+	<script src="../js/jsloc-sk.js" type="text/javascript"></script>
+	<script type="text/javascript"><!--
+		wrap.i18n.init(undefined, 'jsloc-sk', locale_data);
+	// --></script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!--
+
+Custom made DTD for our events.
+
+-->
+
+<!ENTITY % xhtml PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+%xhtml;
+
+<!ELEMENT ba:events      (ba:event*)>
+<!ATTLIST ba:events
+	xmlns:ba  CDATA   #FIXED "http://bratislava.pm.org/dtd/events-1.1.dtd"
+>
+
+<!ELEMENT ba:event       (ba:title+, ba:link, ba:subject, ba:creator, ba:date, ba:id, ba:description+)>
+
+
+<!ELEMENT ba:title       (#PCDATA)>
+<!ELEMENT ba:link        (#PCDATA)>
+<!-- The definiton of 'ba:description' is the same as a 'div' -->
+<!ELEMENT ba:description %Flow;>
+<!ELEMENT ba:subject     (#PCDATA)>
+<!ELEMENT ba:creator     (#PCDATA)>
+<!ELEMENT ba:date        (#PCDATA)>
+<!ELEMENT ba:id          (#PCDATA)>
+
+<!ATTLIST ba:description
+	xmlns     CDATA   #FIXED  "http://www.w3.org/1999/xhtml"
+>
+<!ATTLIST ba:title
+	lang      CDATA   #IMPLIED
+>
+<!ATTLIST ba:description
+	lang      CDATA   #IMPLIED
+>

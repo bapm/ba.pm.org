@@ -1,0 +1,587 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE rdf:RDF PUBLIC "-//BRATISLAVA.PM.ORG//RDF 1.0//EN" "http://bratislava.pm.org/dtd/rdf-1.0.dtd">
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://purl.org/rss/1.0/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:taxo="http://purl.org/rss/1.0/modules/taxonomy/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:syn="http://purl.org/rss/1.0/modules/syndication/" xmlns:admin="http://webns.net/mvcb/" xmlns:html="http://www.w3.org/1999/xhtml">
+  <channel rdf:about="http://bratislava.pm.org/en/">
+    <title>Bratislava Perl Mongers</title>
+    <link>http://bratislava.pm.org/en/</link>
+    <description><![CDATA[Perl fans from Bratislava]]></description>
+    <dc:date>2009-11-21T14:41:27</dc:date>
+    <dc:subject>Perl</dc:subject>
+    <items>
+      <rdf:Seq>
+        <rdf:li rdf:resource="http://bratislava.pm.org/events.html#feed"/>
+        <rdf:li rdf:resource="http://bratislava.pm.org/tutorial/cpan.html"/>
+        <rdf:li rdf:resource="http://bratislava.pm.org/tutorial/new-module.html"/>
+        <rdf:li rdf:resource="http://bratislava.pm.org/tutorial/utf8-locale.html"/>
+        <rdf:li rdf:resource="http://bratislava.pm.org/events.html#tcp-workshop"/>
+        <rdf:li rdf:resource="http://bratislava.pm.org/events.html#tcp-workshop-call"/>
+        <rdf:li rdf:resource="http://bratislava.pm.org/events.html#tech-social_2008-09-19"/>
+        <rdf:li rdf:resource="http://bratislava.pm.org/events.html#feed-udalosti-one-source"/>
+        <rdf:li rdf:resource="http://translate.google.com/translate?u=http%3A%2F%2Fba.pm.org%2F&amp;hl=en&amp;ie=UTF-8&amp;sl=sk&amp;tl=en"/>
+        <rdf:li rdf:resource="http://bratislava.pm.org/events.html#callforpresentations"/>
+        <rdf:li rdf:resource="http://bratislava.pm.org/review/the-myths-of-innovation.html"/>
+        <rdf:li rdf:resource="http://ba.pm.org/go/workshop/day1"/>
+        <rdf:li rdf:resource="http://bratislava.pm.org/events.html#feed-events-xslt"/>
+        <rdf:li rdf:resource="http://bratislava.pm.org/events.html#tech-social-meeting-28-oct-2008"/>
+        <rdf:li rdf:resource="http://bratislava.pm.org/events.html#tcpw2008"/>
+        <rdf:li rdf:resource="http://bratislava.pm.org/events.html#tech-social_2008-12-15"/>
+        <rdf:li rdf:resource="http://news.perlfoundation.org/2008/12/jonathan_worthingtons_hague_gr.html"/>
+        <rdf:li rdf:resource="http://www.facebook.com/group.php?gid=43903647807"/>
+        <rdf:li rdf:resource="http://bratislava.pm.org/projects/"/>
+        <rdf:li rdf:resource="http://bratislava.pm.org/who.html"/>
+        <rdf:li rdf:resource="http://bratislava.pm.org/events.html#tech-social_2009-01-22"/>
+        <rdf:li rdf:resource="http://bratislava.pm.org/events.html#tech-social_2009-02-19"/>
+        <rdf:li rdf:resource="http://bratislava.pm.org/events.html#tech-social_2009-03-26"/>
+        <rdf:li rdf:resource="http://bratislava.pm.org/planet/"/>
+        <rdf:li rdf:resource="http://bratislava.pm.org/events.html#tech-social_2009-05-26"/>
+        <rdf:li rdf:resource="http://conferences.yapceurope.org/ye2009/"/>
+        <rdf:li rdf:resource="http://bratislava.pm.org/events.html#sk-en-events"/>
+        <rdf:li rdf:resource="http://bratislava.pm.org/events.html#tech-social_2009-07-17"/>
+        <rdf:li rdf:resource="http://bratislava.pm.org/events.html#yapc-eu-2010-announcement"/>
+        <rdf:li rdf:resource="http://bratislava.pm.org/events.html#yapc-eu-2009-jonathan"/>
+        <rdf:li rdf:resource="http://bratislava.pm.org/events.html#yapc-eu-2009-emmanuel"/>
+        <rdf:li rdf:resource="http://bratislava.pm.org/events.html#yapc-eu-2009-jozef"/>
+        <rdf:li rdf:resource="http://bratislava.pm.org/events.html#meeting-ba-pm-2009-10"/>
+        <rdf:li rdf:resource="http://bratislava.pm.org/events.html#meeting-ba-pm-2009-11"/>
+      </rdf:Seq>
+    </items>
+  </channel>
+  <item rdf:about="http://bratislava.pm.org/events.html#feed">
+    <title>News feed</title>
+    <link>http://bratislava.pm.org/events.html#feed</link>
+    <description><![CDATA[<p><b>21 Júl 2008</b> (SK) Bratislava.pm.org má <a href="http://bratislava.pm.org/news.rdf">news feed</a>.</p><p>(EN) just created <a href="http://bratislava.pm.org/news.rdf">news feed</a>! to inform about news and events</p>]]></description>
+    <dc:creator>jozef</dc:creator>
+    <dc:date>2008-07-21T06:19:23+02:00</dc:date>
+    <dc:subject>page</dc:subject>
+  </item>
+  <item rdf:about="http://bratislava.pm.org/tutorial/cpan.html">
+    <title>Čo skrýva CPAN</title>
+    <link>http://bratislava.pm.org/tutorial/cpan.html</link>
+    <description><![CDATA[<p>(SK) Krátky článok o CPAN-e a nástrojoch ktoré ponúka</p><p>(EN) Short article about CPAN and it's tools</p>]]></description>
+    <dc:creator>jozef</dc:creator>
+    <dc:date>2008-08-03T14:03:55+02:00</dc:date>
+    <dc:subject>page/tutorial</dc:subject>
+  </item>
+  <item rdf:about="http://bratislava.pm.org/tutorial/new-module.html">
+    <title>Ako na CPAN-like modul</title>
+    <link>http://bratislava.pm.org/tutorial/new-module.html</link>
+    <description><![CDATA[<p>(SK) Návod ako zostrojiť modul pre CPAN</p><p>(EN) How to make CPAN-like module</p>]]></description>
+    <dc:creator>jozef</dc:creator>
+    <dc:date>2008-08-03T14:07:32+02:00</dc:date>
+    <dc:subject>page/tutorial</dc:subject>
+  </item>
+  <item rdf:about="http://bratislava.pm.org/tutorial/utf8-locale.html">
+    <title>viac o UTF-8</title>
+    <link>http://bratislava.pm.org/tutorial/utf8-locale.html</link>
+    <description><![CDATA[<p>(SK) teraz je v článku o UTF-8 viac omáčky o tom čo
+		sa deje a pridal som sekciu o PerlIO</p><p>(EN) now the article about UTF-8 has more explanations
+		about what's going on and a topic about PerlIO</p>]]></description>
+    <dc:creator>emmanuel</dc:creator>
+    <dc:date>2008-08-03T21:16:58+02:00</dc:date>
+    <dc:subject>page/tutorial</dc:subject>
+  </item>
+  <item rdf:about="http://bratislava.pm.org/events.html#tcp-workshop">
+    <title>Bratislava.pm &amp;&amp; Vienna.pm organizujú "TwinCity Perl Workshop"</title>
+    <link>http://bratislava.pm.org/events.html#tcp-workshop</link>
+    <description><![CDATA[<p>(SK) <b>7. a 8. Novembra</b> Bratislava.pm a Vienna.pm organizujú 
+		<a href="http://conferences.yapceurope.org/tcpw2008/index.html?language=sk">TwinCity Perl Workshop</a>.
+		7. Novembra sa bude konať vo Viedni a 8. Novembra v Bratislave. Zároveň sme V Bratislave začali
+		hľadať priestory kde by sa dal tento workshop usporiadať. Akýkoľvek tip je vítaný.
+		</p><p>(EN) <b>7. and 8. November</b> Bratislava.pm and Vienna.pm are organizing the 
+		<a href="http://conferences.yapceurope.org/tcpw2008/index.html?language=en">TwinCity Perl Workshop</a>.
+		The workshop will be held during two days, the 7<sup>th</sup> of November it will
+		be hosted in Vienna and the 8<sup>th</sup> of November in Bratislava (in the
+		<a href="http://www.baronka.sk/">Hotel Baronka</a> in Rača).
+		</p>]]></description>
+    <dc:creator>jozef</dc:creator>
+    <dc:date>2008-08-12T12:08:42+02:00</dc:date>
+    <dc:subject>events</dc:subject>
+  </item>
+  <item rdf:about="http://bratislava.pm.org/events.html#tcp-workshop-call">
+    <title>TwinCity Perl Workshop call for Participation</title>
+    <link>http://bratislava.pm.org/events.html#tcp-workshop-call</link>
+    <description><![CDATA[<p>(SK) <a href="http://conferences.yapceurope.org/tcpw2008/index.html?language=sk">TwinCity Perl Workshop</a>
+		už má stránku na ktorej sa dá registrovať aj pridávať návrhy na prednášky -
+		<a href="http://conferences.yapceurope.org/tcpw2008/index.html?language=sk">http://conferences.yapceurope.org/tcpw2008/</a>
+		</p><p>(EN) The <a href="http://conferences.yapceurope.org/tcpw2008/index.html?language=en">TwinCity Perl Workshop</a>
+		has now a page where you can register and also send the proposal for talks -
+		<a href="http://conferences.yapceurope.org/tcpw2008/index.html?language=en">http://conferences.yapceurope.org/tcpw2008/</a>
+		</p>]]></description>
+    <dc:creator>jozef</dc:creator>
+    <dc:date>2008-09-09T20:49:42+02:00</dc:date>
+    <dc:subject>events</dc:subject>
+  </item>
+  <item rdf:about="http://bratislava.pm.org/events.html#tech-social_2008-09-19">
+    <title>Tech-Social meeting</title>
+    <link>http://bratislava.pm.org/events.html#tech-social_2008-09-19</link>
+    <description><![CDATA[<p><b>18 Sep 2008 18:00</b></p><ul>
+			<li>Emmanuel Rodriguez - <a href="presentation/dbus/index.html">D-Bus integration in Perl</a>.</li>
+			<li>Jonathan Worthington - <a href="http://www.jnthn.net/papers/2008-bpm-perl6oo.pdf">Object Orientation, The Perl 6 Way</a>.</li>
+			<li>Michael Kröll - <a href="http://xims.info/presentations/pimp_your_cms_using_webdav_and_perl/">Pimp your CMS using WebDAV and Perl</a>.</li>
+		</ul><p>(SK) Vďaka firme <a href="http://www.ergon.sk/">Ergon</a> sme mali priestor
+		kde sa stretnúť, vďaka firme <a href="http://threeunited.com">VeriSign</a>
+		sme mali data projektor a samozrejme vďaka že si Emmanuel, Jonathan a Michael
+		pripravili prednášky!</p><p>(EN) Thanks to <a href="http://www.ergon.sk/">Ergon</a> company we had a place
+		to meet, thanks to <a href="http://threeunited.com">VeriSign</a>
+		we had a data projektor and thanks to Emmanuel, Jonathan and Michael
+		we had the talks!</p>]]></description>
+    <dc:creator>emmanuel</dc:creator>
+    <dc:date>2008-09-18T18:00:0+02:00</dc:date>
+    <dc:subject>events</dc:subject>
+  </item>
+  <item rdf:about="http://bratislava.pm.org/events.html#feed-udalosti-one-source">
+    <title>RSS Feed a Udalosti zosynchronizované</title>
+    <link>http://bratislava.pm.org/events.html#feed-udalosti-one-source</link>
+    <description><![CDATA[<p><b>21 Sep 2008</b></p><p>(SK) RSS Feed a stránka z udalosťami sú od teraz
+		generované z jedného YAML súboru takže texty budú totožné.
+		Môže sa však stať, že tvojmu feed readeru sa nebude "páčiť" že staré položky
+		sa zmenia.</p><p>(EN) RSS Feed and page with events are now generated from the same
+		YAML file so the text will be identical. It can happend that your feed
+		reader wouldn't "like" that the old feed items suddenly changed.
+		</p>]]></description>
+    <dc:creator>jozef</dc:creator>
+    <dc:date>2008-09-21T18:46:0+02:00</dc:date>
+    <dc:subject>events</dc:subject>
+  </item>
+  <item rdf:about="http://translate.google.com/translate?u=http%3A%2F%2Fba.pm.org%2F&amp;hl=en&amp;ie=UTF-8&amp;sl=sk&amp;tl=en">
+    <title>Who are we, what are we? - Hungarian Perl, from Prague, speak English :-)</title>
+    <link>http://translate.google.com/translate?u=http%3A%2F%2Fba.pm.org%2F&amp;hl=en&amp;ie=UTF-8&amp;sl=sk&amp;tl=en</link>
+    <description><![CDATA[<p><b>21 Sep 2008</b></p><p>Google zaradil Slovenčinu do jazykov z ktorých sa dá automaticky prekladať.
+		Tak som hneď skúsil ako je na tom http://ba.pm.org/ ...
+		</p><p><a href="http://bratislava.pm.org/images/ba.pm-translated.png">screen shot</a>
+		z <a href="http://translate.google.com/translate?u=http%3A%2F%2Fba.pm.org%2F&hl=en&ie=UTF-8&sl=sk&tl=en">http://translate.google.com/translate?u=http%3A%2F%2Fba.pm.org%2F&hl=en&ie=UTF-8&sl=sk&tl=en</a>:
+		</p><p>We are especially programmers. The Hungarian Perl, IT, network, but mainly
+		the desire to learn more. It connects us to that we have from Prague, or at
+		least to speak English.
+		</p><p>:D</p>]]></description>
+    <dc:creator>jozef</dc:creator>
+    <dc:date>2008-09-27T16:41:0+02:00</dc:date>
+    <dc:subject>news</dc:subject>
+  </item>
+  <item rdf:about="http://bratislava.pm.org/events.html#callforpresentations">
+    <title>Prihláste sa s prezentáciou!</title>
+    <link>http://bratislava.pm.org/events.html#callforpresentations</link>
+    <description><![CDATA[<p><b>1 Oct 2008</b></p><p>(SK) Deadline na zasielanie návrhov na prezentácie pre Twin City Perl
+		Workshop 2008 sa blíži rýchlo! Zostalo už len trochu viac ako jeden týždeň. 
+		Na zaslanie svojho návrhu prezentácie sa prosím prihláste prostredníctvom
+		<a href="http://conferences.yapceurope.org/tcpw2008/index.html?language=sk">stránky workshopu</a>.
+		</p><p>(EN) Call for Papers Deadline on Tue, 7th Oct
+		The deadline for submitting talks for the Twin City Perl Workshop 2008
+		is approaching fast! There's a little bit more than one week left to
+		submit your proposals. To submit your talk, please use the
+		<a href="http://conferences.yapceurope.org/tcpw2008/index.html?language=en">workshop website</a>.
+		</p>]]></description>
+    <dc:creator>jozef</dc:creator>
+    <dc:date>2008-10-01T09:31:00+02:00</dc:date>
+    <dc:subject>events reminder</dc:subject>
+  </item>
+  <item rdf:about="http://bratislava.pm.org/review/the-myths-of-innovation.html">
+    <title>The Myths of Innovation - recenzia na knihu</title>
+    <link>http://bratislava.pm.org/review/the-myths-of-innovation.html</link>
+    <description><![CDATA[<p><b>03 Oct 2008</b></p><p>(SK) Kniha sa veľmi ľahko číta. Je plná nápadov a myšlienok. Snaží sa
+		povzbudiť k tomu aby sa čitatelia nadchli pre zmenu a nové veci. Na jednej
+		strane je to bezpochyby jediný spôsob ako dosiahnuť raketový vzostup firemných
+		akcií. Na druhú stranu určitá dávka zdržanlivosti nie je na škodu. Asi najviac
+		by som ju doporučil ľuďom čo sú vo vedúcich postaveniach aby vedeli čo ich
+							čaká a aby nepremeškali/nezahodili príležitosti pre svoju firmu a tým
+		pádom pre seba.
+		<a href="http://bratislava.pm.org/review/the-myths-of-innovation.html">
+		Tu sa nachádza kompletná recenzia</a>.
+		</p><p>(EN) The book is easy to read. It's full of new thoughts and ideas, trying to
+		cheer up the reader to do the change and go for the new things. For sure it's
+		the only way how to make rocket raise of the company shares. On the other
+		hand to be a little conservative never hurts. I will recommend it to the people
+		in charge of making decisions, so that they will not miss/waste the opportunities
+		for their companies and there by for them.
+		<a href="http://bratislava.pm.org/review/the-myths-of-innovation.html">
+		Here is the complete review</a>.
+		</p>]]></description>
+    <dc:creator>jozef</dc:creator>
+    <dc:date>2008-10-03T19:01:00+02:00</dc:date>
+    <dc:subject>book review</dc:subject>
+  </item>
+  <item rdf:about="http://ba.pm.org/go/workshop/day1">
+    <title>program na 7. a 8. Novembra</title>
+    <link>http://ba.pm.org/go/workshop/day1</link>
+    <description><![CDATA[<p><b>14 Oct 2008</b></p><p>(SK) program pre Twin City Perl Workshop je zverejnený:</p><p>
+		Piatok - <a href="http://ba.pm.org/go/workshop/day1">http://ba.pm.org/go/workshop/day1</a><br></br>
+		Sobota - <a href="http://ba.pm.org/go/workshop/day2">http://ba.pm.org/go/workshop/day2</a>
+		</p><p>(EN) the schedule for the Twin City Perl Workshop is made public now:</p><p>
+		Friday - <a href="http://ba.pm.org/go/workshop/day1">http://ba.pm.org/go/workshop/day1</a><br></br>
+		Saturday - <a href="http://ba.pm.org/go/workshop/day2">http://ba.pm.org/go/workshop/day2</a>
+		</p>]]></description>
+    <dc:creator>jozef</dc:creator>
+    <dc:date>2008-10-14T19:33:00+02:00</dc:date>
+    <dc:subject>news</dc:subject>
+  </item>
+  <item rdf:about="http://bratislava.pm.org/events.html#feed-events-xslt">
+    <title>feed &amp; events pomocou XSLT</title>
+    <link>http://bratislava.pm.org/events.html#feed-events-xslt</link>
+    <description><![CDATA[<p><b>15 Oct 2008</b></p><p>(SK) vďaka Emmanuel-ovi sú momentálne <a href="http://bratislava.pm.org/news.rdf">news feed</a>
+		a stránka s <a href="http://bratislava.pm.org/events.html">udalosťami</a> generované z jedného zdrojového
+		<a href="http://svn.cle.sk/repos/pub/www/tt-pm/trunk/etc/events.xml">XML súboru</a>
+		za pomoci XSLT (
+			<a href="http://svn.cle.sk/repos/pub/www/tt-pm/trunk/xslt/events-to-html.xslt">events-to-html.xslt</a> +
+			<a href="http://svn.cle.sk/repos/pub/www/tt-pm/trunk/xslt/events-to-rdf.xslt">events-to-rdf.xslt</a>
+		).
+		</p><p>(EN) thanks to Emmanuel now <a href="http://bratislava.pm.org/news.rdf">the news feed</a>
+		and the page with <a href="http://bratislava.pm.org/events.html">the events</a>
+		are generated from one <a href="http://svn.cle.sk/repos/pub/www/tt-pm/trunk/etc/events.xml">source XML</a>
+		file with a help of XSLT(
+			<a href="http://svn.cle.sk/repos/pub/www/tt-pm/trunk/xslt/events-to-html.xslt">events-to-html.xslt</a> +
+			<a href="http://svn.cle.sk/repos/pub/www/tt-pm/trunk/xslt/events-to-rdf.xslt">events-to-rdf.xslt</a>
+		).
+		</p>]]></description>
+    <dc:creator>jozef</dc:creator>
+    <dc:date>2008-10-15T10:21:00+02:00</dc:date>
+    <dc:subject>page</dc:subject>
+  </item>
+  <item rdf:about="http://bratislava.pm.org/events.html#tech-social-meeting-28-oct-2008">
+    <title>Twin city workshop training - 28. Oktober, 18:00</title>
+    <link>http://bratislava.pm.org/events.html#tech-social-meeting-28-oct-2008</link>
+    <description><![CDATA[<p><b>28 Oct 2008</b></p><p>(SK) v utorok 28. Októbra o 18:00 sa stretneme v priestoroch firmy Ergon
+		(Podjavorinskej 6/B 811 03 Bratislava) na prediskutovanie/nacvičenie prezentácií
+		čo zaznejú na TCPW.
+		</p><p>(EN) on Tuesday 28th October at 18:00 there will be a Bratislava PM meeting in the
+		office of company Ergon (Podjavorinskej 6/B 811 03 Bratislava) to discuss and
+		train the talks that will be at TCPW.
+		</p>]]></description>
+    <dc:creator>jozef</dc:creator>
+    <dc:date>2008-10-24T19:14:00+02:00</dc:date>
+    <dc:subject>tcpw</dc:subject>
+  </item>
+  <item rdf:about="http://bratislava.pm.org/events.html#tcpw2008">
+    <title>Twin city workshop 2008 - 7. + 8. Novembra</title>
+    <link>http://bratislava.pm.org/events.html#tcpw2008</link>
+    <description><![CDATA[<p><b>7. + 8. Nov 2008</b></p><p>(SK) TwinCity Perl Workshop 2008 je za nami. Dva dni, 27 prezentácií z toho
+		5 po slovensky, 6 po nemecky a zvyšok po anglicky. Väčšina z nich je
+		<a href="http://conferences.yapceurope.org/tcpw2008/talks?language=sk">prístupná online</a>.
+		Za Bratislava Perl Mongerov by sme sa chceli poďakovať všetkým prezentujúcim
+		a účastníkom vďaka ktorým sa mohol tento workshop uskutočniť. Do Viedne ich prišlo
+		32 a do Bratislavy 40. 27 z nich sa zúčastnilo obydvoch dní.
+		</p><p>(EN) TwinCity Perl Workshop 2008 is over. Two days, 27 presentations
+		from which were 5 in Slovak, 6 in German and the rest in english. Most of them
+		is <a href="http://conferences.yapceurope.org/tcpw2008/talks?language=en">available online</a>.
+		Bratislava Perl Mongers would like to sa thak you to all that were presenting
+		and all the attendies. There were 32 attendies in Vienna and 40 in Bratislava. 27
+		attendies were there both days.
+		</p>]]></description>
+    <dc:creator>jozef</dc:creator>
+    <dc:date>2008-11-22T13:10:00+02:00</dc:date>
+    <dc:subject>tcpw</dc:subject>
+  </item>
+  <item rdf:about="http://bratislava.pm.org/events.html#tech-social_2008-12-15">
+    <title>Tech-Social meeting</title>
+    <link>http://bratislava.pm.org/events.html#tech-social_2008-12-15</link>
+    <description><![CDATA[<p><b>15 Dec 2008 18:00</b></p><p>(SK) stretnutie sa uskutoční 15. Decembra o 18:00 vo firme <a href="http://comsultia.com/">Comsultia</a>
+		(<a href="http://webcom.sk/">WebCom</a>) na ulici Tomášikova 26. Zatiaľ je v pláne táto prezentácia:</p><p>(EN) meeting will happend on 15th December at 18:00 in company <a href="http://comsultia.com/">Comsultia</a>
+		(<a href="http://webcom.sk/">WebCom</a>) street Tomášikova 26. There will this presentation:</p><ul>
+			<li>Roman Fordinal - <a href="http://cyclone3.org/">Cyclone3 CMS</a>.</li>
+		</ul>]]></description>
+    <dc:creator>jozef</dc:creator>
+    <dc:date>2008-11-22T13:29:00+02:00</dc:date>
+    <dc:subject>events</dc:subject>
+  </item>
+  <item rdf:about="http://news.perlfoundation.org/2008/12/jonathan_worthingtons_hague_gr.html">
+    <title>Jonathan Worthington's Hague Grant</title>
+    <link>http://news.perlfoundation.org/2008/12/jonathan_worthingtons_hague_gr.html</link>
+    <description><![CDATA[<p><b>10 Dec 2008 13:43</b></p><p>
+			(SK) <a href="http://jnthn.net/">Jonathan</a> má schválený grant od
+			<a href="http://www.perlfoundation.org/">The Perl Foundation</a>
+			na "<a href="http://news.perlfoundation.org/2008/11/hague_grant_request_rakudo_dis.html">Rakudo
+			Dispatch and Role Enhancements</a>". Gratulujeme!
+		</p><p>
+			(EN) <a href="http://jnthn.net/">Jonathan</a> received a grant from
+			<a href="http://www.perlfoundation.org/">The Perl Foundation</a>
+			to do "<a href="http://news.perlfoundation.org/2008/11/hague_grant_request_rakudo_dis.html">Rakudo
+			Dispatch and Role Enhancements</a>". Congratulations!
+		</p>]]></description>
+    <dc:creator>jozef</dc:creator>
+    <dc:date>2008-12-11T10:10:00+02:00</dc:date>
+    <dc:subject>events</dc:subject>
+  </item>
+  <item rdf:about="http://www.facebook.com/group.php?gid=43903647807">
+    <title>Facebook group created</title>
+    <link>http://www.facebook.com/group.php?gid=43903647807</link>
+    <description><![CDATA[<p><b>10 Jan 2009 19:02</b></p><p>
+			(SK) bola vytvorená <a href="http://www.facebook.com/group.php?gid=43903647807">Bratislava
+			Perl Mongers</a> group @ Facebook.
+		</p><p>
+			(EN) <a href="http://www.facebook.com/group.php?gid=43903647807">Bratislava
+			Perl Mongers</a> group was created @ Facebook.
+		</p>]]></description>
+    <dc:creator>jozef</dc:creator>
+    <dc:date>2009-01-10T19:02:00+02:00</dc:date>
+    <dc:subject>news</dc:subject>
+  </item>
+  <item rdf:about="http://bratislava.pm.org/projects/">
+    <title>Projects page</title>
+    <link>http://bratislava.pm.org/projects/</link>
+    <description><![CDATA[<p><b>10 Jan 2009 19:07</b></p><p>
+			(SK) O projektoch ktoré vytvorili, alebo na ktorých pracujú
+			Bratislava Perl Mongeri sa dá viac dočítať
+			<a href="http://bratislava.pm.org/projects/">tu</a>.
+		</p><p>
+			(EN) Now it's possible to read about projects made by or
+			contributed by Bratislava Perl Mongers
+			<a href="http://bratislava.pm.org/en/projects/">here</a>.
+		</p>]]></description>
+    <dc:creator>jozef</dc:creator>
+    <dc:date>2009-01-10T19:07:00+02:00</dc:date>
+    <dc:subject>news</dc:subject>
+  </item>
+  <item rdf:about="http://bratislava.pm.org/who.html">
+    <title>Who is Who page</title>
+    <link>http://bratislava.pm.org/who.html</link>
+    <description><![CDATA[<p><b>10 Jan 2009 20:02</b></p><p>
+			(SK) <a href="http://bratislava.pm.org/who.html">Kto sú</a> Bratislava Perl Mongers
+		</p><p>
+			(EN) <a href="http://bratislava.pm.org/en/who.html">Discover</a> the Bratislava Perl Mongers
+		</p>]]></description>
+    <dc:creator>jozef</dc:creator>
+    <dc:date>2009-01-10T20:02:00+02:00</dc:date>
+    <dc:subject>news</dc:subject>
+  </item>
+  <item rdf:about="http://bratislava.pm.org/events.html#tech-social_2009-01-22">
+    <title>Tech-Social meeting</title>
+    <link>http://bratislava.pm.org/events.html#tech-social_2009-01-22</link>
+    <description><![CDATA[<p><b>22 Jan 2009 18:00</b></p><p>
+			(SK) sa uskutočilo tech-social stretnutie s týmito prezentáciami:<br></br>
+			Jonathan - ‎There's More Than One Way To Dispatch It‎ (~20min)<br></br>
+			Emmanuel - Xacobeo (~20min)
+		</p><p>
+			(EN) a tech-social meeting took place with this presentations:<br></br>
+			Jonathan - ‎There's More Than One Way To Dispatch It‎ (~20min)<br></br>
+			Emmanuel - Xacobeo (~20min)
+		</p>]]></description>
+    <dc:creator>jozef</dc:creator>
+    <dc:date>2009-01-22T18:00:0+02:00</dc:date>
+    <dc:subject>events</dc:subject>
+  </item>
+  <item rdf:about="http://bratislava.pm.org/events.html#tech-social_2009-02-19">
+    <title>Tech-Social meeting</title>
+    <link>http://bratislava.pm.org/events.html#tech-social_2009-02-19</link>
+    <description><![CDATA[<p><b>19 Feb 2009 18:00</b></p><p>
+			(SK) V skratke - <a href="http://search.cpan.org/perldoc?SVGraph">http://search.cpan.org/perldoc?SVGraph</a>.
+
+			Na <a href="http://svn.comsultia.com/svgraph/">http://svn.comsultia.com/svgraph/</a> nájdete pôvodnú verziu a na CPAN-e
+			si môžete stiahnuť .tar.gz. .pm súbory (okrem komentárov) neboli
+			zmenené. Pribudli Build.PL, Changes, MANIFEST, MANIFEST.SKIP, t/ a
+			examples/ na vytvorenie CPAN balíčka.
+
+			Výsledné grafy z príkladov sa dajú pozrieť tu:
+
+			<a href="http://cpansearch.perl.org/src/COMSULTIA/SVGraph-0.02/doc/src/images/graph.svg">http://cpansearch.perl.org/src/COMSULTIA/SVGraph-0.02/doc/src/images/graph.svg</a>,
+			<a href="http://cpansearch.perl.org/src/COMSULTIA/SVGraph-0.02/doc/src/images/graph2.svg">http://cpansearch.perl.org/src/COMSULTIA/SVGraph-0.02/doc/src/images/graph2.svg</a>.
+		</p><p>
+			(EN) Shortly - <a href="http://search.cpan.org/perldoc?SVGraph">http://search.cpan.org/perldoc?SVGraph</a>.
+
+			In <a href="http://svn.comsultia.com/svgraph/">http://svn.comsultia.com/svgraph/</a> you can find the original version
+			and on CPAN you can download .tar.gz. .pm files (besides comments) were
+			not changed. Build.PL, Changes, MANIFEST, MANIFEST.SKIP, t/ and
+			examples/ were added to create a package.
+
+			Here you can see the two example graphs:
+			
+			<a href="http://cpansearch.perl.org/src/COMSULTIA/SVGraph-0.02/doc/src/images/graph.svg">http://cpansearch.perl.org/src/COMSULTIA/SVGraph-0.02/doc/src/images/graph.svg</a>,
+			<a href="http://cpansearch.perl.org/src/COMSULTIA/SVGraph-0.02/doc/src/images/graph2.svg">http://cpansearch.perl.org/src/COMSULTIA/SVGraph-0.02/doc/src/images/graph2.svg</a>.
+		</p>]]></description>
+    <dc:creator>jozef</dc:creator>
+    <dc:date>2009-02-25T09:36:0+02:00</dc:date>
+    <dc:subject>events</dc:subject>
+  </item>
+  <item rdf:about="http://bratislava.pm.org/events.html#tech-social_2009-03-26">
+    <title>Tech-Social meeting</title>
+    <link>http://bratislava.pm.org/events.html#tech-social_2009-03-26</link>
+    <description><![CDATA[<p><b>26 Mar 2009 18:00</b></p><p>
+			(SK) Program stretnutia bol nasledový:
+		</p><ul>
+			<li>objednávka pizze</li>
+			<li>ukážka libchamplain (Emmanuel)</li>
+			<li>použitie XML::LibXML::Reader+XML::Compile::Schema (Jozef)</li>
+		</ul><p>
+			Pizza tentoraz prišla na čas a nezostali sme hladný!
+			Emmanuel predviedol projekt <a href="http://projects.gnome.org/libchamplain/">libchamplain</a> a jeho
+			<a href="http://search.cpan.org/perldoc?Champlain">Perl C-bindings</a> pomocou
+			ktorých sa dá do GTK+ aplikácie zakomponovať mapa. Jozef ukázal ako pomocou
+			<a href="http://search.cpan.org/perldoc?XML::LibXML::Reader">XML::LibXML::Reader</a>
+			+<a href="http://search.cpan.org/perldoc?XML::Compile::Schema">XML::Compile::Schema</a>
+			spracoval 11MB xml súbor.
+		</p><p>
+			(EN) This was a program of the meeting:
+		</p><ul>
+			<li>pizza ordering</li>
+			<li>demonstration of libchamplain (Emmanuel)</li>
+			<li>XML::LibXML::Reader+XML::Compile::Schema example usage (Jozef)</li>
+		</ul><p>
+			This time pizza arrived on time and we were not hungry!
+			Emmanuel showed us project <a href="http://projects.gnome.org/libchamplain/">libchamplain</a> and his
+			<a href="http://search.cpan.org/perldoc?Champlain">Perl C-bindings</a> that
+			could be used to have maps in the GTK+ application. Jozef showed how he using
+			<a href="http://search.cpan.org/perldoc?XML::LibXML::Reader">XML::LibXML::Reader</a>
+			+<a href="http://search.cpan.org/perldoc?XML::Compile::Schema">XML::Compile::Schema</a>
+			parsed a 11MB xml file.
+		</p>]]></description>
+    <dc:creator>jozef</dc:creator>
+    <dc:date>2009-03-26T18:00:0+02:00</dc:date>
+    <dc:subject>events</dc:subject>
+  </item>
+  <item rdf:about="http://bratislava.pm.org/planet/">
+    <title>New planet</title>
+    <link>http://bratislava.pm.org/planet/</link>
+    <description><![CDATA[<p><b>08 Apr 2009</b></p><p>
+			(SK) Ba.pm má <a href="http://bratislava.pm.org/planet/">planétu</a>!
+		</p><p>
+			(EN) Ba.pm has a <a href="http://bratislava.pm.org/en/planet/">planet</a>!
+		</p>]]></description>
+    <dc:creator>jozef</dc:creator>
+    <dc:date>2009-04-08T22:35:0+02:00</dc:date>
+    <dc:subject>events</dc:subject>
+  </item>
+  <item rdf:about="http://bratislava.pm.org/events.html#tech-social_2009-05-26">
+    <title>Social meeting</title>
+    <link>http://bratislava.pm.org/events.html#tech-social_2009-05-26</link>
+    <description><![CDATA[<p><b>26 May 2009 18:00</b></p><p>
+			(SK) Tentoraz bez prezentácií ale zato bolo viac času na dobré pivo!
+			Toto stretnutie bolo aj posledné ktoré Emmanuel pravidelne navštívil
+			kedže od budúceho mesiaca bude na druhom konci Európy. V mene Ba.pm
+			mu chcem poďakovať za všetky strasti čo podstúpil s našincami aby
+			ich naučil programovať v Perl-e a za všetky vedomosti čo priniesol
+			a odovzdal u nás v Bratislave po tom čo sem prišiel spoza veľkej mláky.
+			Bude nám chýbať! Prajeme mu veľa úspechov na nasledujúcej životnej púti.
+		</p><p>
+			(EN) Without presentations but at least there was a lot of
+			time for a good beer! This meeting was the last one that Emmanuel
+			regulary attended. For the next months (years?) he will be on the other side
+			of the Europe. In the name of Ba.pm I would like to say: Thank you Emmanuel
+			for all you knowledge that you brought and left here. We will miss
+			you! We wish you all the best for your upcomming life journey.
+		</p>]]></description>
+    <dc:creator>jozef</dc:creator>
+    <dc:date>2009-05-26T18:00:0+02:00</dc:date>
+    <dc:subject>events</dc:subject>
+  </item>
+  <item rdf:about="http://conferences.yapceurope.org/ye2009/">
+    <title>YAPC::EU::2009</title>
+    <link>http://conferences.yapceurope.org/ye2009/</link>
+    <description><![CDATA[<p><b>3 - 5 August 2009</b></p><p>
+			<a href="http://yapceurope2009.org/">
+      		<img src="http://yapceurope2009.org/ye2009/banners/banner-728x90.png" alt="Yet Another Perl Conference :: Europe :: 2009" style="border: none;"></img>
+    		</a>
+		</p><p>
+		(SK) Desiate vidanie európskej "Yet Another Perl Conference" sa
+		uskutočí v Lisabone - Portugalsku na "Faculty of Sciences, University of Lisbon"
+		a to od 3. do 5. augusta.
+		</p><p>
+		(EN) The Tenth Edition of the european Yet Another Perl Conference will
+		be held in Lisbon, Portugal,  in the Faculty of Sciences, University of Lisbon,
+		from 3 to 5 August.
+		</p>]]></description>
+    <dc:creator>jozef</dc:creator>
+    <dc:date>2009-05-27T21:27:0+02:00</dc:date>
+    <dc:subject>events</dc:subject>
+  </item>
+  <item rdf:about="http://bratislava.pm.org/events.html#sk-en-events">
+    <title>sk/en events separation</title>
+    <link>http://bratislava.pm.org/events.html#sk-en-events</link>
+    <description><![CDATA[<p><b>10 Jun 2009</b></p><p>
+		Welcome to English feed!
+		</p>]]></description>
+    <dc:creator>jozef</dc:creator>
+    <dc:date>2009-06-10T19:27:0+02:00</dc:date>
+    <dc:subject>events</dc:subject>
+  </item>
+  <item rdf:about="http://bratislava.pm.org/events.html#tech-social_2009-07-17">
+    <title>ba.pm meeting - July</title>
+    <link>http://bratislava.pm.org/events.html#tech-social_2009-07-17</link>
+    <description><![CDATA[<p><b>17 July 2009 at 6pm</b></p><p>we meet in "U Justína" pub. More information in
+		<a href="http://mail.pm.org/pipermail/bratislava-pm/2009-July/000198.html">mailing list</a>
+		or online on IRC.
+		</p>]]></description>
+    <dc:creator>jozef</dc:creator>
+    <dc:date>2009-07-15T22:18:0+02:00</dc:date>
+    <dc:subject>events</dc:subject>
+  </item>
+  <item rdf:about="http://bratislava.pm.org/events.html#yapc-eu-2010-announcement">
+    <title>YAPC::EU::2010 - Pisa, Italy</title>
+    <link>http://bratislava.pm.org/events.html#yapc-eu-2010-announcement</link>
+    <description><![CDATA[<p><b>03 August 2009</b></p><p>
+		Today the location for the next YAPC::EU was announced: 
+		YAPC::EU::2010 will be held in <a href="http://en.wikipedia.org/wiki/Pisa">Pisa</a>, Italy.
+		</p><p style="text-align: center;">
+		<a href="http://en.wikipedia.org/wiki/Pisa">
+		<img src="http://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Leaning_tower_of_pisa_2.jpg/180px-Leaning_tower_of_pisa_2.jpg" width="180" height="240" alt="the leaning tower of Pisa"></img>
+		</a>
+		</p>]]></description>
+    <dc:creator>jozef</dc:creator>
+    <dc:date>2009-08-03T16:41:0+02:00</dc:date>
+    <dc:subject>events</dc:subject>
+  </item>
+  <item rdf:about="http://bratislava.pm.org/events.html#yapc-eu-2009-jonathan">
+    <title>Jonathan talk @ YAPC::EU::2009</title>
+    <link>http://bratislava.pm.org/events.html#yapc-eu-2009-jonathan</link>
+    <description><![CDATA[<p><b>04 August 2009 14:45</b></p><p>
+		Today Jonathan gave a talk named
+		<a href="http://yapceurope2009.org/ye2009/talk/2079">Perl 6 Roles In Depth‎</a>
+		at <a href="http://yapceurope2009.org/ye2009/">YAPC::EU::2009</a>.
+		</p><p style="text-align: center;">
+		<a href="http://yapceurope2009.org/ye2009/talk/2079">
+		<img src="http://bratislava.pm.org/images/whoiswho/Jonathan-YAPC-EU-2009.jpg" width="378" height="512" alt="Jonathan YAPC::EU::2009"></img>
+		</a>
+		</p>]]></description>
+    <dc:creator>jozef</dc:creator>
+    <dc:date>2009-08-04T14:45:0+01:00</dc:date>
+    <dc:subject>events</dc:subject>
+  </item>
+  <item rdf:about="http://bratislava.pm.org/events.html#yapc-eu-2009-emmanuel">
+    <title>Emmanuels lightning talk @ YAPC::EU::2009</title>
+    <link>http://bratislava.pm.org/events.html#yapc-eu-2009-emmanuel</link>
+    <description><![CDATA[<p><b>04 August 2009 16:45</b></p><p>
+		Today Emmanuel gave a lightning talk named
+		<a href="http://yapceurope2009.org/ye2009/talk/2267">Champlain - OpenStreetMaps widget</a>
+		at <a href="http://yapceurope2009.org/ye2009/">YAPC::EU::2009</a>.
+		</p>]]></description>
+    <dc:creator>jozef</dc:creator>
+    <dc:date>2009-08-04T16:45:0+01:00</dc:date>
+    <dc:subject>events</dc:subject>
+  </item>
+  <item rdf:about="http://bratislava.pm.org/events.html#yapc-eu-2009-jozef">
+    <title>Jozef talk @ YAPC::EU::2009</title>
+    <link>http://bratislava.pm.org/events.html#yapc-eu-2009-jozef</link>
+    <description><![CDATA[<p><b>05 August 2009 11:55</b></p><p>
+		Today Jozef gave a talk named
+		<a href="http://yapceurope2009.org/ye2009/talk/1930">Static can be more</a>
+		at <a href="http://yapceurope2009.org/ye2009/">YAPC::EU::2009</a>.
+		</p>]]></description>
+    <dc:creator>jozef</dc:creator>
+    <dc:date>2009-08-05T11:55:0+01:00</dc:date>
+    <dc:subject>events</dc:subject>
+  </item>
+  <item rdf:about="http://bratislava.pm.org/events.html#meeting-ba-pm-2009-10">
+    <title>Bratislava.pm October meeting</title>
+    <link>http://bratislava.pm.org/events.html#meeting-ba-pm-2009-10</link>
+    <description><![CDATA[<p><b>15 October 2009 18:00</b></p><p>
+		This time we have had a special guest -
+		<a href="http://andy.sh/">Andrew Shitow</a> who made
+		a talk called "Perl 6 compiler". The second talk was done by
+		<a href="http://use.perl.org/~potyl/journal">Emmanuel</a>
+		called "Pexeso". After the meeting we went to Bastion where we
+		appreciated a good beer, good food and a free WiFi.
+		</p>]]></description>
+    <dc:creator>jozef</dc:creator>
+    <dc:date>2009-10-15T18:00:0+02:00</dc:date>
+    <dc:subject>events</dc:subject>
+  </item>
+  <item rdf:about="http://bratislava.pm.org/events.html#meeting-ba-pm-2009-11">
+    <title>Bratislava.pm November meeting</title>
+    <link>http://bratislava.pm.org/events.html#meeting-ba-pm-2009-11</link>
+    <description><![CDATA[<p><b>18 November 2009 18:00</b></p><p>We have had this three presentations:</p><ul>
+			<li>Jonathan - Meta-models: the magic that makes OO less magical</li>
+			<li>Jozef - IRC bots</li>
+			<li>Emmanuel - Gtk2::SourceView2</li>
+		</ul>]]></description>
+    <dc:creator>jozef</dc:creator>
+    <dc:date>2009-11-18T18:00:0+02:00</dc:date>
+    <dc:subject>events</dc:subject>
+  </item>
+</rdf:RDF>

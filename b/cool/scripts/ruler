@@ -1,0 +1,24 @@
+#! /usr/bin/perl -w
+
+# Usage: $0 [<width>] [<height>]
+
+my $max   = shift || 80;
+my $lines = shift;
+my @prev = ("")x3;
+
+# Rotate digits of numbers horizontally into three arrays...
+for my $n (1..$max) {
+	@digits = split //, sprintf "%3s", $n;
+	$ruler[$_] .= $digits[$_] eq $prev[$_] ? " " : ($prev[$_]=$digits[$_])
+		for 0..2;
+}
+
+# Join each array to generate string of digits...
+print join("\n", @ruler, ""), "-"x$max, "\n";
+exit unless $lines;
+
+# If height also requested, generate rows of line numbers...
+my $len = length($lines);
+if (defined $lines) {
+	printf "%${max}s|%s\n"," ", $_ for 1..$lines;
+}

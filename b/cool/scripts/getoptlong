@@ -1,0 +1,46 @@
+#!/usr/bin/perl
+
+=head1 SYNOPSIS
+
+getoptlong [-h] [-l] [-t TEXT1] TEXT2 [TEXT3]
+
+	-l	just a switch
+	-t	switch with a text
+	-h  help
+
+=cut
+
+use strict;
+use warnings;
+
+use Getopt::Long;
+use Pod::Usage;
+
+exit main();
+
+sub main {
+	my $want_help = 0;
+	my $l_switch;
+	my $title;
+	GetOptions(
+		'h|help'    => \$want_help,
+		'l|lines'   => \$l_switch,
+		't|title=s' => \$title,
+	) or pod2usage(1);
+
+	# print out help if requested
+	pod2usage(1)
+		if $want_help;
+	pod2usage(1)
+		if !$l_switch and !(defined $title) and !(scalar @ARGV);
+	
+	print 'run with -l switch on', "\n"
+		if $l_switch;
+	print 'run with -t switch with text "'.$title.'"', "\n"
+		if defined $title;
+	
+	print 'the rest arguments are: ', join(', ', @ARGV), "\n"
+		if scalar @ARGV;
+	
+	return 0;
+}

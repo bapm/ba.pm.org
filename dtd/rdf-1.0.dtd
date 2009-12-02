@@ -1,0 +1,47 @@
+<!--
+
+Custom made DTD because the one provided in /usr/share/sgml/dtd/rdf.dtd doesn't
+work with our RDF document.
+
+-->
+
+<!ELEMENT rdf:RDF     (channel, item*)>
+<!ATTLIST rdf:RDF
+	xmlns:rdf     CDATA   #FIXED   "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns         CDATA   #FIXED   "http://purl.org/rss/1.0/"
+	xmlns:dc      CDATA   #FIXED   "http://purl.org/dc/elements/1.1/"
+	xmlns:html    CDATA   #FIXED   "http://www.w3.org/1999/xhtml"
+	xmlns:content CDATA            "http://purl.org/rss/1.0/modules/content/"
+	xmlns:taxo    CDATA            "http://purl.org/rss/1.0/modules/taxonomy/"
+	xmlns:syn     CDATA            "http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:admin   CDATA            "http://webns.net/mvcb/"
+>
+
+
+<!ELEMENT channel     (title, link, description, dc:date, dc:subject, items)>
+<!ATTLIST channel
+	rdf:about CDATA #REQUIRED
+>
+
+
+<!ELEMENT title       (#PCDATA)>
+<!ELEMENT link        (#PCDATA)>
+<!ELEMENT description (#PCDATA)>
+<!ELEMENT dc:date     (#PCDATA)>
+<!ELEMENT dc:subject  (#PCDATA)>
+<!ELEMENT items       (rdf:Seq)>
+
+<!ELEMENT rdf:Seq     (rdf:li+)>
+
+<!ELEMENT rdf:li      (#PCDATA)>
+<!ATTLIST rdf:li
+	rdf:resource CDATA #REQUIRED
+>
+
+
+<!ELEMENT item        (title, link, description, dc:creator, dc:date, dc:subject)>
+<!ATTLIST item
+	rdf:about  CDATA #REQUIRED
+>
+
+<!ELEMENT dc:creator  (#PCDATA)>

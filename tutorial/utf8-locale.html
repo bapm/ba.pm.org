@@ -1,0 +1,315 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>utf8 &amp;&amp; locale</title>
+	<link rel="stylesheet" href="../stylesheets/style.css" type="text/css" media="screen" />
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta http-equiv="content-language" content="sk" />
+	<meta http-equiv="imagetoolbar" content="false" />
+	<meta name="author" content="different" />
+	<meta name="copyright" content="" />
+	<meta name="description" content="utf8 &amp;&amp; locale" />
+	<meta name="keywords" content="Perl, UTF8, locale, kódovanie" />
+	<meta name="mssmarttagspreventparsing" content="true" />
+	<meta name="robots" content="index, follow, noarchive" />
+	<meta name="revisit-after" content="7 days" />
+	<link rel="alternate" title="Bratislava.pm.org - news" href="../news.rdf" type="application/rss+xml" />
+	<link rel="shortcut icon" href="../favicon.ico" />
+</head>
+<body>
+	<div id="header">
+	<div id="header_inside">
+		<h1><a href="../index.html">Bratislava <span>Perl Mongers</span></a></h1>
+
+		<ul>
+			
+				<li>
+					<a 
+					href="../contact.html">Kontakt</a>
+				</li>
+			
+				<li>
+					<a 
+					href="../job.html">Job</a>
+				</li>
+			
+				<li>
+					<a 
+					href="../links.html">Linky</a>
+				</li>
+			
+				<li>
+					<a  class="active"
+					href="../other.html">Ostatné</a>
+				</li>
+			
+				<li>
+					<a 
+					href="../events.html">Udalosti</a>
+				</li>
+			
+				<li>
+					<a 
+					href="../index.html">PM</a>
+				</li>
+			
+		</ul>		
+
+	</div>
+	</div>
+
+	<div id="content">
+	<div id="content_inside">
+
+
+<div id="miniMenu">
+<ul>
+	
+	<li><a href="../en/tutorial/utf8-locale.html"><img src="../images/uk-small-flag.png" alt="en" /> en</a></li>
+	
+	<li class="first" ><a id="feedbackLink" href="../contact.html">Feedback</a></li>	
+</ul>
+</div>
+
+		
+		<div id="content_inside_main">
+		<div class="error hidden">
+			<img class="icon" src="../images/icons/32x32/dialog-error.png" alt="!" />
+			<div id="errorMessage"></div>
+		</div>
+		<div class="info hidden">
+			<img class="icon" src="../images/icons/32x32/dialog-information.png" alt="" />
+			<div id="infoMessage"></div>
+		</div>
+				
+
+
+<h1>utf8 &amp;&amp; locale</h1>
+
+<p>Perl má podporu pre UNICODE a rôzne znakové sady ale napísať kód ktorý
+pracuje správne s UTF-8 ešte nieje veľmy primočiare a jednoduché. Stále
+prichádzajú znova a znova otázky ohľadne tejto témy. Jan poslal 
+<a href="http://mail.pm.org/pipermail/bratislava-pm/2008-March/000040.html">otázku</a>
+na mailing list, nesôr som čítal podobnú
+<a href="http://www.debian.cz/archiv/czdebian-l/msg12197.html">otázku</a>
+diskutovanú na CZ/SK Debian mailing liste. Tak sa na to pozrime na
+príklade:
+</p>
+
+<pre>
+#!/usr/bin/perl 
+
+my @pole=qw(šiška marek ucho čaj žička);
+
+@pole=sort(@pole);           # utriediť pole
+
+foreach my $a (@pole) {
+    $a =~ s/\W//g;           # vymazať všetky "neslovné" znaky
+    print "$a\n";
+}
+
+open my $handle, "&gt;file.txt" or die "Can't write to file.txt: $!";
+print $handle "\Uěščřžabcd\E\n";     # vypíš znaky ako veľké písmená
+close $handle;
+</pre>
+
+<p>Nám vypíše:</p>
+
+<pre>
+marek 
+ucho 
+aj 
+ika
+ika
+
+ěščřžABCD
+</pre>
+
+<p>Veľa chybyčiek krásy a výsledok zrovna nieje to čo sme čakali. čaj,
+šiška and žička sú na konci a neboli utriedené dobre, ěščřž zostalo ako
+bolo a písmená s diakritikou neboli považované za znaky slov.
+</p>
+
+
+<h3>Naučme Perl abecedu</h3>
+<p>
+Najskôr, Perl nepracuje správne so stringom keďže triedenie a pattern
+matching nepoužilo všetky znaky ako malo. To je preto, lebo nie všetky
+lazyky používajú tú istú abecedu. Kým niektoré jazyky môžu mať (a majú
+samozrejme) tie isté znaky, triedenie môže byť iné. Perl nevie v ako jazyku
+je string napísaný takže ich nevie správne utriediť. Aby sme mu to "ukázali"
+musíme mu povedať aby používal špecifickú "locale" (abecedu), potom bude
+vedieť ktoré znaky sú písmená a aké majú poradie. Toto sa udeje pomocout
+<code>use locale;</code>, keď to pridáme výstup vyzerá následovne:
+</p>
+
+<pre>
+aj 
+marek 
+ika 
+ucho 
+ika 
+ěščřžABCD
+</pre>
+
+
+<h3>Parsovanie zdrojového kódu v rôznych jazykoch</h3>
+<p>
+V predchádzajúcom odstavci sme si ukázali ako naučiť Perl abecedu. Problémom
+je, že Perl stále nevie ako prečítať náš text. Vie prečítať string zo súborov
+a STDIN ale nie zo svojho zdrojového kódu. To je preto, že Perl počíta s
+tým že zdrojový kód je v default encoding ktoré <b>NIEJE</b> UTF-8
+(asi ASCII alebo Latin-1, niesom si istý). Aby sme to opravili musíme mu
+povedať v akom kódovaní je zdrojový kód. Toto sa dá spraviť troma spôsobmi:
+
+</p>
+
+<p>
+Pridaním <code>use utf8;</code>. Perl prečíta zdrojový kód ako UTF-8 súbor,
+takže "prijme" všetky znaky s diakritikou a ostatné znaky definované v UTF-8
+znakovej sade.
+</p>
+
+<p>
+Pridaním <code>use encoding 'utf8';</code>. Táto pragma má výhodu tohom že
+sa dá špecifikovať kódovanie aj iné ako utf8.
+</p>
+
+<p>
+Používaním escape sequences pre všetky non ASCII znaky. Napríklad, na napísanie
+Á sa dá použiť "\x{C1}" čo korešponduje s UNICODE znakom pre LATIN CAPITAL
+LETTER A WITH ACUTE. Toto je celkom univerzálne, zdroják je celý v ASCII
+ale vcelku sa to zle číta a udržiava.
+</p>
+
+<p>
+Keď je zdrojový súbor načítaný v správnom kódovaní tak máme dobrý výsledok
+aj na výstupe.
+</p>
+
+<pre>
+Wide character in print at ./utf8-test.pl line 15.
+čaj 
+marek 
+Wide character in print at ./utf8-test.pl line 15.
+šiška 
+ucho 
+Wide character in print at ./utf8-test.pl line 15.
+žička 
+Wide character in print at ./utf8-test.pl line 18.
+ĚŠČŘŽABCD
+</pre>
+
+<h3>I/O v UTF-8</h3>
+<p>Teraz je text vypísaný ako sme očakávali. Ale stále máme problém s
+výpisom UTF-8 znakov, STDOUT neočakáva UTF-8. To sa
+dá ošetriť rôznymi spôsobmi:
+</p>
+
+<p>Prvé riešenie je pridať <code>use encoding 'utf8';</code>, to povie 
+Perl-u, že zdrojový kód je v UTF-8 a zároveň nastaví PerlIO layers pre
+STDIN a STDOUT na UTF-8. V podstate sú <code>use encoding 'utf8';</code> a
+<code>use utf8;</code> skoro rovnaké okrem toho že ten prvý nastavý
+kódovanie pre STDIN a STDOUT (STDERR zostáva nezmenený).
+</p>
+
+<p>
+Druhá alternatíva je manuálne nastaviť kódovanie pre STDOUT pomocou
+<code>binmode(STDOUT =&gt; ':encoding(utf8)')</code>. To sa dá uplatniť
+na všetky file handle and nieje limitované pre STDOUT. Je to asi najlepšie
+riešenie, lebo všetky ostatné PerlIO zostanú nezmenené aj keď sa použije 
+<code>use encoding</code>.
+</p>
+
+<p>
+A nakoniec, kódovanie pre PerlIO layer sa dá nastaviť priamo pri otváraní
+súboru pomocou <code>open</code>. Napríklad nasledujúci kód 
+<code>open my $handle, "&lt;:utf8", "file" or die "Can't read file: $!";</code>
+otvorí súbor v UTF-8.
+</p>
+
+<p>
+Keď povieme Perl-u aby robil I/O v UTF-8 všetko je v poriadku:
+</p>
+
+<pre>
+čaj 
+marek 
+šiška 
+ucho 
+žička 
+ĚŠČŘŽABCD
+</pre>
+
+<p>Nuž a pre úplnosť tu je finálny test script:
+</p>
+
+<pre>
+#!/usr/bin/perl 
+
+use warnings;
+use strict;
+
+# Utrieď string podľa aktuálneho kódovania a používanej abecedy
+use locale;
+
+# načítaj zdrojovy kód ak UTF-8 a nastav STDOUT a STDIN na UTF-8
+use encoding 'utf8';
+
+
+# môžeme písať UTF-8 znaky v kóde vďaka "use encoding"
+my @pole=qw(šiška marek ucho čaj žička);
+
+# sort rozpoznáva všetk znaky abecedy vďaka "use locale"
+@pole=sort(@pole);           # sort array
+
+foreach my $a (@pole) {
+    # pattern matching funguje vďaka "use locale"
+    $a =~ s/\W//g;           # vymazať všetky "neslovné" znaky
+    print "$a\n";            # vypíš prvok poľa
+}
+
+# zapíš UTF-8 do súboru
+open my $handle, "&gt;:utf8", "file.txt" or die "Can't write to file.txt: $!";
+# vieme zneniť znaky na veľké písmená vďaka "use locale"
+print $handle "\Uěščřžabcd\E\n";     # vypíš znaky ako veľe písmená
+close $handle;
+</pre>
+
+<h3>Poznánky</h3>
+
+<p>Keď  chceme písať znaky iné ako Latin-1 do Pod dokumentácie treba nastaviť
+kódovanie nasledovne:
+</p>
+
+<pre>
+=encoding utf-8
+</pre>
+
+<p>Linky: <a href="http://search.cpan.org/perldoc?utf8">utf8 - Perl pragma to enable/disable UTF-8 (or UTF-EBCDIC) in source code</a>,
+<a href="http://search.cpan.org/perldoc?locale">locale - Perl pragma to use and avoid POSIX locales for built-in operations</a>,
+<a href="http://search.cpan.org/perldoc?perlunitut">perlunitut - Perl Unicode Tutorial</a>,
+<a href="http://search.cpan.org/perldoc?perluniintro">perluniintro - Perl Unicode introduction</a>,
+<a href="http://search.cpan.org/perldoc?perlunicode">perlunicode - Unicode support in Perl</a>
+</p>
+
+<p class='signature'>29. Jun 2008<br/>Jozef</p>
+<p class='signature'>03. Aug 2008<br/>Emmanuel</p>
+
+
+		</div>	
+	</div>	
+	</div>
+
+	<div id="footer">
+	<div id="footer_inside">
+		<p>© Copyright 2009</p>
+	</div>
+	</div>
+	<script src="../js/script.js" type="text/javascript"></script>
+	<script src="../js/jsloc-sk.js" type="text/javascript"></script>
+	<script type="text/javascript"><!--
+		wrap.i18n.init(undefined, 'jsloc-sk', locale_data);
+	// --></script>
+</body>
+</html>

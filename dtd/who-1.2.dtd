@@ -1,0 +1,53 @@
+<!--
+
+Custom made DTD for our who's who page.
+
+-->
+
+<!ENTITY % xhtml PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+%xhtml;
+
+<!ELEMENT ba:who      (ba:monger*)>
+<!ATTLIST ba:who
+	xmlns:ba  CDATA  #FIXED "http://bratislava.pm.org/dtd/who-1.2.dtd"
+>
+
+<!ELEMENT ba:monger
+	(
+		ba:id, 
+		ba:name?, 
+		ba:nick?, 
+		ba:cpan?, 
+		ba:email?, 
+		ba:place?, 
+		ba:picture?,
+		ba:info?,
+		ba:geo?
+	)
+>
+
+
+<!ELEMENT ba:id         (#PCDATA)>
+<!ELEMENT ba:name       (#PCDATA)>
+<!ELEMENT ba:nick       (#PCDATA)>
+<!ELEMENT ba:cpan       (#PCDATA)>
+<!ELEMENT ba:email      (#PCDATA)>
+<!ELEMENT ba:place      (#PCDATA)>
+
+<!-- The definiton of 'ba:info' is the same as a 'xhtml:div' -->
+<!ELEMENT ba:info       %Flow;>
+<!ATTLIST ba:info
+	xmlns  CDATA  #FIXED "http://www.w3.org/1999/xhtml"
+>
+
+<!ELEMENT ba:picture    (#PCDATA)>
+
+
+<!ELEMENT ba:geo
+	(
+		ba:latitude?, 
+		ba:longitude?
+	)
+>
+<!ELEMENT ba:latitude  (#PCDATA)>
+<!ELEMENT ba:longitude (#PCDATA)>

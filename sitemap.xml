@@ -1,0 +1,465 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<url>
+    <loc>http://bratislava.pm.org/events.html</loc>
+    <lastmod>2009-11-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1</priority>
+</url>
+<url>
+    <loc>http://bratislava.pm.org/who.html</loc>
+    <lastmod>2009-10-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+</url>
+<url>
+    <loc>http://bratislava.pm.org/links.html</loc>
+    <lastmod>2009-10-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+</url>
+<url>
+    <loc>http://bratislava.pm.org/contact.html</loc>
+    <lastmod>2009-10-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+</url>
+<url>
+    <loc>http://bratislava.pm.org/index.html</loc>
+    <lastmod>2009-10-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+</url>
+<url>
+    <loc>http://bratislava.pm.org/job.html</loc>
+    <lastmod>2009-10-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+</url>
+<url>
+    <loc>http://bratislava.pm.org/wien-justin.html</loc>
+    <lastmod>2009-10-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+</url>
+<url>
+    <loc>http://bratislava.pm.org/store.html</loc>
+    <lastmod>2009-10-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+</url>
+<url>
+    <loc>http://bratislava.pm.org/other.html</loc>
+    <lastmod>2009-10-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+</url>
+<url>
+    <loc>http://bratislava.pm.org/news.rdf</loc>
+    <lastmod>2009-11-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1</priority>
+</url>
+<url>
+    <loc>http://bratislava.pm.org/review/jeff-s-view.html</loc>
+    <lastmod>2009-10-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1</priority>
+</url>
+<url>
+    <loc>http://bratislava.pm.org/review/the-myths-of-innovation.html</loc>
+    <lastmod>2009-10-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1</priority>
+</url>
+<url>
+    <loc>http://bratislava.pm.org/review/catalyst-book.html</loc>
+    <lastmod>2009-10-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1</priority>
+</url>
+<url>
+    <loc>http://bratislava.pm.org/review/mobile-web-design.html</loc>
+    <lastmod>2009-10-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1</priority>
+</url>
+<url>
+    <loc>http://bratislava.pm.org/review/perl-hacks-book.html</loc>
+    <lastmod>2009-10-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1</priority>
+</url>
+<url>
+    <loc>http://bratislava.pm.org/planet/index.html</loc>
+    <lastmod>2009-10-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+</url>
+<url>
+    <loc>http://bratislava.pm.org/en/events.html</loc>
+    <lastmod>2009-11-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1</priority>
+</url>
+<url>
+    <loc>http://bratislava.pm.org/en/who.html</loc>
+    <lastmod>2009-10-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+</url>
+<url>
+    <loc>http://bratislava.pm.org/en/links.html</loc>
+    <lastmod>2009-10-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+</url>
+<url>
+    <loc>http://bratislava.pm.org/en/contact.html</loc>
+    <lastmod>2009-11-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+</url>
+<url>
+    <loc>http://bratislava.pm.org/en/index.html</loc>
+    <lastmod>2009-11-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+</url>
+<url>
+    <loc>http://bratislava.pm.org/en/job.html</loc>
+    <lastmod>2009-11-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+</url>
+<url>
+    <loc>http://bratislava.pm.org/en/wien-justin.html</loc>
+    <lastmod>2009-10-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+</url>
+<url>
+    <loc>http://bratislava.pm.org/en/store.html</loc>
+    <lastmod>2009-10-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+</url>
+<url>
+    <loc>http://bratislava.pm.org/en/other.html</loc>
+    <lastmod>2009-10-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+</url>
+<url>
+    <loc>http://bratislava.pm.org/en/news.rdf</loc>
+    <lastmod>2009-11-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1</priority>
+</url>
+<url>
+    <loc>http://bratislava.pm.org/en/review/jeff-s-view.html</loc>
+    <lastmod>2009-11-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+</url>
+<url>
+    <loc>http://bratislava.pm.org/en/review/the-myths-of-innovation.html</loc>
+    <lastmod>2009-11-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+</url>
+<url>
+    <loc>http://bratislava.pm.org/en/review/catalyst-book.html</loc>
+    <lastmod>2009-10-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+</url>
+<url>
+    <loc>http://bratislava.pm.org/en/review/mobile-web-design.html</loc>
+    <lastmod>2009-11-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+</url>
+<url>
+    <loc>http://bratislava.pm.org/en/review/perl-hacks-book.html</loc>
+    <lastmod>2009-10-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+</url>
+<url>
+    <loc>http://bratislava.pm.org/en/planet/index.html</loc>
+    <lastmod>2009-10-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+</url>
+<url>
+    <loc>http://bratislava.pm.org/en/tutorial/cpan.html</loc>
+    <lastmod>2009-11-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+</url>
+<url>
+    <loc>http://bratislava.pm.org/en/tutorial/server.html</loc>
+    <lastmod>2009-10-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+</url>
+<url>
+    <loc>http://bratislava.pm.org/en/tutorial/debian-simple-repo.html</loc>
+    <lastmod>2009-11-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+</url>
+<url>
+    <loc>http://bratislava.pm.org/en/tutorial/new-module.html</loc>
+    <lastmod>2009-11-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+</url>
+<url>
+    <loc>http://bratislava.pm.org/en/tutorial/templates.html</loc>
+    <lastmod>2009-10-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+</url>
+<url>
+    <loc>http://bratislava.pm.org/en/tutorial/tt-ba_pm.html</loc>
+    <lastmod>2009-11-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+</url>
+<url>
+    <loc>http://bratislava.pm.org/en/tutorial/utf8-locale.html</loc>
+    <lastmod>2009-11-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+</url>
+<url>
+    <loc>http://bratislava.pm.org/en/go/YAPC/index.html</loc>
+    <lastmod>2009-10-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+</url>
+<url>
+    <loc>http://bratislava.pm.org/en/go/workshop/index.html</loc>
+    <lastmod>2009-10-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+</url>
+<url>
+    <loc>http://bratislava.pm.org/en/go/workshop/day2/index.html</loc>
+    <lastmod>2009-10-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+</url>
+<url>
+    <loc>http://bratislava.pm.org/en/go/workshop/day1/index.html</loc>
+    <lastmod>2009-10-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+</url>
+<url>
+    <loc>http://bratislava.pm.org/en/go/workshop/day3/index.html</loc>
+    <lastmod>2009-10-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+</url>
+<url>
+    <loc>http://bratislava.pm.org/en/presentation/dbus/index.html</loc>
+    <lastmod>2009-10-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+</url>
+<url>
+    <loc>http://bratislava.pm.org/en/projects/cyclone3.html</loc>
+    <lastmod>2009-11-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+</url>
+<url>
+    <loc>http://bratislava.pm.org/en/projects/index.html</loc>
+    <lastmod>2009-11-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+</url>
+<url>
+    <loc>http://bratislava.pm.org/en/projects/xacobeo.html</loc>
+    <lastmod>2009-11-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+</url>
+<url>
+    <loc>http://bratislava.pm.org/en/b/cool/index.html</loc>
+    <lastmod>2009-10-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+</url>
+<url>
+    <loc>http://bratislava.pm.org/tutorial/cpan.html</loc>
+    <lastmod>2009-10-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1</priority>
+</url>
+<url>
+    <loc>http://bratislava.pm.org/tutorial/server.html</loc>
+    <lastmod>2009-10-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1</priority>
+</url>
+<url>
+    <loc>http://bratislava.pm.org/tutorial/debian-simple-repo.html</loc>
+    <lastmod>2009-10-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1</priority>
+</url>
+<url>
+    <loc>http://bratislava.pm.org/tutorial/new-module.html</loc>
+    <lastmod>2009-10-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1</priority>
+</url>
+<url>
+    <loc>http://bratislava.pm.org/tutorial/templates.html</loc>
+    <lastmod>2009-10-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1</priority>
+</url>
+<url>
+    <loc>http://bratislava.pm.org/tutorial/tt-ba_pm.html</loc>
+    <lastmod>2009-10-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1</priority>
+</url>
+<url>
+    <loc>http://bratislava.pm.org/tutorial/utf8-locale.html</loc>
+    <lastmod>2009-10-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1</priority>
+</url>
+<url>
+    <loc>http://bratislava.pm.org/go/YAPC/index.html</loc>
+    <lastmod>2009-10-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+</url>
+<url>
+    <loc>http://bratislava.pm.org/go/workshop/index.html</loc>
+    <lastmod>2009-10-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+</url>
+<url>
+    <loc>http://bratislava.pm.org/go/workshop/day2/index.html</loc>
+    <lastmod>2009-10-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+</url>
+<url>
+    <loc>http://bratislava.pm.org/go/workshop/day1/index.html</loc>
+    <lastmod>2009-10-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+</url>
+<url>
+    <loc>http://bratislava.pm.org/go/workshop/day3/index.html</loc>
+    <lastmod>2009-10-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+</url>
+<url>
+    <loc>http://bratislava.pm.org/presentation/fun-with-lvm.html</loc>
+    <lastmod>2009-04-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1</priority>
+</url>
+<url>
+    <loc>http://bratislava.pm.org/presentation/yapc2007.html</loc>
+    <lastmod>2009-11-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1</priority>
+</url>
+<url>
+    <loc>http://bratislava.pm.org/presentation/static-can-be-more.html</loc>
+    <lastmod>2009-08-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1</priority>
+</url>
+<url>
+    <loc>http://bratislava.pm.org/presentation/dynamicke-staticke-stranky.html</loc>
+    <lastmod>2009-04-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1</priority>
+</url>
+<url>
+    <loc>http://bratislava.pm.org/presentation/pm2deb.html</loc>
+    <lastmod>2009-04-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1</priority>
+</url>
+<url>
+    <loc>http://bratislava.pm.org/presentation/network-monitoring.html</loc>
+    <lastmod>2009-04-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1</priority>
+</url>
+<url>
+    <loc>http://bratislava.pm.org/presentation/fun-with-raid.html</loc>
+    <lastmod>2009-04-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1</priority>
+</url>
+<url>
+    <loc>http://bratislava.pm.org/presentation/catalyst-tricks.html</loc>
+    <lastmod>2009-11-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1</priority>
+</url>
+<url>
+    <loc>http://bratislava.pm.org/presentation/pod-docbook.html</loc>
+    <lastmod>2009-04-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1</priority>
+</url>
+<url>
+    <loc>http://bratislava.pm.org/presentation/co-je-a-ako-funguje-perl.html</loc>
+    <lastmod>2009-11-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1</priority>
+</url>
+<url>
+    <loc>http://bratislava.pm.org/presentation/dbus/index.html</loc>
+    <lastmod>2009-10-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1</priority>
+</url>
+<url>
+    <loc>http://bratislava.pm.org/presentation/catalyst-tricks/Monger.pod.html</loc>
+    <lastmod>2009-04-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1</priority>
+</url>
+<url>
+    <loc>http://bratislava.pm.org/projects/cyclone3.html</loc>
+    <lastmod>2009-10-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1</priority>
+</url>
+<url>
+    <loc>http://bratislava.pm.org/projects/index.html</loc>
+    <lastmod>2009-10-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1</priority>
+</url>
+<url>
+    <loc>http://bratislava.pm.org/projects/xacobeo.html</loc>
+    <lastmod>2009-10-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1</priority>
+</url>
+<url>
+    <loc>http://bratislava.pm.org/b/cool/index.html</loc>
+    <lastmod>2009-10-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+</url>
+</urlset>

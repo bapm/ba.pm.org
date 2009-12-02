@@ -1,0 +1,147 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>Perl + D-Bus</title>
+	<link rel="stylesheet" href="../../../stylesheets/style.css" type="text/css" media="screen" />
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta http-equiv="content-language" content="en" />
+	<meta http-equiv="imagetoolbar" content="false" />
+	<meta name="author" content="different" />
+	<meta name="copyright" content="" />
+	<meta name="description" content="Perl D-Bus introduction presentation" />
+	<meta name="keywords" content="Perl, D-Bus, examples, intro, presentation" />
+	<meta name="mssmarttagspreventparsing" content="true" />
+	<meta name="robots" content="index, follow, noarchive" />
+	<meta name="revisit-after" content="7 days" />
+	<link rel="alternate" title="Bratislava.pm.org - news" href="../../news.rdf" type="application/rss+xml" />
+	<link rel="shortcut icon" href="../../../favicon.ico" />
+</head>
+<body>
+	<div id="header">
+	<div id="header_inside">
+		<h1><a href="../../index.html">Bratislava <span>Perl Mongers</span></a></h1>
+
+		<ul>
+			
+				<li>
+					<a 
+					href="../../contact.html">Contact</a>
+				</li>
+			
+				<li>
+					<a 
+					href="../../job.html">Job</a>
+				</li>
+			
+				<li>
+					<a 
+					href="../../links.html">Links</a>
+				</li>
+			
+				<li>
+					<a 
+					href="../../other.html">Other</a>
+				</li>
+			
+				<li>
+					<a  class="active"
+					href="../../events.html">Events</a>
+				</li>
+			
+				<li>
+					<a 
+					href="../../index.html">PM</a>
+				</li>
+			
+		</ul>		
+
+	</div>
+	</div>
+
+	<div id="content">
+	<div id="content_inside">
+
+
+<div id="miniMenu">
+<ul>
+	
+	<li><a href="../../../presentation/dbus/index.html"><img src="../../../images/sk-small-flag.png" alt="sk" /> sk</a></li>
+	
+	<li class="first" ><a id="feedbackLink" href="../../contact.html">Feedback</a></li>	
+</ul>
+</div>
+
+		
+		<div id="content_inside_main">
+		<div class="error hidden">
+			<img class="icon" src="../../../images/icons/32x32/dialog-error.png" alt="!" />
+			<div id="errorMessage"></div>
+		</div>
+		<div class="info hidden">
+			<img class="icon" src="../../../images/icons/32x32/dialog-information.png" alt="" />
+			<div id="infoMessage"></div>
+		</div>
+				
+
+
+<!--
+
+D-Bus
+
+-->
+
+<h1>D-Bus</h1>
+<p>This presentation shows how to use D-Bus from Perl. It provides sample code
+that demontrates the various ways to use D-Bus from within Perl programs.
+</p>
+
+<p>D-Bus is a new inter process communication (IPC) system that's available in
+almost all Linux distributions. It consists of a message bus daemon that allow
+applications to communicate with one another through remove methods invocation,
+signals and properties.</p>
+
+<p>
+Files:
+</p>
+
+<ul>
+	<li><a href="../../../presentation/dbus/dbus-pidgin.pl">dbus-pidgin.pl</a> - Enable a Pidgin account</li>
+	<li><a href="../../../presentation/dbus/dbus-list-services.pl">dbus-list-services.pl</a> - List the D-Bus services available</li>
+	<li><a href="../../../presentation/dbus/dbus-introspect.pl">dbus-introspect.pl</a> - Introspect a D-Bus object</li>
+
+	<li><a href="../../../presentation/dbus/DBus/Test.pm">DBus/Test.pm</a> - A simple Test object to be shared through D-Bus</li>
+	<li><a href="../../../presentation/dbus/dbus-test-service.pl">dbus-server.pl</a> - Simple service for the Test service</li>
+	<li><a href="../../../presentation/dbus/dbus-test-client.pl">dbus-client.pl</a> - Simple client for the Test service</li>
+
+
+	<li><a href="../../../presentation/dbus/DBus/FileWatcher.pm">DBus/FileWatcher.pm</a> - A FileWatcher object to be shared through D-Bus</li>
+	<li><a href="../../../presentation/dbus/dbus-file-watcher-service.pl">dbus-file-watcher-service.pl</a> - Service that shares the FileWatcher object through Glib</li>
+	<li><a href="../../../presentation/dbus/dbus-file-watcher-client.pl">dbus-file-watcher-client.pl</a> - Client for the FileWatcher service</li>
+
+	<li><a href="../../../presentation/dbus/dbus-file-watcher2-service.pl">dbus-file-watcher2-service.pl</a> - Service that shares the FileWatcher object through the Reactor</li>
+
+</ul>
+
+<p>
+Presentation in <a href='../../../presentation/dbus/../dbus/perl-dbus.odp'>OpenOffice</a> and <a href='../../../presentation/dbus/../dbus/perl-dbus.pdf'>PDF</a> format.<br/>
+All files <a href='../../../presentation/dbus/../perl-dbus-presensation.tar.gz'>perl-dbus-presensation.tar.gz</a>
+</p>	
+
+
+
+		</div>	
+	</div>	
+	</div>
+
+	<div id="footer">
+	<div id="footer_inside">
+		<p>© Copyright 2009</p>
+	</div>
+	</div>
+	<script src="../../../js/script.js" type="text/javascript"></script>
+	<script src="../../../js/jsloc-en.js" type="text/javascript"></script>
+	<script type="text/javascript"><!--
+		wrap.i18n.init(undefined, 'jsloc-en', locale_data);
+	// --></script>
+</body>
+</html>

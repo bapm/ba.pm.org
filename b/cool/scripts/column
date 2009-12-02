@@ -1,0 +1,96 @@
+#!/usr/bin/perl
+use v5.10;
+use warnings;
+
+
+use Getopt::Declare <<'EOARGS' => $args, -tabs=>4;
+
+    -<N:i>              Specify number of columns (default: -2)
+
+    -hor[izontally]     Fill columns across first then down
+    -ver[t[ically]]     Fill columns down first then across (default)
+
+    -t[abbed] [<N:i>]   Separate columns with exactly N tabs
+                        (default: N=1)
+                        { $N ||= 1 }
+
+    -s[paced] [<N:i>]   Separate columns with a minimum of N spaces
+                        (default: N=3)
+                        { $N ||= 3 }
+
+    -sep[arator] <str>  Separate columns with <str>
+
+    [mutex: -t -s ]
+
+    -start <str>        Begin each row with <str>
+    -end   <str>        Terminate each row with <str>
+
+EOARGS
+
+# Extract command line flags...
+my $spaced = exists $args->{'-s'} ? $args->{'-s'}{'<N>'} : undef;
+my $sep = exists $args->{'-sep'}  ? $args->{'-sep'}{'<str>'}
+    : exists $args->{'-t'}    ? "\t" x $args->{'-t'}{'<N>'}
+    : !defined $spaced        ? "\t"
+    : "";
+
+# Grab items to be put in columns (one per line)
+chomp(my @lines = <>);
+
+# Work out the size of the table...
+use POSIX 'ceil';
+my $cols = $args->{'-'} || 2;
+my $rows = ceil(@lines/$cols);
+ 
+# If horizontal layout requested, build rows until everything consumed..
+if (exists $args->{'-hor'}) {
+    ROW: for my $r (0..$rows-1) {
+         for my $c (0..$cols-1) {
+                my $next = shift(@lines)||"";
+                $table[$r][$c] = $next;
+                $max[$c] = length $next
+                    if !defined($max[$c]) || $max[$c] < length $next;
+                last ROW unless @lines;
+         }
+    }
+}
+else { # Vertical layout requested...
+    # Work out which (if any) columns will end up shorter by one row...
+    my $firstshortcol = $cols - ($rows*$cols-@lines);
+
+    # Then build columns till everything consumed...
+    COL: for my $c (0..$cols-1) {
+         for my $r (0..$rows-($c>=$firstshortcol?2:1)) {
+                my $next = shift(@lines) || "";
+                $table[$r][$c] = $next;
+                $max[$c] = length $next
+                    if !defined($max[$c]) || $max[$c] < length $next;
+                last COL unless @lines;
+         }
+    }
+}
+
+# Insert appropriate inter-column spaces, if spaced columns requested...
+if (defined $spaced) {
+    for my $c (0..$cols-2) {
+         for my $r (0..$rows-1) {
+        next unless defined $table[$r][$c];
+        $table[$r][$c] .=
+            " " x ($spaced+$max[$c]-length $table[$r][$c]);
+         }
+    }
+}
+
+# Extract line beginners and enders (if any)...
+my $sol = exists $args->{-start} ? $args->{-start} : "";
+my $eol = exists $args->{-end}   ? $args->{-end} : "";
+
+# Print row-by-row, with line delimiters...
+for my $r (0..$rows-1) {
+    print "$sol";
+    for my $c (0..$cols-1) {
+    print $table[$r][$c]||"",
+          ($c == $cols-1 ? "" : $sep);
+    }
+    print "$eol\n";
+}

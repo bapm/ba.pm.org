@@ -1,0 +1,191 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>simple Debian repository</title>
+	<link rel="stylesheet" href="../../stylesheets/style.css" type="text/css" media="screen" />
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta http-equiv="content-language" content="en" />
+	<meta http-equiv="imagetoolbar" content="false" />
+	<meta name="author" content="different" />
+	<meta name="copyright" content="" />
+	<meta name="description" content="How to set-up a simple Debian repository." />
+	<meta name="keywords" content="debian, deb, repo, repository, dpkg-scanpackages, dpkg-scansources, apt-ftparchive" />
+	<meta name="mssmarttagspreventparsing" content="true" />
+	<meta name="robots" content="index, follow, noarchive" />
+	<meta name="revisit-after" content="7 days" />
+	<link rel="alternate" title="Bratislava.pm.org - news" href="../news.rdf" type="application/rss+xml" />
+	<link rel="shortcut icon" href="../../favicon.ico" />
+</head>
+<body>
+	<div id="header">
+	<div id="header_inside">
+		<h1><a href="../index.html">Bratislava <span>Perl Mongers</span></a></h1>
+
+		<ul>
+			
+				<li>
+					<a 
+					href="../contact.html">Contact</a>
+				</li>
+			
+				<li>
+					<a 
+					href="../job.html">Job</a>
+				</li>
+			
+				<li>
+					<a 
+					href="../links.html">Links</a>
+				</li>
+			
+				<li>
+					<a  class="active"
+					href="../other.html">Other</a>
+				</li>
+			
+				<li>
+					<a 
+					href="../events.html">Events</a>
+				</li>
+			
+				<li>
+					<a 
+					href="../index.html">PM</a>
+				</li>
+			
+		</ul>		
+
+	</div>
+	</div>
+
+	<div id="content">
+	<div id="content_inside">
+
+
+<div id="miniMenu">
+<ul>
+	
+	<li><a href="../../tutorial/debian-simple-repo.html"><img src="../../images/sk-small-flag.png" alt="sk" /> sk</a></li>
+	
+	<li class="first" ><a id="feedbackLink" href="../contact.html">Feedback</a></li>	
+</ul>
+</div>
+
+		
+		<div id="content_inside_main">
+		<div class="error hidden">
+			<img class="icon" src="../../images/icons/32x32/dialog-error.png" alt="!" />
+			<div id="errorMessage"></div>
+		</div>
+		<div class="info hidden">
+			<img class="icon" src="../../images/icons/32x32/dialog-information.png" alt="" />
+			<div id="infoMessage"></div>
+		</div>
+				
+
+
+<h1>simple Debian repository</h1>
+
+<p>This tutorial will show how to set-up simple Debian repository.
+<code>dpkg-scanpackages, dpkg-scansources, apt-ftparchive, gpg</code>
+and a <code>Makefile</code> will be used.
+The folder structure is following:
+</p>
+
+<pre>
+debian-simple-repo
+|-- <a href="../../tutorial/debian-simple-repo/Makefile">Makefile</a>
+|-- <a href="../../tutorial/debian-simple-repo/Release.conf">Release.conf</a>
+`-- unstable    # files here generated
+    |-- Packages
+    |-- Packages.bz2
+    |-- Packages.gz
+    |-- Release
+    |-- Release.gpg
+    |-- Sources
+    |-- Sources.bz2
+    `-- Sources.gz
+</pre>
+
+<h3>Makefile</h3>
+
+<pre>
+all: repository
+
+repository:
+	dpkg-scanpackages unstable /dev/null > unstable/Packages
+	dpkg-scansources  unstable /dev/null > unstable/Sources
+	
+	bzip2 -c9 unstable/Packages &gt; unstable/Packages.bz2
+	gzip -c9 unstable/Packages &gt; unstable/Packages.gz
+	bzip2 -c9 unstable/Sources  &gt; unstable/Sources.bz2
+	gzip -c9 unstable/Sources  &gt; unstable/Sources.gz
+	
+	apt-ftparchive -c=Release.conf release unstable > unstable/Release
+	-rm unstable/Release.gpg
+	gpg -abs -o unstable/Release.gpg unstable/Release
+
+clean:
+	rm -f unstable/Packages* unstable/Sources* unstable/Release*
+</pre>
+
+<h3>Release.conf</h3>
+
+<pre>
+APT::FTPArchive::Release::Origin "your@email";
+APT::FTPArchive::Release::Label "Test repository";
+APT::FTPArchive::Release::Suite "unstable";
+APT::FTPArchive::Release::Architectures "i386 source";
+APT::FTPArchive::Release::Components "main";
+</pre>
+
+<h3>generation</h3>
+
+<p>All <code>*.deb, *.dsc, *.diff.gz, *.changes, *.orig.tar.gz</code> has to
+be copied to the <code>unstable/</code> folder and `make` executed. This
+will generate <code>unstable/Packages*, unstable/Sources*, unstable/Release*</code>
+files. Then just the whole folder as-is copied to a web/ftp server. 
+</p>
+
+<h3>usage</h3>
+
+<p>
+<code>/etc/apt/sources.list</code> file on a Debian machine
+has to be updated and a gpg key has to be added through `apt-key add`.
+</p>
+
+<h3>sources.list</h3>
+
+<pre>
+deb http://your.hostname/some/folder/ unstable/
+deb-src http://your.hostname/some/folder/ unstable/
+</pre>
+
+<h3>beyond simple</h3>
+
+<p>For more advanced and more distribution like repository use
+<a href="http://packages.debian.org/lenny/reprepro">reprepro</a>.
+<a href="http://www.debian-administration.org/articles/286">Setting up
+your own APT repository with upload support</a> - is a good introduction
+to it.
+</p>
+
+<p class='signature'>7 Jul 2009<br/>Jozef</p>
+
+
+		</div>	
+	</div>	
+	</div>
+
+	<div id="footer">
+	<div id="footer_inside">
+		<p>© Copyright 2009</p>
+	</div>
+	</div>
+	<script src="../../js/script.js" type="text/javascript"></script>
+	<script src="../../js/jsloc-en.js" type="text/javascript"></script>
+	<script type="text/javascript"><!--
+		wrap.i18n.init(undefined, 'jsloc-en', locale_data);
+	// --></script>
+</body>
+</html>

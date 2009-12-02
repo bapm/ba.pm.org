@@ -1,0 +1,8 @@
+
+body { background: #FFF }
+div#header { background: #323232 url('../../images/ba-castle-logo.gif') 25px 30px no-repeat; color: #9C0; }
+div#footer { background: #323232; color: #9C0; }
+.slide h1 { background: none; color: #9C0; } 
+#currentSlide { color: #9C0; }
+:link, :visited {text-decoration: none; color: #9C0;}
+#controls #navLinks a { background: none; color: #9C0; }
