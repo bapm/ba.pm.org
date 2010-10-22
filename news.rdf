@@ -5,7 +5,7 @@
     <title>Bratislava Perl Mongers</title>
     <link>http://bratislava.pm.org/</link>
     <description><![CDATA[Priatelia programovacieho jazyka Perl v Bratislave]]></description>
-    <dc:date>2009-12-30T11:52:01</dc:date>
+    <dc:date>2010-10-22T14:07:02</dc:date>
     <dc:subject>Perl</dc:subject>
     <items>
       <rdf:Seq>
@@ -26,6 +26,7 @@
         <rdf:li rdf:resource="http://bratislava.pm.org/events.html#yapc-eu-2009-jozef"/>
         <rdf:li rdf:resource="http://bratislava.pm.org/events.html#meeting-ba-pm-2009-10"/>
         <rdf:li rdf:resource="http://bratislava.pm.org/events.html#meeting-ba-pm-2009-11"/>
+        <rdf:li rdf:resource="http://bratislava.pm.org/events.html#meeting-ba-pm-2010-10"/>
       </rdf:Seq>
     </items>
   </channel>
@@ -314,6 +315,17 @@
 		</ul>]]></description>
     <dc:creator>jozef</dc:creator>
     <dc:date>2009-11-18T18:00:0+02:00</dc:date>
+    <dc:subject>events</dc:subject>
+  </item>
+  <item rdf:about="http://bratislava.pm.org/events.html#meeting-ba-pm-2010-10">
+    <title>Bratislava.pm meeting v Októbri</title>
+    <link>http://bratislava.pm.org/events.html#meeting-ba-pm-2010-10</link>
+    <description><![CDATA[<p><b>22 Október 2010 18:00</b></p><p>Prezentácie:</p><ul>
+			<li>Jozef - <a href="http://bratislava.pm.org/presentation/cpan-vnutornosti.html">CPAN vnútornosti</a></li>
+			<li>Emmanuel - ako môžeme spojiť Log4perl s SOAP::Lite-om (lightning talk)</li>
+		</ul>]]></description>
+    <dc:creator>jozef</dc:creator>
+    <dc:date>2010-10-22T18:00:0+02:00</dc:date>
     <dc:subject>events</dc:subject>
   </item>
 </rdf:RDF>

@@ -1,0 +1,180 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<title>CPAN vnútornosti</title>
+<!-- metadata -->
+<meta name="version" content="S5 1.1" />
+<meta name="presdate" content="20100426" />
+<meta name="author" content="Jozef Kutej"/>
+<meta name="company" content="" />
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<!-- configuration parameters -->
+<meta name="defaultView" content="slideshow" />
+<!-- <meta name="defaultView" content="outline" /> -->
+<meta name="controlVis" content="hidden" />
+<!-- style sheet links -->
+<link rel="stylesheet" href="ui/default/slides.css" type="text/css" media="projection" id="slideProj" />
+<link rel="stylesheet" href="ui/default/outline.css" type="text/css" media="screen" id="outlineStyle" />
+<link rel="stylesheet" href="ui/default/print.css" type="text/css" media="print" id="slidePrint" />
+<link rel="stylesheet" href="ui/default/opera.css" type="text/css" media="projection" id="operaFix" />
+<!-- S5 JS -->
+<script src="ui/default/slides.js" type="text/javascript"></script>
+<!-- syntax highlighting -->
+<link rel="stylesheet" type="text/css" href="ui/sh/sh_style.css" />
+<script type="text/javascript" src="ui/sh/sh_main.js"></script>
+<script type="text/javascript" src="ui/sh/sh_perl.js"></script>
+<script type="text/javascript" src="ui/sh/sh_sql.js"></script>
+<!-- custom -->
+<script src="ui/jquery-1.2.6.js" type="text/javascript"></script>
+<script src="ui/custom.js" type="text/javascript"></script>
+<link rel="stylesheet" href="ui/custom.css" type="text/css" />
+</head>
+
+<body><!--  onload='sh_highlightDocument();' -->
+
+<div class="layout">
+<div id="controls"><!-- DO NOT EDIT --></div>
+<div id="currentSlide"><!-- DO NOT EDIT --></div>
+<div id="header"></div>
+<div id="footer">
+
+<!-- added by Jozef :) -->
+<div id="counter" style="float: right; margin-right: 10px;">20</div>
+<span id="ignoreClicks" />
+
+<h1>20 Oct. 2010</h1>
+<h2>CPAN vnútornosti</h2>
+
+</div>
+
+</div>
+
+
+<div class="presentation">
+
+<div class="slide">
+    <h1>CPAN vnútornosti</h1>
+    <h3>Jozef Kutej</h3>
+</div>
+
+<div class="slide">
+    <h1>folder tree full of archives</h1>
+</div>
+
+<div class="slide">
+    <h1>mirror(s) &amp;&amp; search &amp;&amp; pause</h1>
+</div>
+
+<div class="slide">
+	<h1>tree</h1>
+	<ul>
+		<li>/authors/01mailrc.txt.gz</li>
+		<li><b>/authors/id/A/AB/ABCDE/abc.tgz</b></li>
+		<li><b>/modules/02packages.details.txt.gz</b></li>
+		<li>/modules/03modlist.data.gz</li>
+		<li>/modules/06perms.txt.gz</li>
+	</ul>    
+</div>
+
+<div class="slide">
+	<h1>from author to consumer</h1>
+	<h2>you</h2>
+	<ul>
+		<li>pause.perl.org</li>
+		<li>pause indexer</li>
+		<li>mirrors</li>
+	</ul>    
+	<h2>consumers</h2>
+	<ul>
+		<li>search.cpan.org</li>
+		<li>smoke testers</li>
+		<li>distribution packages</li>
+		<li><b>file-systems</b></li>
+	</ul>
+</div>
+
+<div class="slide">
+	<h1>cpan -i App::whichpm</h1>
+	<ul>
+		<li>refresh $HOME/.cpan/sources/modules/02packages.details.txt.gz</li>
+		<li>resolve dist_name and compare versions</li>
+		<li>wget $MIRROR/authors/J/JK/JKUTEJ/App-whichpm-0.04.tar.gz</li>
+		<li>tar xvzf App-whichpm-0.04.tar.gz</li>
+		<li>perl Build.PL # (Makefile.PL)</li>
+		<li># install missing dependencies</li>
+		<li>./Build &amp;&amp; <b>./Build test</b> &amp;&amp; ./Build install</li>
+		<li>(perl Makefile.PL &amp;&amp; make &amp;&amp; <b>make test</b> &amp;&amp; make install)</li>
+	</ul>    
+</div>
+
+<div class="slide">
+	<h1>freedom</h1>
+	<ul>
+		<li>create archive like you want</li>
+		<li>upload it (anything)</li>
+		<li>put modules anywhere</li>
+		<li>skip any files</li>
+		<li>do anything within the Makefile.PL and Build.PL steps</li>
+	</ul>    
+</div>
+
+<div class="slide">
+	<h1>common archive structure</h1>
+	<ul>
+		<li><b>lib/</b></li>
+		<li>script/ (bin/)</li>
+		<li>examples/</li>
+		<li><b>t/</b></li>
+		<li><b>META.yml</b></li>
+		<li>MANIFEST (MANIFEST.SKIP)</li>
+		<li><b>Makefile.PL || Build.PL</b></li>
+		<li>Changes + README + LICENSE</li>
+	</ul>    
+</div>
+
+<div class="slide">
+	<h1>What's so cool?</h1>
+	<ul>
+		<li>works for 15y already</li>
+		<li>hosting</li>
+		<li>documentation browser</li>
+		<li>tested on X architectures</li>
+		<li>bug tracking</li>
+		<li>handles the dependecies</li>
+		<li>this allows to <b>break down the problem</b></li>
+	</ul>    
+</div>
+
+<div class="slide">
+	<h1>Interesting modules</h1>
+	<ul>
+		<li>CPAN::Mini + <b>CPAN::Mini::Inject</b></li>
+		<li>CPAN::Mini::Webserver</li>
+		<li>Dist::Zilla</li>
+		<li>MakeMaker::ExtUtils + Module::Build + Module::Install</li>
+		<li>CPAN + CPANPLUS + App::cpanminus</li>
+		<li>local::lib</li>
+		<li>App::perlbrew</li>
+	</ul>
+</div>
+
+<div class="slide">
+	<h1>CPAN::Mini::Inject</h1>
+	<p style="text-align: center;">
+		mcpani --authorid LOCAL --add <b>--discover-packages</b> --file SOME.tag.gz
+	</p>
+</div>
+
+
+<div class="slide">
+    <h1>Questions?</h1>
+    <div class="singleThing"><img src="images/questions.png" alt=":-?" /></div>
+</div>
+
+</div>
+
+</body>
+</html>
