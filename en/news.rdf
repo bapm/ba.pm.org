@@ -5,7 +5,7 @@
     <title>Bratislava Perl Mongers</title>
     <link>http://bratislava.pm.org/en/</link>
     <description><![CDATA[Perl fans from Bratislava]]></description>
-    <dc:date>2010-10-22T14:07:02</dc:date>
+    <dc:date>2011-08-16T17:15:12</dc:date>
     <dc:subject>Perl</dc:subject>
     <items>
       <rdf:Seq>
@@ -27,6 +27,8 @@
         <rdf:li rdf:resource="http://bratislava.pm.org/events.html#meeting-ba-pm-2009-10"/>
         <rdf:li rdf:resource="http://bratislava.pm.org/events.html#meeting-ba-pm-2009-11"/>
         <rdf:li rdf:resource="http://bratislava.pm.org/events.html#meeting-ba-pm-2010-10"/>
+        <rdf:li rdf:resource="http://bratislava.pm.org/events.html#meeting-ba-pm-2011-05"/>
+        <rdf:li rdf:resource="http://bratislava.pm.org/events.html#yapc-eu-2011"/>
       </rdf:Seq>
     </items>
   </channel>
@@ -323,6 +325,28 @@
 		</ul>]]></description>
     <dc:creator>jozef</dc:creator>
     <dc:date>2010-10-22T18:00:0+02:00</dc:date>
+    <dc:subject>events</dc:subject>
+  </item>
+  <item rdf:about="http://bratislava.pm.org/events.html#meeting-ba-pm-2011-05">
+    <title>Bratislava.pm May meeting</title>
+    <link>http://bratislava.pm.org/events.html#meeting-ba-pm-2011-05</link>
+    <description><![CDATA[<p><b>16 May 2011 18:00</b></p><p>Topics:</p><ul>
+			<li>Cyclone3 BugDay</li>
+			<li>"\N{SOFT HYPHEN}"</li>
+			<li><a href="http://pkg-perl.alioth.debian.org/cpan2deb/">http://pkg-perl.alioth.debian.org/cpan2deb/</a></li>
+			<li><a href="http://2011.qa-hackathon.org/">http://2011.qa-hackathon.org/</a></li>
+			<li>Potyl - <a href="https://github.com/potyl/Webkit">Webkit</a></li>
+		</ul>]]></description>
+    <dc:creator>jozef</dc:creator>
+    <dc:date>2011-05-16T18:00:0+02:00</dc:date>
+    <dc:subject>events</dc:subject>
+  </item>
+  <item rdf:about="http://bratislava.pm.org/events.html#yapc-eu-2011">
+    <title>YAPC::Europe 2011 - Riga</title>
+    <link>http://bratislava.pm.org/events.html#yapc-eu-2011</link>
+    <description><![CDATA[<p><b>15-17 August 2011</b></p><p>This years <a href="http://www.yapceurope.lv/ye2011/">YAPC::Europe 2011</a> will take place in Riga.</p>]]></description>
+    <dc:creator>jozef</dc:creator>
+    <dc:date>2011-08-15T10:00:0+03:00</dc:date>
     <dc:subject>events</dc:subject>
   </item>
 </rdf:RDF>
