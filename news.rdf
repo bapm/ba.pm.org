@@ -5,7 +5,7 @@
     <title>Bratislava Perl Mongers</title>
     <link>http://bratislava.pm.org/</link>
     <description><![CDATA[Priatelia programovacieho jazyka Perl v Bratislave]]></description>
-    <dc:date>2011-08-16T17:15:12</dc:date>
+    <dc:date>2011-08-23T16:30:51</dc:date>
     <dc:subject>Perl</dc:subject>
     <items>
       <rdf:Seq>
@@ -15,7 +15,6 @@
         <rdf:li rdf:resource="http://bratislava.pm.org/events.html#tech-social_2009-01-22"/>
         <rdf:li rdf:resource="http://bratislava.pm.org/events.html#tech-social_2009-02-19"/>
         <rdf:li rdf:resource="http://bratislava.pm.org/events.html#tech-social_2009-03-26"/>
-        <rdf:li rdf:resource="http://bratislava.pm.org/planet/"/>
         <rdf:li rdf:resource="http://bratislava.pm.org/events.html#tech-social_2009-05-26"/>
         <rdf:li rdf:resource="http://conferences.yapceurope.org/ye2009/"/>
         <rdf:li rdf:resource="http://bratislava.pm.org/events.html#sk-en-events"/>
@@ -156,18 +155,6 @@
 		</p>]]></description>
     <dc:creator>jozef</dc:creator>
     <dc:date>2009-03-26T18:00:0+02:00</dc:date>
-    <dc:subject>events</dc:subject>
-  </item>
-  <item rdf:about="http://bratislava.pm.org/planet/">
-    <title>New planet</title>
-    <link>http://bratislava.pm.org/planet/</link>
-    <description><![CDATA[<p><b>08 Apr 2009</b></p><p>
-			(SK) Ba.pm má <a href="http://bratislava.pm.org/planet/">planétu</a>!
-		</p><p>
-			(EN) Ba.pm has a <a href="http://bratislava.pm.org/en/planet/">planet</a>!
-		</p>]]></description>
-    <dc:creator>jozef</dc:creator>
-    <dc:date>2009-04-08T22:35:0+02:00</dc:date>
     <dc:subject>events</dc:subject>
   </item>
   <item rdf:about="http://bratislava.pm.org/events.html#tech-social_2009-05-26">
