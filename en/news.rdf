@@ -5,7 +5,7 @@
     <title>Bratislava Perl Mongers</title>
     <link>http://bratislava.pm.org/en/</link>
     <description><![CDATA[Perl fans from Bratislava]]></description>
-    <dc:date>2011-08-25T15:56:48</dc:date>
+    <dc:date>2011-08-25T16:03:46</dc:date>
     <dc:subject>Perl</dc:subject>
     <items>
       <rdf:Seq>
@@ -340,7 +340,7 @@
   <item rdf:about="http://bratislava.pm.org/events.html#meeting-ba-pm-2011-09">
     <title>Bratislava.pm September meeting</title>
     <link>http://bratislava.pm.org/events.html#meeting-ba-pm-2011-09</link>
-    <description><![CDATA[<p><b>8 September 2011 18:00</b></p><p>Topics:</p><ul>
+    <description><![CDATA[<p><b>8 September 2011 18:00</b> - <a href="http://www.progressbar.sk/events?p_p_id=8&p_p_lifecycle=0&p_p_state=normal&p_p_mode=view&p_p_col_id=column-1&p_p_col_count=1&_8_struts_action=%2Fcalendar%2Fview_event&_8_redirect=http%3A%2F%2Fwww.progressbar.sk%2Fevents%3Fp_p_id%3D8%26p_p_lifecycle%3D0%26p_p_state%3Dnormal%26p_p_mode%3Dview%26p_p_col_id%3Dcolumn-1%26p_p_col_count%3D1%26_8_tabs1%3Dmonth%26_8_month%3D8%26_8_struts_action%3D%252Fcalendar%252Fview%26_8_year%3D2011%26_8_day%3D25%26_8_eventType%3D&_8_eventId=37441">progressbar.sk</a></p><p>Topics:</p><ul>
 			<li>barney - <a href="http://search.cpan.org/perldoc?SQL::Admin">SQL::Admin</a></li>
 			<li>potyl - <a href="https://github.com/potyl/camarero">very simple web server</a></li>
 			<li>jozef - <a href="http://yapceurope.lv/ye2011/">YAPC::EU::2011</a></li>
