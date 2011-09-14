@@ -5,7 +5,7 @@
     <title>Bratislava Perl Mongers</title>
     <link>http://bratislava.pm.org/en/</link>
     <description><![CDATA[Perl fans from Bratislava]]></description>
-    <dc:date>2011-08-25T16:03:46</dc:date>
+    <dc:date>2011-09-14T09:21:56</dc:date>
     <dc:subject>Perl</dc:subject>
     <items>
       <rdf:Seq>
@@ -28,6 +28,7 @@
         <rdf:li rdf:resource="http://bratislava.pm.org/events.html#meeting-ba-pm-2010-10"/>
         <rdf:li rdf:resource="http://bratislava.pm.org/events.html#meeting-ba-pm-2011-05"/>
         <rdf:li rdf:resource="http://bratislava.pm.org/events.html#yapc-eu-2011"/>
+        <rdf:li rdf:resource="http://bratislava.pm.org/events.html#meeting-ba-pm-2011-09"/>
         <rdf:li rdf:resource="http://bratislava.pm.org/events.html#meeting-ba-pm-2011-09"/>
       </rdf:Seq>
     </items>
@@ -343,11 +344,31 @@
     <description><![CDATA[<p><b>8 September 2011 18:00</b> - <a href="http://www.progressbar.sk/events?p_p_id=8&p_p_lifecycle=0&p_p_state=normal&p_p_mode=view&p_p_col_id=column-1&p_p_col_count=1&_8_struts_action=%2Fcalendar%2Fview_event&_8_redirect=http%3A%2F%2Fwww.progressbar.sk%2Fevents%3Fp_p_id%3D8%26p_p_lifecycle%3D0%26p_p_state%3Dnormal%26p_p_mode%3Dview%26p_p_col_id%3Dcolumn-1%26p_p_col_count%3D1%26_8_tabs1%3Dmonth%26_8_month%3D8%26_8_struts_action%3D%252Fcalendar%252Fview%26_8_year%3D2011%26_8_day%3D25%26_8_eventType%3D&_8_eventId=37441">progressbar.sk</a></p><p>Topics:</p><ul>
 			<li>barney - <a href="http://search.cpan.org/perldoc?SQL::Admin">SQL::Admin</a></li>
 			<li>potyl - <a href="https://github.com/potyl/camarero">very simple web server</a></li>
-			<li>jozef - <a href="http://yapceurope.lv/ye2011/">YAPC::EU::2011</a></li>
+			<li>jozef - <a href="http://bratislava.pm.org/presentation/yapc-eu-2011.html">YAPC::EU::2011</a></li>
 			<li>* - TwinCity Perl Workshop 2011 orga stuff</li>
 		</ul>]]></description>
     <dc:creator>jozef</dc:creator>
     <dc:date>2011-09-08T18:00:0+02:00</dc:date>
+    <dc:subject>events</dc:subject>
+  </item>
+  <item rdf:about="http://bratislava.pm.org/events.html#meeting-ba-pm-2011-09">
+    <title>TwinCity Perl Workshop 2011 - Call for papers</title>
+    <link>http://bratislava.pm.org/events.html#meeting-ba-pm-2011-09</link>
+    <description><![CDATA[<p><b>13 September 2011</b></p><p>
+			We are announcing the call for papers for talks and workshops for the
+			<a href="http://conferences.yapceurope.org/tcpw2011/">TwinCity Perl Workshop 2011</a>
+			which will be held on 4th–5th November in Vienna and
+			Bratislava. We would like to hear about your topics concerning the Perl family
+			of languages and related topics. The deadline for submissions is October 15th.
+		</p><p>
+			To submit a talk abstract and for further details visit
+			<a href="http://conferences.yapceurope.org/tcpw2011/">our web site</a>.
+		</p><p>
+			Please <a href="http://conferences.yapceurope.org/tcpw2011/atom/en.xml">subscribe to the newsfeed</a>
+			to stay updated.
+		</p>]]></description>
+    <dc:creator>jozef</dc:creator>
+    <dc:date>2011-09-13T22:30:0+02:00</dc:date>
     <dc:subject>events</dc:subject>
   </item>
 </rdf:RDF>
