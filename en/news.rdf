@@ -5,7 +5,7 @@
     <title>Bratislava Perl Mongers</title>
     <link>http://bratislava.pm.org/en/</link>
     <description><![CDATA[Perl fans from Bratislava]]></description>
-    <dc:date>2011-09-15T17:16:41</dc:date>
+    <dc:date>2012-09-18T08:56:00</dc:date>
     <dc:subject>Perl</dc:subject>
     <items>
       <rdf:Seq>
@@ -30,6 +30,7 @@
         <rdf:li rdf:resource="http://bratislava.pm.org/events.html#yapc-eu-2011"/>
         <rdf:li rdf:resource="http://bratislava.pm.org/events.html#meeting-ba-pm-2011-09"/>
         <rdf:li rdf:resource="http://bratislava.pm.org/events.html#tcpw2011-call-for-papers"/>
+        <rdf:li rdf:resource="http://bratislava.pm.org/events.html#meeting-ba-pm-2012-09"/>
       </rdf:Seq>
     </items>
   </channel>
@@ -369,6 +370,16 @@
 		</p>]]></description>
     <dc:creator>jozef</dc:creator>
     <dc:date>2011-09-13T22:30:0+02:00</dc:date>
+    <dc:subject>events</dc:subject>
+  </item>
+  <item rdf:about="http://bratislava.pm.org/events.html#meeting-ba-pm-2012-09">
+    <title>Bratislava.pm September meeting</title>
+    <link>http://bratislava.pm.org/events.html#meeting-ba-pm-2012-09</link>
+    <description><![CDATA[<p><b>17 September 2012 18:30</b></p><p>Topics:</p><ul>
+			<li>Potyl - <a href="https://github.com/potyl/gir-fun">GObject Introspection for Perl</a></li>
+		</ul>]]></description>
+    <dc:creator>jozef</dc:creator>
+    <dc:date>2012-09-17T18:30:0+02:00</dc:date>
     <dc:subject>events</dc:subject>
   </item>
 </rdf:RDF>
